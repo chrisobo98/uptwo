@@ -1,0 +1,223 @@
+<template>
+  <section class="py-24 relative">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="w-full">
+        <div class="block lg:flex items-center justify-between mb-4">
+          <div
+            class="flex md:flex-row flex-col items-center gap-4 lg:justify-start justify-center"
+          >
+            <h2
+              class="font-manrope font-bold text-5xl text-white md:text-left text-center"
+            >
+              Ivan, The Investor Kid: The ABCs of How Money Works
+            </h2>
+          </div>
+        </div>
+        <div
+          class="flex items-center lg:justify-start justify-center max-sm:flex-wrap gap-y-3 mt-3"
+        >
+          <span
+            class="p-2 rounded-full border border-yellow-600 cursor-pointer ml-3 group transition-all duration-500 hover:bg-yellow-600"
+          >
+            <svg
+              class="fill-yellow-600 transition-all duration-500 group-hover:fill-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 10 10"
+              fill="none"
+            >
+              <path
+                d="M7.0135 3.60427C7.1973 3.78979 7.20195 4.09542 7.0239 4.28692L5.35958 6.07698C5.18153 6.26848 4.8882 6.27333 4.70441 6.08782C4.52062 5.9023 4.51596 5.59667 4.69401 5.40517L6.35833 3.61511C6.53638 3.42361 6.82971 3.41876 7.0135 3.60427Z"
+                fill=""
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 1.3778C0 0.616862 0.592031 0 1.32234 0H6.15424C8.28309 0.0298824 10 1.83766 10 4.06289C10 6.30677 8.2542 8.12578 6.10065 8.12578C5.33279 8.12578 4.61676 7.89453 4.01323 7.49522L1.88233 9.66839C1.18123 10.3834 0 9.86584 0 8.84365V1.3778ZM3.29126 6.88045C2.61631 6.14999 2.20129 5.15694 2.20129 4.06289C2.20129 3.79627 2.40873 3.58013 2.66463 3.58013C2.92052 3.58013 3.12796 3.79627 3.12796 4.06289C3.12796 5.77352 4.45888 7.16025 6.10065 7.16025C7.74242 7.16025 9.07333 5.77352 9.07333 4.06289C9.07333 2.35227 7.74242 0.965533 6.10065 0.965533H1.32234C1.10382 0.965533 0.926669 1.15011 0.926669 1.3778V8.84365C0.926669 9.01062 1.11962 9.09516 1.23414 8.97837L3.29126 6.88045Z"
+                fill=""
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_13228_72031"
+                  x1="10"
+                  y1="0.572917"
+                  x2="-0.208972"
+                  y2="9.53905"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7C3AED" />
+                  <stop offset="0.993738" stop-color="#4F46E5" />
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_13228_72031"
+                  x1="10"
+                  y1="0.572917"
+                  x2="-0.208972"
+                  y2="9.53905"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7C3AED" />
+                  <stop offset="0.993738" stop-color="#4F46E5" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <p
+            class="font-semibold text-lg leading-8 text-white ml-3 whitespace-nowrap"
+          >
+            <span class="text-gray-500 font-medium text-base leading-7"
+              >By
+            </span>
+            T.W. Alexander
+          </p>
+          <svg
+            class="mx-5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="2"
+            height="30"
+            viewBox="0 0 2 30"
+            fill="none"
+          >
+            <path d="M1 0V30" stroke="#E5E7EB" />
+          </svg>
+          <div class="flex items-center">
+            <span
+              class="flex items-center gap-1 bg-amber-400 rounded-md py-0.5 px-1.5 font-medium text-base leading-7 text-white"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_12754_11652)">
+                  <path
+                    d="M8.10326 2.26718C8.47008 1.52393 9.52992 1.52394 9.89674 2.26718L11.4124 5.33818C11.558 5.63332 11.8396 5.83789 12.1653 5.88522L15.5543 6.37768C16.3746 6.49686 16.7021 7.50483 16.1086 8.08337L13.6562 10.4738C13.4205 10.7035 13.313 11.0345 13.3686 11.3589L13.9475 14.7343C14.0877 15.5512 13.2302 16.1742 12.4966 15.7885L9.46534 14.1948C9.17402 14.0417 8.82598 14.0417 8.53466 14.1948L5.5034 15.7885C4.76978 16.1742 3.91235 15.5512 4.05246 14.7343L4.63137 11.3589C4.68701 11.0345 4.57946 10.7035 4.34378 10.4738L1.89144 8.08337C1.29792 7.50483 1.62543 6.49686 2.44565 6.37768L5.8347 5.88522C6.16041 5.83789 6.44197 5.63332 6.58764 5.33818L8.10326 2.26718Z"
+                    fill="white"
+                  />
+                  <g clip-path="url(#clip1_12754_11652)">
+                    <path
+                      d="M8.10326 2.26718C8.47008 1.52393 9.52992 1.52394 9.89674 2.26718L11.4124 5.33818C11.558 5.63332 11.8396 5.83789 12.1653 5.88522L15.5543 6.37768C16.3746 6.49686 16.7021 7.50483 16.1086 8.08337L13.6562 10.4738C13.4205 10.7035 13.313 11.0345 13.3686 11.3589L13.9475 14.7343C14.0877 15.5512 13.2302 16.1742 12.4966 15.7885L9.46534 14.1948C9.17402 14.0417 8.82598 14.0417 8.53466 14.1948L5.5034 15.7885C4.76978 16.1742 3.91235 15.5512 4.05246 14.7343L4.63137 11.3589C4.68701 11.0345 4.57946 10.7035 4.34378 10.4738L1.89144 8.08337C1.29792 7.50483 1.62543 6.49686 2.44565 6.37768L5.8347 5.88522C6.16041 5.83789 6.44197 5.63332 6.58764 5.33818L8.10326 2.26718Z"
+                      fill="white"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_12754_11652">
+                    <rect width="18" height="18" fill="white" />
+                  </clipPath>
+                  <clipPath id="clip1_12754_11652">
+                    <rect width="18" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              5.0
+            </span>
+            <p class="font-medium text-base leading-7 text-white ml-2">
+              6 Reviews
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-12 gap-8 mt-8 mb-12">
+          <div class="img-box col-span-12 md:col-span-6">
+            <img
+              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Cover.jpg/:/cr=t:0%25,l:3.11%25,w:93.78%25,h:100%25/rs=w:400,h:533.3333333333334,cg:true"
+              alt="red dots top image"
+              class="max-lg:mx-auto rounded-3xl object-cover"
+            />
+          </div>
+<div class="col-span-12 md:col-span-6">
+            <h5
+              class="font-manrope font-semibold text-2xl leading-9 text-white mb-5"
+            >
+              Purpose
+            </h5>
+            <p class="text-gray-400 text-base font-normal mb-8">
+              'Ivan, the Investor Kid' is more than just a book. It's a fun and
+              educational journey that parents and children can embark on
+              together, exploring the world of financial literacy. This book is
+              designed to not only entertain but also to empower parents to have
+              meaningful discussions about money with their children.
+            </p>
+            <h5
+              class="font-manrope font-semibold text-2xl leading-9 text-white mb-5"
+            >
+              Theme
+            </h5>
+            <p class="text-gray-400 text-base font-normal mb-8">
+              This is a story about a young, smart, and ambitious child named
+              Ivan, who is curious to learn how money works from his father. In
+              response to his son's interest, Ivan's father takes him on a fun
+              alphabetical journey to explain the ins and outs of how money
+              works.
+            </p>
+            <h5
+              class="font-manrope font-semibold text-2xl leading-9 text-white mb-5"
+            >
+              Target Age Group
+            </h5>
+            <p class="text-gray-400 text-base font-normal mb-8">
+              Ages 7 through 11 (3rd graders - 5th graders)
+            </p>
+          </div>
+          <div class="col-span-12 md:col-start-7 md:col-end-12">
+            <p class="font-normal text-sm leading-6 text-gray-400">
+              Available on Amazon.com
+            </p>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center justify-end gap-4"></div>
+            </div>
+            <div
+              class="flex items-center justify-between py-2.5 pl-6 pr-3 rounded-full bg-yellow-50"
+            >
+              <div class="">
+                <p class="font-normal text-lg text-yellow-700">Kindle</p>
+                <p class="font-semibold text-sm text-yellow-600">$4.99</p>
+              </div>
+              <div class="">
+                <p class="font-normal text-lg text-yellow-700">Paperback</p>
+                <p class="font-semibold text-sm text-yellow-600">$9.99</p>
+              </div>
+              <button
+                class="h-full px-8 text-center rounded-full py-2.5 bg-yellow-600 sh-1 font-semibold text-sm text-white transition-all duration-500 hover:bg-yellow-700"
+              >
+                Buy&nbsp;Now
+              </button>
+            </div>
+          </div>
+        </div></div>
+        </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="bg-yellow-600 rounded-2xl p-8 xl:p-11">
+        <h2 class="font-manrope text-4xl text-white text-center font-bold mb-6">
+          Bookshelf
+        </h2>
+        <p class="text-center mb-6 text-white">
+          The upTWo writing staff is looking forward to the release of several
+          outstanding books in the upcoming quarters. The author and founder of
+          upTWo, T.W. Alexander, is excited about the release of "Ivan, the
+          Investor Kid," an interactive children's book designed for parents to
+          read along and open a dialogue about how money works.
+        </p>
+        <div
+          class="md:flex-row gap-5 flex-col flex items-center justify-center"
+        >
+          <a
+            href="#"
+            class="border border-gray-300 shadow-sm rounded-full font-semibold text-white block py-3.5 px-7"
+            >More about author</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <ComingSoon />
+  </section>
+</template>
+
+<script>
+import ComingSoon from '../components/ComingSoon.vue'
+</script>
