@@ -1,3 +1,5 @@
+
+import { NuxtLink } from '#components';
 <template>
   <footer class="p-4 sm:p-6 bg-black">
     <div class="mx-auto max-w-screen-xl my-12">
@@ -20,34 +22,13 @@
             </h2>
             <ul class="text-gray-600 dark:text-gray-400">
               <li class="mb-4">
-                <a href="https://flowbite.com" class="hover:underline"
-                  >Flowbite</a
+                <NuxtLink to="/blog" class="hover:underline"
+                  >Blog</NuxtLink
                 >
               </li>
               <li>
-                <a href="https://tailwindcss.com/" class="hover:underline"
-                  >Tailwind CSS</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-            >
-              Follow us
-            </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
-              <li class="mb-4">
-                <a
-                  href="https://github.com/themesberg/flowbite"
-                  class="hover:underline"
-                  >Github</a
-                >
-              </li>
-              <li>
-                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline"
-                  >Discord</a
+                <NuxtLink to="/contact" class="hover:underline"
+                  >Contact</NuxtLink
                 >
               </li>
             </ul>

@@ -3,11 +3,16 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="w-full flex-col justify-start items-start gap-12 inline-flex">
         <!-- Heading -->
-        <div class="w-full flex-col justify-start items-center gap-3 flex">
+        <div
+          v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
+          class="w-full flex-col justify-start items-center gap-3 flex"
+        >
           <h2 class="text-center text-white text-4xl font-bold leading-normal">
-            About Us
+            About <span class="text-yellow-600"> Us </span>
           </h2>
-          <p class="lg:max-w-3xl w-full text-center text-gray-500 text-lg leading-relaxed">
+          <p
+            class="lg:max-w-3xl w-full text-center text-gray-500 text-lg leading-relaxed"
+          >
             Your trusted partner in the digital realm, we specialize in creating
             products that not only look stunning but also deliver seamless user
             experiences.
@@ -40,6 +45,7 @@
               class="w-full justify-start items-center lg:gap-9 gap-7 flex lg:flex-row flex-col"
             >
               <img
+                v-gsap.magnetic
                 class="rounded-2xl object-cover"
                 :src="activeTabData.src"
                 alt="About Us image"
@@ -50,14 +56,16 @@
                 <div
                   class="w-full flex-col justify-start lg:items-start items-center gap-3 flex"
                 >
-                  <p class="text-white text-3xl leading-relaxed lg:text-start text-center">
+                  <p
+                    v-gsap.from="{ autoAlpha: 0 }"
+                    class="text-white text-3xl leading-relaxed lg:text-start text-center"
+                  >
                     {{ activeTabData.description }}
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -103,7 +111,7 @@
                 <p
                   class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center"
                 >
-                  Add call to action text here 
+                  Add call to action text here
                 </p>
               </div>
               <button
@@ -158,6 +166,7 @@
             </div>
           </div>
           <img
+            v-gsap.magnetic
             class="w-full lg:h-full h-auto rounded-xl object-cover"
             src="https://pagedone.io/asset/uploads/1724388858.png"
             alt="About Us image"
@@ -167,7 +176,7 @@
           class="w-full justify-start items-center lg:gap-8 gap-6 grid md:grid-cols-3 grid-cols-1"
         >
           <div
-            class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
+            class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
             <div class="flex-col justify-start items-start gap-2 flex">
               <div class="justify-start items-center gap-1.5 inline-flex">
@@ -202,12 +211,13 @@
                 </h6>
               </div>
               <p class="text-gray-500 text-xs font-normal leading-normal">
-                We empower purpose-driven businesses in the hospitality, small business, and creative industries
+                We empower purpose-driven businesses in the hospitality, small
+                business, and creative industries
               </p>
             </div>
           </div>
           <div
-            class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
+            class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
             <div class="flex-col justify-start items-start gap-2 flex">
               <div class="justify-start items-center gap-1.5 inline-flex">
@@ -236,12 +246,14 @@
                 </h6>
               </div>
               <p class="text-gray-500 text-xs font-normal leading-normal">
-                To be the leading luxury brand strategy partner for innovative businesses and programs in hospitality, small business, and the arts
+                To be the leading luxury brand strategy partner for innovative
+                businesses and programs in hospitality, small business, and the
+                arts
               </p>
             </div>
           </div>
           <div
-            class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
+            class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
             <div class="flex-col justify-start items-start gap-2 flex">
               <div class="justify-start items-center gap-1.5 inline-flex">
@@ -288,15 +300,35 @@ import SubscribeForm from "../components/SubscribeForm.vue";
 const activeTab = ref("tabs-with-pill-1");
 
 const tabs = [
-  { id: "tabs-with-pill-1", label: "Our Story", src: "//img1.wsimg.com/isteam/stock/uV8DYPKZyNTe2d5ox/:/cr=t:0%25,l:16.67%25,w:66.67%25,h:100%25/rs=w:365,h:365,cg:true", description: 'We empower purpose-driven businesses in the hospitality, small business, and creative industries by crafting luxury brand strategies that elevate their impact — adding value to those who bring value to others. Guided by our "Quality Simplified" approach, we blend strategic creativity with hospitality, creating brand experiences that inspire, connect, and make people smile through the power of love and purpose.' },
-  { id: "tabs-with-pill-2", label: "Our Mission", src: "//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Glassses%20lookaway.JPG/:/cr=t:0%25,l:8.25%25,w:66.68%25,h:100%25/rs=w:365,h:365,cg:true", description: 'To be the leading luxury brand strategy partner for innovative businesses and programs in hospitality, small business, and the arts — where "Quality Simplified" fuels bold ideas, clear messaging, and transformative impact. We envision a future where brands drive creativity, education, and change and build heartfelt connections and memorable experiences.'},
-  { id: "tabs-with-pill-3", label: "Our Vision", src: "//img1.wsimg.com/isteam/stock/u73W5ZPJDGUN0VeWl/:/cr=t:0%25,l:16.67%25,w:66.67%25,h:100%25/rs=w:365,h:365,cg:true", description: 'Our purpose is to add value to those who bring value to others — driving the drivers of tomorrow. With a foundation of love and hospitality, we simplify complexity, empower impactful voices, and create brand experiences that spark innovation, inspire smiles, and elevate businesses in hospitality, small businesses, and the creative arts.'},
+  {
+    id: "tabs-with-pill-1",
+    label: "Our Story",
+    src: "//img1.wsimg.com/isteam/stock/uV8DYPKZyNTe2d5ox/:/cr=t:0%25,l:16.67%25,w:66.67%25,h:100%25/rs=w:365,h:365,cg:true",
+    description:
+      'We empower purpose-driven businesses in the hospitality, small business, and creative industries by crafting luxury brand strategies that elevate their impact — adding value to those who bring value to others. Guided by our "Quality Simplified" approach, we blend strategic creativity with hospitality, creating brand experiences that inspire, connect, and make people smile through the power of love and purpose.',
+  },
+  {
+    id: "tabs-with-pill-2",
+    label: "Our Mission",
+    src: "//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Glassses%20lookaway.JPG/:/cr=t:0%25,l:8.25%25,w:66.68%25,h:100%25/rs=w:365,h:365,cg:true",
+    description:
+      'To be the leading luxury brand strategy partner for innovative businesses and programs in hospitality, small business, and the arts — where "Quality Simplified" fuels bold ideas, clear messaging, and transformative impact. We envision a future where brands drive creativity, education, and change and build heartfelt connections and memorable experiences.',
+  },
+  {
+    id: "tabs-with-pill-3",
+    label: "Our Vision",
+    src: "//img1.wsimg.com/isteam/stock/u73W5ZPJDGUN0VeWl/:/cr=t:0%25,l:16.67%25,w:66.67%25,h:100%25/rs=w:365,h:365,cg:true",
+    description:
+      "Our purpose is to add value to those who bring value to others — driving the drivers of tomorrow. With a foundation of love and hospitality, we simplify complexity, empower impactful voices, and create brand experiences that spark innovation, inspire smiles, and elevate businesses in hospitality, small businesses, and the creative arts.",
+  },
 ];
 
 const isActive = (tabId: string) => activeTab.value === tabId;
 
 // Get the currently active tab's data
-const activeTabData = computed(() => tabs.find(tab => tab.id === activeTab.value));
+const activeTabData = computed(() =>
+  tabs.find((tab) => tab.id === activeTab.value)
+);
 </script>
 
 <!-- Custom Style -->

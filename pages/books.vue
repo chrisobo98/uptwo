@@ -9,7 +9,7 @@
             <h2
               class="font-manrope font-bold text-5xl text-white md:text-left text-center"
             >
-              Ivan, The Investor Kid: The ABCs of How Money Works
+              Ivan, The Investor Kid: The ABCs of <span class="text-yellow-600">  How Money Works</span>
             </h2>
           </div>
         </div>

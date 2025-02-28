@@ -44,6 +44,7 @@
                           class="flex-col justify-start items-start gap-2 flex mt-8"
                         >
                           <h2
+                          v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
                             v-gsap.animateText
                             v-gsap.from="{ opacity: 0, y: 50, stagger: 1.0 }"
                             class="text-white md:text-7xl text-6xl font-bold font-manrope md:leading-snug leading-snug"
@@ -51,6 +52,7 @@
                             Your Story. Your Brand. Our Pen.
                           </h2>
                           <h2
+                          v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
                             v-gsap.animateText
                             v-gsap.from="{ opacity: 0, y: 50, stagger: 1.0 }"
                             class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope md:leading-snug leading-snug"
@@ -58,6 +60,7 @@
                             Our Passion
                           </h2>
                           <p
+                          v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
                             v-gsap.animateText.slow
                             v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
                             class="lg:max-w-xl w-full text-gray-200/80 text-2xl font-normal leading-normal"

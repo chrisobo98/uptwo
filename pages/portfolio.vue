@@ -5,10 +5,6 @@
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 gap-14 items-center lg:grid-cols-12 lg:gap32">
                         <div class="w-full xl:col-span-5 lg:col-span-6">
-                            <div
-                                class="bg-yellow-50 flex items-center text-sm rounded-full font-medium text-yellow-500 justify-center lg:justify-start py-1 px-4 w-52 mx-auto lg:mx-0">
-                                Portfolio
-                            </div>
                             <h1 class="py-8 text-center text-white font-extrabold font-manrope text-5xl lg:text-left">
                                 The Art of <span class="text-yellow-600">Storytelling</span>
                             </h1>
