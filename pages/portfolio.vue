@@ -34,14 +34,14 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide" v-for="(slide, index) in slides" :key="index">
                                     <div class="grid grid-cols-2 gap-4">
-                                        <div class="w-full flex-col justify-start items-start gap-8 flex">
+                                        <div class="w-full flex-col col-span-2 lg:col-span-1 justify-start items-start gap-8 flex">
                                             <div class="flex flex-col">
-                                                <h2 class="text-white text-6xl font-normal font-playfairDisplay">
+                                                <h2 class="text-white text-5xl font-normal font-playfairDisplay">
                                                     {{ slide.title }}
                                                 </h2>
                                             </div>
                                             <p
-                                                class="lg:max-w-xl w-full text-gray-300 text-base font-medium leading-relaxed">
+                                                class="lg:max-w-xl w-full h-auto text-gray-300 text-base font-medium leading-relaxed">
                                                 {{ slide.description }}
                                             </p>
                                         </div>
@@ -54,7 +54,7 @@
                         </div>
 
                         <!-- Swiper Thumbnail Navigation -->
-                        <div class="swiper-container slider-thumbnail relative">
+                        <div class="swiper-container slider-thumbnail relative mt-20">
                             <div class="swiper-wrapper lg:flex-row flex-col">
                                 <div class="swiper-slide cursor-pointer transition duration-300 ease-in-out" :class="{
                                     'text-yellow-400': activeIndex === index,
@@ -107,7 +107,7 @@
                         </div>
 
                         <!-- Second Swiper Thumbnail Navigation (Aligned Right) -->
-                        <div class="swiper-container slider-thumbnail2 relative flex justify-end">
+                        <div class="swiper-container slider-thumbnail2 relative flex justify-end mt-20">
                             <div class="swiper-wrapper lg:flex-row flex-col">
                                 <div class="swiper-slide cursor-pointer transition duration-300 ease-in-out" :class="{
                                     'text-yellow-400': activeIndex2 === index,
@@ -131,7 +131,7 @@
                 <h2 class="font-manrope text-4xl font-bold text-white leading-[3.25rem] mb-4">What our clients say about us</h2>
                 <p class="text-base text-gray-400 mb-14">knowledge, expertise, advices &
                     confidence</p>
-                 <button class="bg-yellow-50 rounded-full shadow-sm py-3 px-7 flex items-center gap-4 font-semibold text-yellow-600 transition-all duration-500 hover:bg-yellow-100">View all testimonials <svg class="w-2 h-3 text-yellow-600" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <button class="bg-yellow-50 rounded-full shadow-sm py-3 px-7 flex items-center gap-4 font-semibold text-yellow-600 transition-all duration-500 hover:bg-yellow-100 mb-12">View all testimonials <svg class="w-2 h-3 text-yellow-600" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 11L5.08578 7.41421C5.75245 6.74755 6.08579 6.41421 6.08579 6C6.08579 5.58579 5.75245 5.25245 5.08579 4.58579L1.5 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>   

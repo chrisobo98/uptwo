@@ -97,16 +97,13 @@
                   <h2
                     class="text-white text-4xl font-bold font-manrope leading-normal lg:text-start text-center"
                   >
-                    Revolutionizing Project Management
+                    Lorem Upsum
                   </h2>
                 </div>
                 <p
                   class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center"
                 >
-                  SAP is a leading provider of innovative project management
-                  solutions designed to empower organizations to achieve their
-                  goals efficiently and effectively. With a commitment to
-                  excellence.
+                  Add call to action text here 
                 </p>
               </div>
               <button
