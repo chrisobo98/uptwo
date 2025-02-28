@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     'v-gsap-nuxt',
     '@nuxt/image',
     '@nuxtjs/seo',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/google-fonts',
   ],
   css: ['~/assets/css/main.css'],
 })
