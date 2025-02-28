@@ -48,7 +48,7 @@
               <img
                 v-gsap.magnetic.weak
                 ref="tabImage"
-                class="rounded-2xl object-cover"
+                class="rounded-2xl h-80 w-full object-right-top md:object-center md:h-auto md:w-auto object-cover"
                 :src="activeTabData.src"
                 alt="About Us image"
               />
@@ -61,7 +61,7 @@
                   class="w-full flex-col justify-start lg:items-start items-center gap-3 flex"
                 >
                   <p
-                    class="text-white text-3xl leading-relaxed lg:text-start text-center"
+                    class="text-white md:text-3xl leading-relaxed lg:text-start text-center"
                   >
                     {{ activeTabData.description }}
                   </p>
@@ -73,7 +73,6 @@
       </div>
     </div>
   </section>
-  <section class="py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div
         class="w-full flex-col justify-start items-start lg:gap-14 gap-10 inline-flex"
@@ -82,66 +81,8 @@
           class="w-full justify-start items-center lg:gap-8 gap-6 grid lg:grid-cols-2 grid-cols-1"
         >
           <div
-            class="w-full flex-col justify-start items-start lg:gap-10 gap-6 inline-flex"
+            class="w-full flex-col justify-start items-start lg:gap-10 gap-6 inline-flex mb-12 md:mb-0"
           >
-            <div
-              class="flex-col justify-start lg:items-start items-center gap-6 flex"
-            >
-              <div
-                class="flex-col justify-start lg:items-start items-center gap-4 flex"
-              >
-                <div
-                  class="flex-col justify-start lg:items-start items-center gap-3 flex"
-                >
-                  <div
-                    v-gsap.whenVisible.from="{
-                      opacity: 0,
-                      y: 50,
-                      stagger: 0.4,
-                    }"
-                    class="justify-start lg:items-start items-center inline-flex"
-                  >
-                    <div
-                      v-gsap.whenVisible.from="{
-                        opacity: 0,
-                        y: 50,
-                        stagger: 0.4,
-                      }"
-                      class="px-2.5 py-0.5 bg-yellow-100 rounded-full justify-start items-center gap-1.5 flex"
-                    >
-                      <span
-                        class="text-center text-yellow-600 text-xs font-medium leading-normal"
-                        >About Us</span
-                      >
-                    </div>
-                  </div>
-                  <h2
-                    v-gsap.whenVisible.from="{
-                      opacity: 0,
-                      y: 50,
-                      stagger: 0.4,
-                    }"
-                    class="text-white text-4xl font-bold font-manrope leading-normal lg:text-start text-center"
-                  >
-                    Lorem Upsum
-                  </h2>
-                </div>
-                <p
-                  class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center"
-                  v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
-                >
-                  Add call to action text here
-                </p>
-              </div>
-              <button
-                v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
-                class="sm:w-fit w-full px-3.5 py-2 bg-yellow-600 hover:bg-yellow-800 transition-all duration-700 ease-in-out rounded-full shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"
-              >
-                <span class="px-1.5 text-white text-sm font-medium leading-6"
-                  >Contact Us</span
-                >
-              </button>
-            </div>
             <div
               v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
               class="w-full justify-start items-center gap-5 grid md:grid-cols-2 sm:grid-cols-2 grid-cols-1"
@@ -188,7 +129,7 @@
           </div>
           <img
             v-gsap.magnetic
-            class="w-full lg:h-full h-auto rounded-xl object-cover"
+            class="w-11/12 md:w-full mx-auto lg:h-full h-auto rounded-xl object-cover"
             src="https://pagedone.io/asset/uploads/1724388858.png"
             alt="About Us image"
           />
@@ -200,7 +141,10 @@
           <div
             class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
-            <div v-gsap.magnetic.weak class="flex-col justify-start items-start gap-2 flex">
+            <div
+              v-gsap.magnetic.weak
+              class="flex-col justify-start items-start gap-2 flex"
+            >
               <div class="justify-start items-center gap-1.5 inline-flex">
                 <div
                   class="w-6 h-6 px-1 py-[3px] justify-center items-center flex"
@@ -242,7 +186,10 @@
           <div
             class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
-            <div v-gsap.magnetic.weak class="flex-col justify-start items-start gap-2 flex">
+            <div
+              v-gsap.magnetic.weak
+              class="flex-col justify-start items-start gap-2 flex"
+            >
               <div class="justify-start items-center gap-1.5 inline-flex">
                 <div class="w-6 h-6 relative">
                   <svg
@@ -279,7 +226,10 @@
           <div
             class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
-            <div v-gsap.magnetic.weak class="flex-col justify-start items-start gap-2 flex">
+            <div
+              v-gsap.magnetic.weak
+              class="flex-col justify-start items-start gap-2 flex"
+            >
               <div class="justify-start items-center gap-1.5 inline-flex">
                 <div
                   class="w-6 h-6 px-0.5 py-[3px] justify-center items-center flex"
@@ -310,7 +260,6 @@
         </div>
       </div>
     </div>
-  </section>
 
   <SubscribeForm />
 </template>
