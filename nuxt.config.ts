@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-swiper', 'v-gsap-nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'nuxt-swiper',
+    'v-gsap-nuxt',
+    '@nuxt/image',
+    '@nuxtjs/seo',
+  ],
   css: ['~/assets/css/main.css'],
 })
