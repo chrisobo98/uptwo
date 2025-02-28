@@ -36,7 +36,7 @@
               </div>
               <!-- Image -->
               <div class="w-5/6 mx-auto xl:col-span-7 lg:col-span-6">
-                <img
+                <img v-gsap.magneticv-gsap.magnetic.weak
                   v-gsap.from="{
                     opacity: 0,
                     x: 100,
@@ -84,7 +84,7 @@
                         {{ slide.description }}
                       </p>
                     </div>
-                    <img
+                    <img v-gsap.magneticv-gsap.magnetic.weak
                       class="h-auto w-auto object-cover md:mt-24 rounded-lg"
                       :src="slide.img"
                       alt="image description"
@@ -123,7 +123,7 @@
         </section>
       </div>
 
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-auto">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-auto overflow-y-none">
         <h1  v-gsap.whenVisible.to="{ x: -300, start: 'top bottom', end: 'bottom top', scrub: 1.5 }"
           class="text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-show"
         >
@@ -134,8 +134,6 @@
         <h1  v-gsap.whenVisible.to="{ x: 300, start: 'top bottom', end: 'bottom top', scrub: 2.5 }"
           class="text-white font-extrabold font-manrope text-5xl"
         >
-          Integrity <span class="text-yellow-600">Visuals</span>          Thrill <span class="text-yellow-600">Visuals</span>
-          Exploration <span class="text-yellow-600"></span>
           Integrity <span class="text-yellow-600">Visuals</span>          Thrill <span class="text-yellow-600">Visuals</span>
           Exploration <span class="text-yellow-600"></span>
           <br />
@@ -161,7 +159,7 @@
                   :key="index"
                 >
                   <div class="grid grid-cols-2 gap-4">
-                    <img
+                    <img v-gsap.magneticv-gsap.magnetic.weak
                       class="h-auto w-auto object-cover md:mt-24 rounded-lg"
                       :src="slide.img"
                       alt="image description"
@@ -495,7 +493,7 @@
                 </p>
                 <div class="flex items-center">
                   <div class="flex items-center gap-4">
-                    <img
+                    <img 
                       src="https://pagedone.io/asset/uploads/1704351062.png"
                       alt="Wyatt image"
                       class="w-6 h-6 rounded-full object-cover"

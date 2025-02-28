@@ -29,7 +29,7 @@
         <div v-for="tab in tabs" :key="tab.id" v-show="activeTab === tab.id" class="grid lg:grid-cols-2 gap-8"
           ref="tabContent">
           <!-- Image with GSAP Animation -->
-          <img v-gsap.magneticv-gsap.magnetic :src="tab.image" alt="Feature image" class="mx-auto max-h-72 w-full object-cover rounded-3xl"
+          <img v-gsap.magneticv-gsap.magnetic.weak :src="tab.image" alt="Feature image" class="mx-auto max-h-72 w-full object-cover rounded-3xl"
             ref="tabImage">
           <!-- Content with GSAP Animation -->
           <div class="flex flex-col gap-6 py-6" ref="tabText">
