@@ -1,3 +1,40 @@
+/* Global Styles */
 body {
-    background-color: black;
-  }
+  font-family: 'Lora', serif;
+  color: #ffffff; /* Default text color */
+  background-color: #000000; /* Default background color */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700; /* Bold for headings */
+  color: #ffffff; /* White text for headings */
+}
+
+/* Subheadings and Quotes */
+.subheading, blockquote {
+  font-family: 'Lora', serif;
+  font-weight: 400; /* Regular weight */
+  font-style: italic;
+  color: #d1d5db; /* Light gray for subheadings */
+}
+
+/* Body Text */
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Regular weight */
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
+  color: #d1d5db; /* Light gray for body text */
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Buttons */
+button {
+  font-family: 'Montserrat', sans-serif;
+}

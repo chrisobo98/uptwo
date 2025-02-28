@@ -123,21 +123,18 @@
         </section>
       </div>
 
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-auto overflow-y-none">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-none overflow-y-none">
         <h1  v-gsap.whenVisible.to="{ x: -300, start: 'top bottom', end: 'bottom top', scrub: 1.5 }"
-          class="text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-show"
+          class="text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-none"
         >
           Luxury <span class="text-yellow-600">Visuals</span>          Storytelling <span class="text-yellow-600">Brands</span>
-          Storytelling <span class="text-yellow-600"></span>
-          <br />
+          Story <span class="text-yellow-600"></span>
         </h1>
         <h1  v-gsap.whenVisible.to="{ x: 300, start: 'top bottom', end: 'bottom top', scrub: 2.5 }"
           class="text-white font-extrabold font-manrope text-5xl"
         >
           Integrity <span class="text-yellow-600">Visuals</span>          Thrill <span class="text-yellow-600">Visuals</span>
           Exploration <span class="text-yellow-600"></span>
-          <br />
-
 
         </h1>
       </div>
