@@ -27,7 +27,7 @@
             >
               <li v-for="tab in tabs" :key="tab.id">
                 <button
-                  @click="activeTab = tab.id"
+                  @click="changeTab(tab.id)"
                   :class="[
                     'group w-full flex items-center justify-center pb-2.5 border-b border-transparent text-gray-400 text-base font-medium leading-relaxed transition-all duration-700 ease-in-out hover:text-yellow-600 hover:border-yellow-600',
                     { 'border-yellow-600 text-yellow-600': isActive(tab.id) },
@@ -44,20 +44,23 @@
             <div
               class="w-full justify-start items-center lg:gap-9 gap-7 flex lg:flex-row flex-col"
             >
+              <!-- Image with GSAP Animation -->
               <img
-                v-gsap.magnetic
+                v-gsap.magnetic.weak
+                ref="tabImage"
                 class="rounded-2xl object-cover"
                 :src="activeTabData.src"
                 alt="About Us image"
               />
+              <!-- Text with GSAP Animation -->
               <div
+                ref="tabText"
                 class="w-full pt-2.5 flex-col justify-start lg:items-start items-center lg:gap-10 gap-6 inline-flex"
               >
                 <div
                   class="w-full flex-col justify-start lg:items-start items-center gap-3 flex"
                 >
                   <p
-                    v-gsap.from="{ autoAlpha: 0 }"
                     class="text-white text-3xl leading-relaxed lg:text-start text-center"
                   >
                     {{ activeTabData.description }}
@@ -91,9 +94,19 @@
                   class="flex-col justify-start lg:items-start items-center gap-3 flex"
                 >
                   <div
+                    v-gsap.whenVisible.from="{
+                      opacity: 0,
+                      y: 50,
+                      stagger: 0.4,
+                    }"
                     class="justify-start lg:items-start items-center inline-flex"
                   >
                     <div
+                      v-gsap.whenVisible.from="{
+                        opacity: 0,
+                        y: 50,
+                        stagger: 0.4,
+                      }"
                       class="px-2.5 py-0.5 bg-yellow-100 rounded-full justify-start items-center gap-1.5 flex"
                     >
                       <span
@@ -103,6 +116,11 @@
                     </div>
                   </div>
                   <h2
+                    v-gsap.whenVisible.from="{
+                      opacity: 0,
+                      y: 50,
+                      stagger: 0.4,
+                    }"
                     class="text-white text-4xl font-bold font-manrope leading-normal lg:text-start text-center"
                   >
                     Lorem Upsum
@@ -110,11 +128,13 @@
                 </div>
                 <p
                   class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center"
+                  v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
                 >
                   Add call to action text here
                 </p>
               </div>
               <button
+                v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
                 class="sm:w-fit w-full px-3.5 py-2 bg-yellow-600 hover:bg-yellow-800 transition-all duration-700 ease-in-out rounded-full shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"
               >
                 <span class="px-1.5 text-white text-sm font-medium leading-6"
@@ -123,6 +143,7 @@
               </button>
             </div>
             <div
+              v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
               class="w-full justify-start items-center gap-5 grid md:grid-cols-2 sm:grid-cols-2 grid-cols-1"
             >
               <div
@@ -173,12 +194,13 @@
           />
         </div>
         <div
-          class="w-full justify-start items-center lg:gap-8 gap-6 grid md:grid-cols-3 grid-cols-1"
+          class="w-full justify-start items-center lg:gap-8 gap-6 grid md:grid-cols-3 grid-cols-1 mt-20"
         >
+          <!-- story -->
           <div
             class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
-            <div class="flex-col justify-start items-start gap-2 flex">
+            <div v-gsap.magnetic.weak class="flex-col justify-start items-start gap-2 flex">
               <div class="justify-start items-center gap-1.5 inline-flex">
                 <div
                   class="w-6 h-6 px-1 py-[3px] justify-center items-center flex"
@@ -216,10 +238,11 @@
               </p>
             </div>
           </div>
+          <!-- Vision -->
           <div
             class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
-            <div class="flex-col justify-start items-start gap-2 flex">
+            <div v-gsap.magnetic.weak class="flex-col justify-start items-start gap-2 flex">
               <div class="justify-start items-center gap-1.5 inline-flex">
                 <div class="w-6 h-6 relative">
                   <svg
@@ -252,10 +275,11 @@
               </p>
             </div>
           </div>
+          <!-- Purpose -->
           <div
             class="lg:p-6 p-4 rounded-2xl border border-gray-200 hover:border-yellow-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex"
           >
-            <div class="flex-col justify-start items-start gap-2 flex">
+            <div v-gsap.magnetic.weak class="flex-col justify-start items-start gap-2 flex">
               <div class="justify-start items-center gap-1.5 inline-flex">
                 <div
                   class="w-6 h-6 px-0.5 py-[3px] justify-center items-center flex"
@@ -291,11 +315,9 @@
   <SubscribeForm />
 </template>
 
-<!-- JavaScript for Tabs -->
-
 <script setup lang="ts">
-import { ref, computed } from "vue";
-import SubscribeForm from "../components/SubscribeForm.vue";
+import { ref, computed, watch } from "vue";
+import gsap from "gsap";
 
 const activeTab = ref("tabs-with-pill-1");
 
@@ -329,12 +351,57 @@ const isActive = (tabId: string) => activeTab.value === tabId;
 const activeTabData = computed(() =>
   tabs.find((tab) => tab.id === activeTab.value)
 );
+
+// Refs for GSAP animations
+const tabImage = ref(null);
+const tabText = ref(null);
+
+// Function to change tabs with animations
+const changeTab = (tabId: string) => {
+  // Animate out the current content
+  gsap.to([tabImage.value, tabText.value], {
+    opacity: 0,
+    y: 20,
+    duration: 0.3,
+    ease: "power2.out",
+    onComplete: () => {
+      // Update the active tab
+      activeTab.value = tabId;
+
+      // Animate in the new content
+      gsap.fromTo(
+        [tabImage.value, tabText.value],
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          delay: 0.2,
+        }
+      );
+    },
+  });
+};
+
+// Watch for tab changes and animate content
+watch(activeTab, () => {
+  if (tabImage.value && tabText.value) {
+    gsap.fromTo(
+      [tabImage.value, tabText.value],
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+        delay: 0.2,
+      }
+    );
+  }
+});
 </script>
 
-<!-- Custom Style -->
 <style>
-[data-tab].active {
-  border-color: rgb(79 70 229);
-  color: rgb(79 70 229);
-}
+/* Optional: Add custom styles if needed */
 </style>

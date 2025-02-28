@@ -21,7 +21,7 @@
 
       <!-- Centered Logo -->
       <div class="absolute left-1/2 transform -translate-x-1/2">
-        <img class="h-20 w-20" src="assets/css/uptwologo.png" />
+        <img v-gsap.magnetic class="h-20 w-20" src="assets/css/uptwologo.png" />
       </div>
 
       <!-- Desktop Menu -->

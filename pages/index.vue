@@ -7,7 +7,7 @@
         autoplay
         loop
         muted
-        class="swiper-slide w-full bg-no-repeat bg-cover bg-center md:pt-[84px] md:pb-24 md:min-h-[800px] relative"
+        class="swiper-slide w-full bg-no-repeat bg-cover bg-center md:pt-[84px] md:pb-24 min-h-[800px] relative"
       >
         <source src="assets/css/Final Comp.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -15,7 +15,7 @@
 
 
     </section>
-    <div class="swiper mySwiper md:w-4/5 mx-auto md:rounded-2xl">
+    <div class="swiper mySwiper md:w-4/5 mx-auto rounded-2xl">
         <div class="swiper-wrapper">
           <div
             v-for="(slide, index) in slides"
@@ -44,10 +44,10 @@
                           class="flex-col justify-start items-start gap-2 flex mt-8"
                         >
                           <h2
-                          v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
+                            v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
                             v-gsap.animateText
                             v-gsap.from="{ opacity: 0, y: 50, stagger: 1.0 }"
-                            class="text-white md:text-7xl text-6xl font-bold font-manrope md:leading-snug leading-snug"
+                            class="text-white text-5xl font-bold font-manrope md:leading-snug leading-snug"
                           >
                             Your Story. Your Brand. Our Pen.
                           </h2>
@@ -200,7 +200,6 @@ export default {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      pagination: { el: ".swiper-pagination", type: "fraction" },
     });
   },
 };
@@ -227,7 +226,7 @@ export default {
 }
 .swiper-pagination {
   color: #9ca3af;
-  font-size: 30px;
+  font-size: 0px;
   font-weight: 400;
   line-height: 46px;
   position: absolute;

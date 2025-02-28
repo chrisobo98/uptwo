@@ -1,5 +1,20 @@
 <template>
   <section class="py-24 relative">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
+        class="text-center mb-10"
+      >
+        <h2 class="text-3xl font-bold text-white leading-normal">
+          Lorem <span class="text-yellow-600">Ipsum & Ipsum</span>
+        </h2>
+        <p class="text-lg text-gray-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          fringilla imperdiet scelerisque. teger finibus, mi ique rhoncus
+          consectetur.
+        </p>
+      </div>
+    </div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="w-full">
         <div class="block lg:flex items-center justify-between mb-4">
@@ -9,7 +24,8 @@
             <h2
               class="font-manrope font-bold text-5xl text-white md:text-left text-center"
             >
-              Ivan, The Investor Kid: The ABCs of <span class="text-yellow-600">  How Money Works</span>
+              Ivan, The Investor Kid: The ABCs of
+              <span class="text-yellow-600"> How Money Works</span>
             </h2>
           </div>
         </div>
@@ -123,12 +139,13 @@
         <div class="grid grid-cols-12 gap-8 mt-8 mb-12">
           <div class="img-box col-span-12 md:col-span-6">
             <img
+              v-gsap.magnetic.weak
               src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Cover.jpg/:/cr=t:0%25,l:3.11%25,w:93.78%25,h:100%25/rs=w:400,h:533.3333333333334,cg:true"
               alt="red dots top image"
               class="max-lg:mx-auto rounded-3xl object-cover"
             />
           </div>
-<div class="col-span-12 md:col-span-6">
+          <div class="col-span-12 md:col-span-6">
             <h5
               class="font-manrope font-semibold text-2xl leading-9 text-white mb-5"
             >
@@ -187,15 +204,22 @@
               </button>
             </div>
           </div>
-        </div></div>
         </div>
+      </div>
+    </div>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="bg-yellow-600 rounded-2xl p-8 xl:p-11">
-        <h2 class="font-manrope text-4xl text-white text-center font-bold mb-6">
+        <h2
+          v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
+          class="font-manrope text-4xl text-white text-center font-bold mb-6"
+        >
           Bookshelf
         </h2>
-        <p class="text-center mb-6 text-white">
+        <p
+          v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
+          class="text-center mb-6 text-white"
+        >
           The upTWo writing staff is looking forward to the release of several
           outstanding books in the upcoming quarters. The author and founder of
           upTWo, T.W. Alexander, is excited about the release of "Ivan, the
@@ -206,6 +230,7 @@
           class="md:flex-row gap-5 flex-col flex items-center justify-center"
         >
           <a
+            v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0 }"
             href="#"
             class="border border-gray-300 shadow-sm rounded-full font-semibold text-white block py-3.5 px-7"
             >More about author</a
@@ -219,5 +244,5 @@
 </template>
 
 <script>
-import ComingSoon from '../components/ComingSoon.vue'
+import ComingSoon from "../components/ComingSoon.vue";
 </script>
