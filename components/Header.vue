@@ -25,7 +25,7 @@
       </div>
 
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-6">
+      <ul class="hidden lg:flex space-x-6">
         <li><NuxtLink to="/about" class="hover:text-yellow-500 text-gray-400">About</NuxtLink></li>
         <li><NuxtLink to="/services" class="hover:text-yellow-500 text-gray-400">Services</NuxtLink></li>
         <li><NuxtLink to="/portfolio" class="hover:text-yellow-500 text-gray-400">Portfolio</NuxtLink></li>
@@ -35,7 +35,7 @@
       </ul>
 
       <!-- Mobile Menu Button -->
-      <button @click="toggleMenu" class="md:hidden focus:outline-none">
+      <button @click="toggleMenu" class="lg:hidden focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -44,7 +44,7 @@
 
     <!-- Mobile Menu -->
     <transition>
-      <ul v-if="menuOpen" class="md:hidden bg-white shadow-md p-4 space-y-4">
+      <ul v-if="menuOpen" class="lg:hidden bg-white shadow-md p-4 space-y-4">
         <li><NuxtLink to="/about" class="hover:text-yellow-500 text-gray-400">About</NuxtLink></li>
         <li><NuxtLink to="/services" class="hover:text-yellow-500 text-gray-400">Services</NuxtLink></li>
         <li><NuxtLink to="/portfolio" class="hover:text-yellow-500 text-gray-400">Portfolio</NuxtLink></li>
