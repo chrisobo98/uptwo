@@ -1,12 +1,26 @@
 <template>
   <div>
-    <section class="w-full h-screen">
-      <div class="swiper mySwiper ">
-        <div class="swiper-wrapper ">
+    <section class="w-full h-auto mt-12">
+      <video
+        width="auto"
+        height="auto"
+        autoplay
+        loop
+        muted
+        class="swiper-slide w-full bg-no-repeat bg-cover bg-center md:pt-[84px] md:pb-24 md:min-h-[800px] relative"
+      >
+        <source src="assets/css/Final Comp.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+
+    </section>
+    <div class="swiper mySwiper md:w-4/5 mx-auto md:rounded-2xl">
+        <div class="swiper-wrapper">
           <div
             v-for="(slide, index) in slides"
             :key="index"
-            class="swiper-slide w-full bg-no-repeat bg-cover bg-center pt-[84px] pb-24 min-h-[800px] relative"
+            class="swiper-slide w-full bg-no-repeat bg-cover bg-center pb-24 min-h-[600px] relative"
             :style="{ backgroundImage: `url(${slide.image})` }"
           >
             <!-- Background overlay using ::before -->
@@ -26,77 +40,64 @@
                       <div
                         class="flex-col justify-start items-start gap-4 flex"
                       >
-                        <h5
-                          class="text-white text-lg font-medium leading-relaxed"
-                        >
-                          <div
-                            class="border border-yellow-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-4"
-                          >
-                            <span
-                              class="font-inter text-xs font-medium text-white ml-3"
-                            >
-                              {{ slide.highlight }}
-                            </span>
-                            <a
-                              href="javascript:;"
-                              class="w-8 h-8 rounded-full flex justify-center items-center bg-yellow-600"
-                            >
-                              <svg
-                                width="17"
-                                height="16"
-                                viewBox="0 0 17 16"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M2.83398 8.00019L12.9081 8.00019M9.75991 11.778L13.0925 8.44541C13.3023 8.23553 13.4073 8.13059 13.4073 8.00019C13.4073 7.86979 13.3023 7.76485 13.0925 7.55497L9.75991 4.22241"
-                                  stroke="white"
-                                  stroke-width="1.6"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </h5>
                         <div
-                          class="flex-col justify-start items-start gap-2 flex"
+                          class="flex-col justify-start items-start gap-2 flex mt-8"
                         >
                           <h2
+                            v-gsap.animateText
+                            v-gsap.from="{ opacity: 0, y: 50, stagger: 1.0 }"
                             class="text-white md:text-7xl text-6xl font-bold font-manrope md:leading-snug leading-snug"
                           >
-                            Your Story. Your Brand. Our Pen. <br />Our Passion
+                            Your Story. Your Brand. Our Pen.
+                          </h2>
+                          <h2
+                            v-gsap.animateText
+                            v-gsap.from="{ opacity: 0, y: 50, stagger: 1.0 }"
+                            class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope md:leading-snug leading-snug"
+                          >
+                            Our Passion
                           </h2>
                           <p
-                            class="lg:max-w-xl w-full text-gray-200/80 text-lg font-normal leading-normal"
+                            v-gsap.animateText.slow
+                            v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
+                            class="lg:max-w-xl w-full text-gray-200/80 text-2xl font-normal leading-normal"
                           >
                             Driving Growth Through Strategy and Storytelling
                           </p>
                         </div>
                       </div>
-                      <button
-                        class="px-5 py-2.5 bg-white hover:bg-gray-200 transition-all duration-700 ease-in-out rounded-xl shadow-sm justify-center items-center flex"
+                      <h5
+                        class="text-white text-lg font-medium leading-relaxed"
                       >
-                        <span
-                          class="px-2 py-px text-gray-900 text-base font-semibold leading-relaxed"
-                          >Learn More</span
+                        <div
+                          v-gsap.from="{ opacity: 0, y: 50, delay: 4.5 }"
+                          class="border border-yellow-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-12 md:mb-4"
                         >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                        >
-                          <path
-                            d="M4.5845 4.99988L9.5847 10.0001L4.58154 15.0032M10.4178 4.99988L15.418 10.0001L10.4149 15.0032"
-                            stroke="#111827"
-                            stroke-width="1.6"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </button>
+                          <span class="font-light text-lg text-white ml-3">
+                            {{ slide.highlight }}
+                          </span>
+                          <a
+                            href="javascript:;"
+                            class="w-8 h-8 rounded-full flex justify-center items-center bg-yellow-600"
+                          >
+                            <svg
+                              width="17"
+                              height="16"
+                              viewBox="0 0 17 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M2.83398 8.00019L12.9081 8.00019M9.75991 11.778L13.0925 8.44541C13.3023 8.23553 13.4073 8.13059 13.4073 8.00019C13.4073 7.86979 13.3023 7.76485 13.0925 7.55497L9.75991 4.22241"
+                                stroke="white"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </h5>
                     </div>
                   </div>
                 </div>
@@ -151,9 +152,9 @@
           class="swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal lg:top-[40%] lg:-left-[18%] left-[-48%]"
         ></div>
       </div>
-    </section>
+    <SubscribeForm />
+
   </div>
-            <SubscribeForm />
 </template>
 
 <script>
@@ -205,7 +206,7 @@ export default {
 <style>
 .swiper-wrapper {
   height: max-content !important;
-  padding-bottom: 56px;
+  padding-bottom: 100px;
 }
 .swiper-scrollbar {
   width: 196px !important;

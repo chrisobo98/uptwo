@@ -15,16 +15,16 @@
             </div>
           </div>
           <div class="w-full lg:w-1/2">
-            <h2
+            <h2 v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
               class="font-manrope text-4xl font-bold text-gray-900 leading-[3.5rem] mb-7 text-center lg:text-left"
             >
               Subscribe to newsletter
             </h2>
-            <p class="text-gray-500 leading-6 mb-8 text-center lg:text-left">
+            <p v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }" class="text-gray-500 leading-6 mb-8 text-center lg:text-left">
               Join our community of subscribers and receive regular updates
               delivered straight to your inbox. It's quick, easy, and free
             </p>
-            <ul class="grid gap-5 mb-8 lg:mb-24">
+            <ul class="grid gap-5 mb-8 lg:mb-24" v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }">
               <li
                 class="flex items-center gap-3 text-yellow-600 justify-center lg:justify-start"
               >
