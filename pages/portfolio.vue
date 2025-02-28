@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <section class="pt-5 lg:pt-20 overflow-x-hidden">
+    <section class="pt-20 overflow-x-hidden">
       <!-- Hero Section -->
           <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div
@@ -35,7 +34,7 @@
                 </p>
               </div>
               <!-- Image -->
-              <div class="w-5/6 mx-auto xl:col-span-7 lg:col-span-6">
+              <div class="w-5/6 mx-auto xl:col-span-7 lg:col-span-6 mb-12 md:mb-0">
                 <img v-gsap.magneticv-gsap.magnetic.weak
                   v-gsap.from="{
                     opacity: 0,
@@ -124,14 +123,20 @@
       </div>
 
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-none overflow-y-none">
+        <h1  v-gsap.whenVisible.to="{ x: 50, start: 'top bottom', end: 'bottom top', scrub: 1.5 }"
+          class="md:hidden text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-none"
+        >
+          Luxury <span class="text-yellow-600">Visuals</span>          Storytelling <span class="text-yellow-600">Brands</span>
+          Story <span class="text-yellow-600"></span>
+        </h1>
         <h1  v-gsap.whenVisible.to="{ x: -300, start: 'top bottom', end: 'bottom top', scrub: 1.5 }"
-          class="text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-none"
+          class="hidden md:block text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-none"
         >
           Luxury <span class="text-yellow-600">Visuals</span>          Storytelling <span class="text-yellow-600">Brands</span>
           Story <span class="text-yellow-600"></span>
         </h1>
         <h1  v-gsap.whenVisible.to="{ x: 300, start: 'top bottom', end: 'bottom top', scrub: 2.5 }"
-          class="text-white font-extrabold font-manrope text-5xl"
+          class="hidden md:block text-white font-extrabold font-manrope text-5xl"
         >
           Integrity <span class="text-yellow-600">Visuals</span>          Thrill <span class="text-yellow-600">Visuals</span>
           Exploration <span class="text-yellow-600"></span>
@@ -217,13 +222,10 @@
         class="flex justify-center items-center gap-y-8 md:gap-y-0 flex-wrap md:flex-wrap xl:flex-nowrap xl:flex-row xl:justify-between xl:gap-x-8 max-w-lg md:max-w-3xl lg:max-w-4xl mx-auto xl:max-w-full"
       >
         <div v-gsap.whenVisible.delay-1000.stagger.from="{ opacity: 0, x: -40 }" class="w-full xl:w-1/3">
-          <span class="text-sm text-yellow-600 font-medium mb-4 block"
-            >Brand Strategist Testimonials</span
-          >
           <h2
             class="font-manrope text-4xl font-bold text-white leading-[3.25rem] mb-4"
           >
-            What our clients say about us
+            What our clients say <span class="text-yellow-600"> about us</span>
           </h2>
           <p class="text-base text-gray-400 mb-14">
             knowledge, expertise, advices & confidence
@@ -251,7 +253,7 @@
         <div class="w-full xl:w-2/3 relative md:-mt-20 xl:mt-0">
           <div class="flex flex-col items-center md:flex-row gap-8">
             <div class="w-full xl:w-1/2">
-              <div v-gsap.parallax.faster-n10 class="bg-white shadow-sm rounded-2xl p-8">
+              <div v-gsap.parallax.faster class="bg-white shadow-sm rounded-2xl p-8 mt-14 md:mt-0">
                 <div
                   class="flex items-center gap-2 text-amber-500 transition-all duration-500"
                 >
@@ -330,7 +332,7 @@
                       alt="Emily image"
                       class="w-6 h-6 rounded-full object-cover"
                     />
-                    <h6 class="font-medium text-white">C.E.O., Founder</h6>
+                    <h6 class="font-medium text-black">C.E.O., Founder</h6>
                   </div>
                   <span
                     class="text-sm font-medium text-yellow-600 ml-4 pl-4 border-l border-solid border-gray-300"
@@ -413,7 +415,7 @@
                       alt="Olivia image"
                       class="w-6 h-6 rounded-full object-cover"
                     />
-                    <h6 class="font-medium text-white">Co-Founder</h6>
+                    <h6 class="font-medium text-black">Co-Founder</h6>
                   </div>
                   <span
                     class="text-sm font-medium text-yellow-600 ml-4 pl-4 border-l border-solid border-gray-300"
@@ -495,7 +497,7 @@
                       alt="Wyatt image"
                       class="w-6 h-6 rounded-full object-cover"
                     />
-                    <h6 class="font-medium text-white">C.E.O</h6>
+                    <h6 class="font-medium text-black">C.E.O</h6>
                   </div>
                   <span
                     class="text-sm font-medium text-yellow-600 ml-4 pl-4 border-l border-solid border-gray-300"
@@ -703,7 +705,6 @@
         </div>
       </div>
     </section>
-  </div>
 </template>
 
 <script setup>
