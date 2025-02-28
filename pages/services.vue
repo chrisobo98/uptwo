@@ -12,11 +12,11 @@
       </div>
 
       <!-- Tabs -->
-      <div class="flex justify-center overflow-auto">
+      <div class="flex justify-center overflow-auto py-8 md:py-0">
         <ul class="w-full flex flex-nowrap border-gray-200 p-1 lg:border lg:rounded-full">
-          <li v-for="tab in tabs" :key="tab.id" class="w-full">
+          <li v-for="tab in tabs" :key="tab.id" class="w-full px-1">
             <button @click="changeTab(tab.id)"
-              class="group w-full flex items-center justify-center gap-2 py-2 px-5 rounded-full text-sm font-medium text-white hover:text-yellow-600 transition-all duration-300 ease-in-out"
+              class="group w-full flex items-center justify-center py-2 px-5 rounded-full text-sm font-medium text-white hover:text-yellow-600 transition-all duration-300 ease-in-out"
               :class="{ 'text-yellow-600 bg-yellow-50': activeTab === tab.id }">
               {{ tab.title }}
             </button>
@@ -25,15 +25,15 @@
       </div>
 
       <!-- Tab Content -->
-      <div class="lg:pt-10 pt-8 min-h-[32rem]">
+      <div class="lg:pt-10 pt-8 min-h-[40rem]">
         <div v-for="tab in tabs" :key="tab.id" v-show="activeTab === tab.id" class="grid lg:grid-cols-2 gap-8"
           ref="tabContent">
           <!-- Image with GSAP Animation -->
-          <img v-gsap.magneticv-gsap.magnetic.weak :src="tab.image" alt="Feature image" class="mx-auto max-h-72 w-full object-cover rounded-3xl"
+          <img v-gsap.magneticv-gsap.magnetic.weak :src="tab.image" alt="Feature image" class="mx-auto max-h-[520px] w-full object-cover rounded-3xl"
             ref="tabImage">
           <!-- Content with GSAP Animation -->
-          <div class="flex flex-col gap-6 py-6" ref="tabText">
-            <h2 class="text-white text-2xl font-semibold">{{ tab.heading }}</h2>
+          <div class="flex flex-col gap-6 py-6 md:px-12 md:pt-14" ref="tabText">
+            <h2 class="text-white text-5xl font-semibold">{{ tab.heading }}</h2>
             <p class="text-gray-400 text-base">{{ tab.description }}</p>
             <ul class="flex flex-col gap-3">
               <li v-for="feature in tab.features" :key="feature.title" class="flex gap-3 items-center">
