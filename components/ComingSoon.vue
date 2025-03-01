@@ -1,51 +1,56 @@
 <template>
-  <section class="relative">
-    <div class="w-full max-w-7xl px-6 lg:px-8 mx-auto">
+  <section class="relative my-24">
+    <div class="w-full max-w-7xl px-6 lg:px-8 mx-auto mt-12">
       <div
         class="flex h-screen items-center justify-between flex-col sm:flex-row gap-y-4 mb-5"
       >
-        <h2 v-gsap.whenVisible.animateText.once class=" font-manrope text-9xl text-white my-8">
+        <h2
+          v-gsap.whenVisible.animateText.once
+          class="font-manrope xl:text-9xl lg:text-6xl text-7xl text-white my-8"
+        >
           A thrilling best-selling fantasy novel is set to hit the shelves in
           July 2025!
         </h2>
-        <div class="flex justify-center items-center gap-6"></div>
       </div>
     </div>
-    <div class="swiper mySwiper mb-10 py-10">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="w-full h-full max-h-[456px]">
-            <img
-              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/StellarIV-Hardcover-M%20(1).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
-              alt=""
-              class="w-100 h-100 object-cover mx-auto"
-            />
-          </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:mb-20 -mt-80 md:mt-0">
+      <div class="flex justify-between items-center flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2">
+          <h2
+            class="font-manrope text-5xl text-white max-w-lg font-bold leading-[4rem] mb-7 text-center md:text-left"
+          >
+            Stellar IV: The Agents of Zierlux
+          </h2>
+          <p class="text-lg text-gray-400 mb-16 text-center md:text-left">
+            Coming Soon
+          </p>
+          <button
+            class="cursor-pointer py-3 px-8 w-60 bg-yellow-600 text-white text-base font-semibold transition-all duration-500 block text-center md:text-left rounded-full hover:bg-yellow-700 mx-auto md:mx-0 lg:mx-0"
+          >
+            Learn More
+          </button>
         </div>
-        <div class="swiper-slide">
-          <div class="w-full h-full max-h-[456px]">
+        <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 mt-16 max-lg:max-w-2xl">
+          <div
+            class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8 md:-mt-20"
+          >
             <img
+            v-gsap.parallax.faster
               src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Main%20Promo.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
-              alt=""
-              class="w-100 h-100 object-cover mx-auto"
+              alt="Team tailwind section"
+              class="w-full h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0"
             />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="w-full h-full max-h-[456px]">
             <img
+            v-gsap.parallax.faster-10
               src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/StellarIV-eBook.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
-              alt=""
-              class="w-full h-full object-cover mx-auto"
+              alt="Team tailwind section"
+              class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto"
             />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="w-full h-full max-h-[456px]">
             <img
-              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Main%20Promo.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
-              alt=""
-              class="w-full h-full object-cover mx-auto"
+            v-gsap.parallax.faster-5
+              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/StellarIV-Hardcover-M%20(1).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
+              alt="Team tailwind section"
+              class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0"
             />
           </div>
         </div>
@@ -54,62 +59,4 @@
   </section>
 </template>
 
-<script>
-import Swiper from "swiper";
-import "swiper/css";
-
-export default {
-  data() {
-    return {
-      images: [
-        "https://pagedone.io/asset/uploads/1707712046.png",
-        "https://pagedone.io/asset/uploads/1707712065.png",
-        "https://pagedone.io/asset/uploads/1707712095.png",
-      ],
-    };
-  },
-  mounted() {
-    new Swiper(".mySwiper", {
-      pagination: ".swiper-pagination",
-      slidesPerView: 2,
-      centeredSlides: true,
-      paginationClickable: true,
-      loop: true,
-      spaceBetween: 0,
-      slideToClickedSlide: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  },
-};
-</script>
-<style>
-.swiper-slide.swiper-slide-active > .slide\:w-full {
-  width: 100%;
-}
-
-.swiper-slide {
-  max-height: 400px !important;
-}
-
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
-  content: "" !important;
-}
-
-.swiper-wrapper {
-  height: 100% !important;
-}
-
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-  content: "" !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  position: relative !important;
-}
-</style>
+<script></script>
