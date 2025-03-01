@@ -1,7 +1,7 @@
 <template>
   <div
     v-gsap.whenVisible.from="{ scale: 0.8, height: 0, padding: 0 }"
-    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-80 lg:-mt-40 xl:-mt-80"
   >
     <div
       v-gsap.whenVisible.from="{ y: 100 }"
@@ -20,7 +20,7 @@
           knowledge, expertise, advices & confidence
         </p>
         <button
-          class="bg-yellow-50 rounded-full shadow-sm py-3 px-7 flex items-center gap-4 font-semibold text-yellow-600 transition-all duration-500 hover:bg-yellow-100 mb-12"
+          class="bg-yellow-50 rounded-full shadow-sm py-3 px-7 flex items-center gap-4 font-semibold text-yellow-600 transition-all duration-500 hover:bg-yellow-100 md:mb-12"
         >
           View all testimonials
           <svg
@@ -39,7 +39,8 @@
           </svg>
         </button>
       </div>
-      <div class="w-full xl:w-2/3 relative md:-mt-20 mt-40 xl:mt-0">
+      <!-- Testimonials -->
+      <div class="w-full xl:w-2/3 relative md:-mt-20 -mt-20 xl:mt-0">
         <div class="flex flex-col items-center md:flex-row gap-8">
           <div class="w-full xl:w-1/2">
             <div

@@ -1,7 +1,7 @@
 <template>
-  <section class="pt-40 overflow-x-hidden h-screen">
+  <section class="pt-40">
     <!-- Hero Section -->
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full lg:h-screen">
       <div class="grid grid-cols-1 items-center lg:grid-cols-12">
         <!-- Text Content -->
         <div class="w-full xl:col-span-5 lg:col-span-6">
@@ -49,210 +49,205 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Swiper Section -->
-  <div class="md:w-3/4 bg-cover bg-center mx-auto rounded-2xl">
-    <section class="mx-auto lg:pt-[84px] pb-12">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          class="swiper-container slider w-full flex-col justify-start items-start gap-12"
-        >
-          <div class="swiper-wrapper">
-            <div
-              v-gsap.whenVisible.from="{ scale: 0.8, height: 0, padding: 0 }"
-              class="swiper-slide"
-              v-for="(slide, index) in slides"
-              :key="index"
-            >
+    <!-- Swiper Section -->
+    <div class="md:w-3/4 bg-cover bg-center mx-auto rounded-2xl">
+      <section class="mx-auto lg:pt-[84px] pb-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="swiper-container slider w-full flex-col justify-start items-start gap-12"
+          >
+            <div class="swiper-wrapper">
               <div
-                v-gsap.whenVisible.from="{ y: 200 }"
-                class="grid grid-cols-2 gap-4"
+                v-gsap.whenVisible.from="{ scale: 0.8, height: 0, padding: 0 }"
+                class="swiper-slide"
+                v-for="(slide, index) in slides"
+                :key="index"
               >
                 <div
-                  v-gsap.whenVisiblestagger.from="{
-                    opacity: 0,
-                    x: 40,
-                  }"
-                  class="w-full flex-col col-span-2 lg:col-span-1 justify-start items-start gap-8 flex"
+                  v-gsap.whenVisible.from="{ y: 200 }"
+                  class="grid grid-cols-2 gap-4"
                 >
-                  <div class="flex flex-col">
-                    <h2
-                      class="text-white text-5xl font-normal font-playfairDisplay"
-                    >
-                      {{ slide.title }}
-                    </h2>
-                  </div>
-                  <p
-                    class="lg:max-w-xl w-full h-auto text-gray-300 text-base font-medium leading-relaxed"
+                  <div
+                    v-gsap.whenVisible.stagger.from="{
+                      opacity: 0,
+                      x: 40,
+                    }"
+                    class="w-full flex-col col-span-2 lg:col-span-1 justify-start items-start gap-8 flex"
                   >
-                    {{ slide.description }}
-                  </p>
+                    <div class="flex flex-col">
+                      <h2
+                        class="text-white text-5xl font-normal font-playfairDisplay"
+                      >
+                        {{ slide.title }}
+                      </h2>
+                    </div>
+                    <p
+                      class="lg:max-w-xl w-full h-auto text-gray-300 text-base font-medium leading-relaxed"
+                    >
+                      {{ slide.description }}
+                    </p>
+                  </div>
+                  <img
+                    v-gsap.magnetic.weak
+                    class="w-full h-auto col-span-2 md:col-span-1 md:w-auto object-cover md:mt-24 rounded-lg"
+                    :src="slide.img"
+                    alt="image description"
+                  />
                 </div>
-                <img
-                  v-gsap.magnetic.weak
-                  class="w-full h-auto col-span-2 md:col-span-1 md:w-auto object-cover md:mt-24 rounded-lg"
-                  :src="slide.img"
-                  alt="image description"
-                />
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Swiper Thumbnail Navigation -->
-        <div class="swiper-container slider-thumbnail relative mt-20">
-          <div class="swiper-wrapper lg:flex-row flex-col">
-            <div
-              class="swiper-slide cursor-pointer transition duration-300 ease-in-out"
-              :class="{
-                'text-yellow-400': activeIndex === index,
-                'text-white': activeIndex !== index,
-              }"
-              v-for="(slide, index) in slides"
-              :key="index"
-              @click="goToSlide(index)"
-            >
+          <!-- Swiper Thumbnail Navigation -->
+          <div class="swiper-container slider-thumbnail relative mt-20">
+            <div class="swiper-wrapper lg:flex-row flex-col">
               <div
-                class="text-lg font-normal leading-relaxed whitespace-nowrap"
+                class="swiper-slide cursor-pointer transition duration-300 ease-in-out"
+                :class="{
+                  'text-yellow-400': activeIndex === index,
+                  'text-white': activeIndex !== index,
+                }"
+                v-for="(slide, index) in slides"
+                :key="index"
+                @click="goToSlide(index)"
               >
-                {{ index + 1 }}. {{ slide.thumbnail }}
+                <div
+                  class="text-lg font-normal leading-relaxed whitespace py-4 px-4"
+                >
+                  {{ index + 1 }}. {{ slide.thumbnail }}
+                </div>
+                <div
+                  v-show="activeIndex === index"
+                  class="swiper-scrollbar my-12"
+                ></div>
               </div>
-              <div
-                v-show="activeIndex === index"
-                class="swiper-scrollbar my-12"
-              ></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <div
-    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-none overflow-y-none"
-  >
-    <h1
-      v-gsap.whenVisible.to="{
-        x: 50,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1.5,
-      }"
-      class="md:hidden text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-none"
+    <div
+      class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-none overflow-y-none mb-20 md:mb-0"
     >
-      Luxury <span class="text-yellow-600">Visuals</span> Storytelling
-      <span class="text-yellow-600">Brands</span> Story
-      <span class="text-yellow-600"></span>
-    </h1>
-    <h1
-      v-gsap.whenVisible.to="{
-        x: -300,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1.5,
-      }"
-      class="hidden md:block text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-none"
-    >
-      Luxury <span class="text-yellow-600">Visuals</span> Storytelling
-      <span class="text-yellow-600">Brands</span> Story
-      <span class="text-yellow-600"></span>
-    </h1>
-    <h1
-      v-gsap.whenVisible.to="{
-        x: 300,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 2.5,
-      }"
-      class="hidden md:block text-white font-extrabold font-manrope text-5xl"
-    >
-      Integrity <span class="text-yellow-600">Visuals</span> Thrill
-      <span class="text-yellow-600">Visuals</span> Exploration
-      <span class="text-yellow-600"></span>
-    </h1>
-  </div>
+      <h1
+        v-gsap.whenVisible.to="{
+          x: 50,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.5,
+        }"
+        class="md:hidden text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-none"
+      >
+        Luxury <span class="text-yellow-600">Visuals</span> Storytelling
+        <span class="text-yellow-600">Brands</span> Story
+        <span class="text-yellow-600"></span>
+      </h1>
+      <h1
+        v-gsap.whenVisible.to="{
+          x: -300,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.5,
+        }"
+        class="hidden md:block text-white font-extrabold font-manrope text-5xl lg:text-left overflow-x-none"
+      >
+        Luxury <span class="text-yellow-600">Visuals</span> Storytelling
+        <span class="text-yellow-600">Brands</span> Story
+        <span class="text-yellow-600"></span>
+      </h1>
+      <h1
+        v-gsap.whenVisible.to="{
+          x: 300,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 2.5,
+        }"
+        class="hidden md:block text-white font-extrabold font-manrope text-5xl"
+      >
+        Integrity <span class="text-yellow-600">Visuals</span> Thrill
+        <span class="text-yellow-600">Visuals</span> Exploration
+        <span class="text-yellow-600"></span>
+      </h1>
+    </div>
 
-  <!-- Swiper2 Section -->
-  <div
-    class="md:w-3/4 bg-no-repeat bg-cover bg-center mx-auto rounded-2xl"
-    :style="{ backgroundImage: `url(${slides2[activeIndex].img})` }"
-  >
-    <section class="mx-auto lg:pt-[84px] pb-12">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          v-gsap.whenVisible.from="{ y: 100 }"
-          class="swiper-container slider2 w-full lg:pt-28 pt-10 flex-col justify-start items-start gap-12"
-        >
+    <!-- Swiper2 Section -->
+    <div
+      class="md:w-3/4 bg-no-repeat bg-cover bg-center mx-auto rounded-2xl"
+      :style="{ backgroundImage: `url(${slides2[activeIndex].img})` }"
+    >
+      <section class="mx-auto lg:pt-[84px]">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
-            v-gsap.whenVisible.stagger.from="{ opacity: 0, x: 40 }"
-            class="swiper-wrapper"
+            v-gsap.whenVisible.from="{ y: 100 }"
+            class="swiper-container slider2 w-full lg:pt-28 pt-10 flex-col justify-start items-start gap-12"
           >
             <div
-              class="swiper-slide"
-              v-for="(slide, index) in slides2"
-              :key="index"
+              v-gsap.whenVisible.stagger.from="{ opacity: 0, x: 40 }"
+              class="swiper-wrapper"
             >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <img
-                  v-gsap.magneticv-gsap.magnetic.weak
-                  class="h-auto w-auto object-cover md:mt-24 rounded-lg"
-                  :src="slide.img"
-                  alt="image description"
-                />
-                <div
-                  class="w-full flex-col justify-end items-end gap-8 flex text-right"
-                >
-                  <div class="flex flex-col">
-                    <h2
-                      class="text-white text-6xl font-normal font-playfairDisplay"
-                    >
-                      {{ slide.title }}
-                    </h2>
-                  </div>
-                  <p
-                    class="lg:max-w-xl w-full text-gray-300 text-base font-medium leading-relaxed md:pb-28 pb-14"
+              <div
+                class="swiper-slide"
+                v-for="(slide, index) in slides2"
+                :key="index"
+              >
+                <div class="grid grid-cols-1 gap-4">
+                  <div
+                    class="w-full flex-col justify-end items-end gap-8 flex text-right"
                   >
-                    {{ slide.description }}
-                  </p>
+                    <div class="flex flex-col">
+                      <h2
+                        class="text-white text-6xl font-normal font-playfairDisplay"
+                      >
+                        {{ slide.title }}
+                      </h2>
+                    </div>
+                    <p
+                      class="lg:max-w-xl w-full text-gray-300 text-base font-medium leading-relaxed md:pb-28 pb-14"
+                    >
+                      {{ slide.description }}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Second Swiper Thumbnail Navigation (Aligned Right) -->
-        <div
-          class="swiper-container slider-thumbnail2 relative flex justify-end mt-20"
-        >
-          <div class="swiper-wrapper lg:flex-row flex-col">
-            <div
-              class="swiper-slide cursor-pointer transition duration-300 ease-in-out"
-              :class="{
-                'text-yellow-400': activeIndex2 === index,
-                'text-white': activeIndex2 !== index,
-              }"
-              v-for="(slide, index) in slides2"
-              :key="index"
-              @click="goToSlide2(index)"
-            >
+          <!-- Second Swiper Thumbnail Navigation (Aligned Right) -->
+          <div
+            class="swiper-container slider-thumbnail2 relative flex justify-end mt-20"
+          >
+            <div class="swiper-wrapper lg:flex-row flex-col">
               <div
-                class="text-lg font-normal leading-relaxed whitespace-nowrap"
+                class="swiper-slide cursor-pointer transition duration-300 ease-in-out"
+                :class="{
+                  'text-yellow-400': activeIndex2 === index,
+                  'text-white': activeIndex2 !== index,
+                }"
+                v-for="(slide, index) in slides2"
+                :key="index"
+                @click="goToSlide2(index)"
               >
-                {{ slide.thumbnail }}
+                <div
+                  class="text-lg font-normal leading-relaxed whitespace py-4 px-4"
+                >
+                  {{ slide.thumbnail }}
+                </div>
+                <div
+                  v-show="activeIndex2 === index"
+                  class="swiper-scrollbar my-12"
+                ></div>
               </div>
-              <div
-                v-show="activeIndex2 === index"
-                class="swiper-scrollbar my-12"
-              ></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-  <TestimonialsSection />
-  <ServicesSection />
+      </section>
+    </div>
+
+    <TestimonialsSection />
+    <ServicesSection class="md:mt-20 mt-0" />
+  </section>
 </template>
 
 <script setup>
@@ -402,8 +397,15 @@ const goToSlide2 = (index) => {
 
 .swiper-wrapper {
   height: auto;
-  padding-bottom: 30%;
+  padding-bottom: 25%; /* Default for larger screens */
 }
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .swiper-wrapper {
+    padding-bottom: 100%;
+  }
+}
+
 
 .swiper-slide {
   cursor: pointer;

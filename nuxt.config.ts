@@ -29,6 +29,7 @@ export default defineNuxtConfig({
         preload: true, // Preload fonts for faster rendering
       },
     ],
+    '@nuxt/scripts',
   ],
   css: ['~/assets/css/main.css'],
 })
