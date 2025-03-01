@@ -58,7 +58,7 @@
                     </p>
                   </div>
                 </div>
-                <h5 class="text-white text-lg font-medium leading-relaxed">
+                <span class="text-white text-lg font-medium leading-relaxed">
                   <div
                     v-gsap.from="{ opacity: 0, y: 50, delay: 4.5 }"
                     class="border border-yellow-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-12 md:mb-4"
@@ -87,7 +87,7 @@
                       </svg>
                     </a>
                   </div>
-                </h5>
+                </span>
               </div>
             </div>
           </div>
