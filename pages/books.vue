@@ -6,7 +6,7 @@
         class="text-center mb-10"
       >
         <h2 class="text-6xl font-bold text-white leading-normal">
-          Lorem <span class="text-yellow-600">Ipsum & Ipsum</span>
+          Books
         </h2>
         <p class="text-lg text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus

@@ -5,7 +5,7 @@
         v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
         class="text-center mb-10"
       >
-        <h2 class="text-5xl md:text-6xl font-bold text-white leading-normal">
+        <h2 class="text-4xl md:text-6xl font-bold text-white leading-normal">
           Comprehensive
           <span class="text-yellow-600">Services and Benefits</span>
         </h2>

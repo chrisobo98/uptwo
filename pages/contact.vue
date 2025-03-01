@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <h2
         v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
-        class="text-white text-center font-manrope text-6xl font-bold leading-10 mb-4"
+        class="text-white text-center font-manrope md:text-6xl text-5xl font-bold leading-10 mb-4"
       >
         Contact <span class="text-yellow-600">Us</span>
       </h2>

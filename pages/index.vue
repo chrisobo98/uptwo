@@ -6,27 +6,25 @@
     type="video/mp4"
     loop
     muted
-    class="md:w-full mx-auto h-full md:h-screen pt-20 md:pt-0"
+    class="md:w-full mx-auto h-full md:h-dvh pt-20 md:pt-0"
   >
     <source src="assets/css/uptwo.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <div class="swiper mySwiper w-11/12 lg:w-8/12 mx-auto rounded-2xl">
+  <div class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl">
     <div class="swiper-wrapper">
       <div
         v-for="(slide, index) in slides"
         :key="index"
-        class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative border"
+        class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative border border-yellow-600"
       >
-        <!-- Background overlay using ::before -->
-        <div class="absolute bg-black"></div>
 
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             class="w-full flex-col justify-start items-start gap-14 inline-flex"
           >
-            <div class="justify-center items-center gap-[492px] inline-flex">
+            <div class="justify-center items-center gap-[492px] inline-flex px-12">
               <div
                 class="flex-col justify-start items-start lg:gap-14 gap-10 inline-flex"
               >

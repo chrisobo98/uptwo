@@ -5,6 +5,11 @@ body {
   background-color: #000000; /* Default background color */
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;

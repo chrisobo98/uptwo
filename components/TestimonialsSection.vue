@@ -7,6 +7,7 @@
       v-gsap.whenVisible.from="{ y: 100 }"
       class="flex justify-center items-center gap-y-8 md:gap-y-0 flex-wrap md:flex-wrap xl:flex-nowrap xl:flex-row xl:justify-between xl:gap-x-8 max-w-lg md:max-w-3xl lg:max-w-4xl mx-auto xl:max-w-full"
     >
+    <!-- What our clients say about us -->
       <div
         v-gsap.whenVisible.delay-1000.stagger.from="{ opacity: 0, x: -40 }"
         class="w-full xl:w-1/3"
@@ -40,7 +41,7 @@
         </button>
       </div>
       <!-- Testimonials -->
-      <div class="w-full xl:w-2/3 relative md:-mt-20 -mt-20 xl:mt-0">
+      <div class="w-full xl:w-2/3 relative md:mt-80 mt-40">
         <div class="flex flex-col items-center md:flex-row gap-8">
           <div class="w-full xl:w-1/2">
             <div

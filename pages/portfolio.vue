@@ -1,7 +1,7 @@
 <template>
-  <section class="pt-40">
+  <section class="pt-20">
     <!-- Hero Section -->
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full lg:h-screen">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full lg:h-screen md:mt-40">
       <div class="grid grid-cols-1 items-center lg:grid-cols-12">
         <!-- Text Content -->
         <div class="w-full xl:col-span-5 lg:col-span-6">
@@ -12,7 +12,7 @@
               duration: 1,
               ease: 'power3.out',
             }"
-            class="py-8 text-center text-white font-extrabold font-manrope text-6xl lg:text-left"
+            class="py-8 text-center text-white font-extrabold font-manrope text-5xl md:text-6xl lg:text-left"
           >
             The Art of <span class="text-yellow-600">Storytelling</span>
           </h1>

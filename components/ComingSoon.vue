@@ -6,7 +6,7 @@
       >
         <h2
           v-gsap.whenVisible.animateText.once
-          class="font-manrope xl:text-9xl lg:text-6xl text-7xl text-white my-8"
+          class="font-manrope xl:text-9xl lg:text-6xl text-6xl text-white my-8"
         >
           A thrilling best-selling fantasy novel is set to hit the shelves in
           July 2025!
