@@ -2,18 +2,18 @@
   <section class="relative my-24">
     <div class="w-full max-w-7xl px-6 lg:px-8 mx-auto mt-12">
       <div
-        class="flex h-screen items-center justify-between flex-col sm:flex-row gap-y-4 mb-5"
+        class="flex md:h-screen items-center justify-between flex-col sm:flex-row gap-y-4 mb-5"
       >
         <h2
           v-gsap.whenVisible.animateText.once
-          class="font-manrope xl:text-9xl lg:text-6xl text-6xl text-white my-8"
+          class="font-manrope xl:text-9xl lg:text-6xl text-5xl text-white my-8"
         >
           A thrilling best-selling fantasy novel is set to hit the shelves in
           July 2025!
         </h2>
       </div>
     </div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:mb-20 -mt-80 md:mt-0">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:mb-20 md:mt-0">
       <div class="flex justify-between items-center flex-col lg:flex-row">
         <div class="w-full lg:w-1/2">
           <h2
