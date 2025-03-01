@@ -148,7 +148,7 @@ import SubscribeForm from "../components/SubscribeForm.vue";
 
 // Head metadata
 useHead({
-  title: "Home",
+  title: "Home | Your Brand, Our Passion",
   meta: [
     {
       name: "description",
