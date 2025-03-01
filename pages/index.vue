@@ -8,7 +8,7 @@
     muted
     class="md:w-full mx-auto h-full md:h-screen pt-20 md:pt-0"
   >
-    <source src="assets/css/Final Comp.mp4" type="video/mp4" />
+    <source src="assets/css/uptwo.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
