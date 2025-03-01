@@ -143,7 +143,8 @@
   <SubscribeForm />
 </template>
 
-<script>
+<script setup>
+import { useHead } from '#imports';
 import Swiper from "swiper";
 import SubscribeForm from "../components/SubscribeForm.vue";
 
@@ -152,7 +153,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 useHead({
-  title: "Luxury Brand Strategy & Storytelling | upTWO",
+  title: "Luxury Brand Strategy & Storytelling",
   meta: [
     {
       name: "description",
@@ -161,7 +162,7 @@ useHead({
     },
     {
       property: "og:title",
-      content: "Luxury Brand Strategy & Storytelling | upTWO",
+      content: "Luxury Brand Strategy & Storytelling",
     },
     {
       property: "og:description",
@@ -171,42 +172,39 @@ useHead({
   ],
 });
 
-export default {
-  data() {
-    return {
-      slides: [
-        {
-          image: "https://img1.wsimg.com/isteam/getty/1400557658/:/rs=w:1350,m",
-          highlight: "Learn How",
-        },
-        {
-          image: "https://pagedone.io/asset/uploads/1720172793.png",
-          highlight: "View our Services",
-        },
-        {
-          image: "https://pagedone.io/asset/uploads/1720172806.png",
-          highlight: "Read more",
-        },
-      ],
-    };
+const slides = [
+  {
+    image: "https://img1.wsimg.com/isteam/getty/1400557658/:/rs=w:1350,m",
+    highlight: "Learn How",
   },
-  mounted() {
-    new Swiper(".mySwiper", {
-      loop: true,
-      slidesPerView: 1,
-      centeredSlides: false,
-      slidesPerGroupSkip: 1,
-      grabCursor: true,
-      keyboard: { enabled: true },
-      scrollbar: { el: ".swiper-scrollbar" },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+  {
+    image: "https://pagedone.io/asset/uploads/1720172793.png",
+    highlight: "View our Services",
   },
-};
+  {
+    image: "https://pagedone.io/asset/uploads/1720172806.png",
+    highlight: "Read more",
+  },
+];
+
+onMounted(() => {
+  new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: { enabled: true },
+    scrollbar: { el: ".swiper-scrollbar" },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
 </script>
+
+
 
 <style>
 .swiper-wrapper {
