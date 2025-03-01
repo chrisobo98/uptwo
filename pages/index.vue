@@ -3,9 +3,10 @@
     width="auto"
     height="auto"
     autoplay
+    type="video/mp4"
     loop
     muted
-    class="md:w-3/6 mx-auto h-full md:h-screen pt-20 md:pt-0"
+    class="md:w-full mx-auto h-full md:h-screen pt-20 md:pt-0"
   >
     <source src="assets/css/Final Comp.mp4" type="video/mp4" />
     Your browser does not support the video tag.
