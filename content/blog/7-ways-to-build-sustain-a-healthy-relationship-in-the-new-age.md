@@ -1,8 +1,8 @@
 ---
 title: "7 Ways to Build & Sustain a Healthy Relationship in the New Age"
 description: "Discover key insights on building lasting relationships in today's world. Learn how to balance communication, faith, commitment, and personal growth in your partnership."
-date: 2023-05-05T00:00:00.000Z
-image: /healthy-relationship-new-age.png
+date: May 2023
+image: https://img1.wsimg.com/isteam/stock/10196/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280/:/rs=w:1280
 category: Dating
 tags:
   - relationships

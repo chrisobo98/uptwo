@@ -1,8 +1,8 @@
 ---
 title: "Unlocking the Secrets of Creative Storytelling: Tips & Techniques"
 description: "Learn the art of storytelling with expert techniques. From crafting compelling narratives to engaging your audience, master storytelling today!"
-date: 2024-12-17T00:00:00.000Z
-image: /creative-storytelling-tips.png
+date: December 2024
+image: //img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Action%20Story_New%20main.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280
 category: Personal Development
 tags:
   - storytelling

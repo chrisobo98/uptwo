@@ -113,7 +113,7 @@ watch(selectedCategory, () => {
                   {{ post.meta.category }}
                 </span>
                 <span class="text-gray-400 text-sm">
-                  {{ new Date(post.date).toLocaleDateString() }}
+                  {{ post.meta.date }}
                 </span>
               </div>
               <h3 class="text-xl font-semibold text-white mb-2">

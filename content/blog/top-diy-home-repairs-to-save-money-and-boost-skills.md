@@ -1,8 +1,8 @@
 ---
 title: "DIY Home Repairs: Save Money & Fix Common Issues Yourself"
 description: "Learn how to handle common home repairs yourself and save money. From fixing leaks to patching walls, here’s how to maintain your home without calling a pro."
-date: 2025 February
-image: /diy-home-repairs.png
+date: February 2025
+image: //img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/diy2-6cc431c.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280
 category: Lifestyle
 tags:
   - home improvement

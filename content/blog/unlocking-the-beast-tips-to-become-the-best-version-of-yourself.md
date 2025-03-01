@@ -1,8 +1,8 @@
 ---
 title: "Unlocking The Beast: Tips to Become the Best Version of Yourself!"
 description: "Discover self-improvement strategies to unlock your potential and become the best version of yourself. From goal-setting to positive habits, take charge of your growth."
-date: 2025-01-26T00:00:00.000Z
-image: /unlocking-the-beast.png
+date: January 2025
+image: //img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Title.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280
 category: Personal Development
 tags:
   - self-improvement

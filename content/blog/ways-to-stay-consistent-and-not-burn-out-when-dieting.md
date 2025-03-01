@@ -1,8 +1,8 @@
 ---
 title: "Ways To Stay Consistent and Not Burn Out When Dieting"
 description: "Discover practical tips for maintaining consistency in your diet without burning out. Learn how to make small changes, plan for cravings, and enjoy healthy food."
-date: 2023-05-23T00:00:00.000Z
-image: /ways-to-stay-consistent-dieting.png
+date: May 2023
+image: //img1.wsimg.com/isteam/stock/V8x2DDn/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280
 category: Lifestyle
 tags:
   - dieting
