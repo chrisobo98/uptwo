@@ -21,7 +21,7 @@
 
       <!-- Centered Logo -->
       <div class="absolute left-1/2 transform -translate-x-1/2">
-        <img v-gsap.magnetic class="h-20 w-20" src="assets/css/uptwologo.png" />
+        <NuxtImg width="100%" height="100%" v-gsap.magnetic class="h-20 w-20" src="/uptwologo.png" alt="upTwo Top Header Logo" />
       </div>
 
       <!-- Desktop Menu -->
