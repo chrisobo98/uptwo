@@ -16,11 +16,11 @@ import { NuxtLink } from '#components';
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
             <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              class="mb-6 text-sm font-semibold text-white uppercase dark:text-white"
             >
               Resources
             </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
+            <ul class="text-white dark:text-white">
               <li class="mb-4">
                 <NuxtLink to="/blog" class="hover:underline"
                   >Blog</NuxtLink
@@ -35,11 +35,11 @@ import { NuxtLink } from '#components';
           </div>
           <div>
             <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              class="mb-6 text-sm font-semibold text-white uppercase dark:text-white"
             >
               Legal
             </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
+            <ul class="text-white dark:text-white">
               <li class="mb-4">
                 <a href="#" class="hover:underline">Privacy Policy</a>
               </li>
@@ -54,7 +54,7 @@ import { NuxtLink } from '#components';
         class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
       />
       <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        <span class="text-sm text-white sm:text-center dark:text-white"
           >© 2025
           <a href="https://flowbite.com" class="hover:underline">UpTwo</a>. All
           Rights Reserved.
@@ -62,7 +62,7 @@ import { NuxtLink } from '#components';
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a
             href="#"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            class="text-white hover:text-white dark:hover:text-white"
           >
             <svg
               class="w-5 h-5"
@@ -79,7 +79,7 @@ import { NuxtLink } from '#components';
           </a>
           <a
             href="#"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            class="text-white hover:text-white dark:hover:text-white"
           >
             <svg
               class="w-5 h-5"
@@ -96,7 +96,7 @@ import { NuxtLink } from '#components';
           </a>
           <a
             href="#"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            class="text-white hover:text-white dark:hover:text-white"
           >
             <svg
               class="w-5 h-5"
@@ -111,7 +111,7 @@ import { NuxtLink } from '#components';
           </a>
           <a
             href="#"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            class="text-white hover:text-white dark:hover:text-white"
           >
             <svg
               class="w-5 h-5"
@@ -128,7 +128,7 @@ import { NuxtLink } from '#components';
           </a>
           <a
             href="#"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            class="text-white hover:text-white dark:hover:text-white"
           >
             <svg
               class="w-5 h-5"
