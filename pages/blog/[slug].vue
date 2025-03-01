@@ -1,49 +1,59 @@
 <script setup>
+import { useRoute } from "vue-router";
+import { useAsyncData } from "#app";
+import { watchEffect } from "vue";
+
 const route = useRoute();
 const slug = route.params.slug;
 
-useHead({
-  title: post?.title
-    ? `${post.title} | Blog`
-    : "Blog Post",
-  meta: [
-    {
-      name: "description",
-      content: post?.description
-        ? post.description
-        : "Read the latest insights on business, lifestyle, and personal growth from upTWO’s blog.",
-    },
-    {
-      property: "og:title",
-      content: post?.title
-        ? `${post.title} | upTWO Blog`
-        : "Blog Post",
-    },
-    {
-      property: "og:description",
-      content: post?.description
-        ? post.description
-        : "Explore expert insights and thought-provoking articles on business, lifestyle, and more.",
-    },
-    {
-      property: "og:image",
-      content: post?.meta?.image || "/default-blog-image.jpg",
-    },
-    {
-      property: "og:url",
-      content: `https://yourwebsite.com/blog/${slug}`,
-    },
-  ],
-});
-
+// Fetch the post data
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
   return queryCollection("content").path(`/blog/${slug}`).first();
 });
 
+// Fetch all blog posts for related posts
 const { data: posts } = await useAsyncData("blog-list", () => {
   return queryCollection("content").all();
 });
+
+// Ensure `useHead` runs only when `post` is available
+watchEffect(() => {
+  if (post.value) {
+    useHead({
+      title: post.value.title ? `${post.value.title} | Blog` : "Blog Post",
+      meta: [
+        {
+          name: "description",
+          content: post.value.description
+            ? post.value.description
+            : "Read the latest insights on business, lifestyle, and personal growth from upTWO’s blog.",
+        },
+        {
+          property: "og:title",
+          content: post.value.title
+            ? `${post.value.title} | upTWO Blog`
+            : "Blog Post",
+        },
+        {
+          property: "og:description",
+          content: post.value.description
+            ? post.value.description
+            : "Explore expert insights and thought-provoking articles on business, lifestyle, and more.",
+        },
+        {
+          property: "og:image",
+          content: post.value.meta?.image || "/default-blog-image.jpg",
+        },
+        {
+          property: "og:url",
+          content: `https://yourwebsite.com/blog/${slug}`,
+        },
+      ],
+    });
+  }
+});
 </script>
+
 
 <template>
   <section class="relative pt-40 pb-24 bg-yellow-600">
