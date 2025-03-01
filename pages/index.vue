@@ -144,69 +144,62 @@
   <SubscribeForm />
 </template>
 
-<script>
+<script setup>
+import { onMounted, ref } from "vue";
 import Swiper from "swiper";
 import SubscribeForm from "../components/SubscribeForm.vue";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
+// Head metadata
 useHead({
-  title: "Luxury Brand Strategy & Storytelling | upTWO",
+  title: "Home | upTWO",
   meta: [
     {
       name: "description",
-      content:
-        "upTWO empowers businesses with strategic storytelling, branding, and digital marketing to create lasting impact.",
+      content: "upTWO helps businesses elevate their brand with strategic storytelling and digital marketing.",
     },
     {
       property: "og:title",
-      content: "Luxury Brand Strategy & Storytelling | upTWO",
+      content: "Your Brand, Our Passion | upTWO",
     },
     {
       property: "og:description",
-      content:
-        "Transform your brand with upTWO’s expertise in storytelling, strategy, and marketing.",
+      content: "Driving growth through strategy and storytelling. Learn how upTWO can help craft a compelling brand.",
     },
   ],
 });
 
-export default {
-  data() {
-    return {
-      slides: [
-        {
-          image: "https://img1.wsimg.com/isteam/getty/1400557658/:/rs=w:1350,m",
-          highlight: "Learn How",
-        },
-        {
-          image: "https://pagedone.io/asset/uploads/1720172793.png",
-          highlight: "View our Services",
-        },
-        {
-          image: "https://pagedone.io/asset/uploads/1720172806.png",
-          highlight: "Read more",
-        },
-      ],
-    };
+// Define reactive data
+const slides = ref([
+  {
+    image: "https://img1.wsimg.com/isteam/getty/1400557658/:/rs=w:1350,m",
+    highlight: "Learn How",
   },
-  mounted() {
-    new Swiper(".mySwiper", {
-      loop: true,
-      slidesPerView: 1,
-      centeredSlides: false,
-      slidesPerGroupSkip: 1,
-      grabCursor: true,
-      keyboard: { enabled: true },
-      scrollbar: { el: ".swiper-scrollbar" },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+  {
+    image: "https://pagedone.io/asset/uploads/1720172793.png",
+    highlight: "View our Services",
   },
-};
+  {
+    image: "https://pagedone.io/asset/uploads/1720172806.png",
+    highlight: "Read more",
+  },
+]);
+
+// Initialize Swiper on mount
+onMounted(() => {
+  new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: { enabled: true },
+    scrollbar: { el: ".swiper-scrollbar" },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
 </script>
 
 <style>

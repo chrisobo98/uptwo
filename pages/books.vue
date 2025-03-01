@@ -251,7 +251,7 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import ComingSoon from "../components/ComingSoon.vue";
 
 useHead({

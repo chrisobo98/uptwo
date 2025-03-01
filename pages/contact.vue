@@ -184,7 +184,7 @@
   </section>
 </template>
 
-<script>
+<script setup>
 useHead({
   title: "Contact | upTWO",
   meta: [
