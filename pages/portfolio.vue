@@ -12,7 +12,7 @@
               duration: 1,
               ease: 'power3.out',
             }"
-            class="py-8 text-center text-white font-extrabold font-manrope text-5xl lg:text-left"
+            class="py-8 text-center text-white font-extrabold font-manrope text-6xl lg:text-left"
           >
             The Art of <span class="text-yellow-600">Storytelling</span>
           </h1>

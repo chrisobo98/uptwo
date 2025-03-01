@@ -37,7 +37,7 @@
                     <h2
                       v-gsap.animateText
                       v-gsap.from="{ opacity: 0, y: 50, stagger: 1.0 }"
-                      class="text-white text-3xl md:text-5xl font-bold font-manrope md:leading-snug leading-snug"
+                      class="text-white text-3xl md:text-6xl font-bold font-manrope md:leading-snug leading-snug"
                     >
                       Your Story. Your Brand. Our Pen.
                     </h2>

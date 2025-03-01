@@ -5,7 +5,7 @@
         v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
         class="text-center mb-10"
       >
-        <h2 class="text-3xl font-bold text-white leading-normal">
+        <h2 class="text-6xl font-bold text-white leading-normal">
           Lorem <span class="text-yellow-600">Ipsum & Ipsum</span>
         </h2>
         <p class="text-lg text-gray-400">

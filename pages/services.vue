@@ -2,7 +2,7 @@
   <section class="py-24 bg-black">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }" class="text-center mb-10">
-        <h2 class="text-4xl font-bold text-white leading-normal">
+        <h2 class="text-6xl font-bold text-white leading-normal">
           Comprehensive <span class="text-yellow-600">Services and Benefits</span>
         </h2>
         <p class="text-lg text-gray-400">

@@ -7,7 +7,7 @@
           v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
           class="w-full flex-col justify-start items-center gap-3 flex"
         >
-          <h2 class="text-center text-white text-4xl font-bold leading-normal">
+          <h2 class="text-center text-white text-6xl font-bold leading-normal">
             About <span class="text-yellow-600"> Us </span>
           </h2>
           <p
