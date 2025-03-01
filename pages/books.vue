@@ -255,7 +255,7 @@
 import ComingSoon from "../components/ComingSoon.vue";
 
 useHead({
-  title: "Books | upTWO Publishing & Author Services",
+  title: "Books | Publishing & Author Services",
   meta: [
     {
       name: "description",

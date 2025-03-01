@@ -151,7 +151,7 @@ import SubscribeForm from "../components/SubscribeForm.vue";
 
 // Head metadata
 useHead({
-  title: "Home | upTWO",
+  title: "Home",
   meta: [
     {
       name: "description",

@@ -2,7 +2,7 @@
 import { ref, watch } from "vue";
 
 useHead({
-  title: "Blog | Insights on Business, Lifestyle & More | upTWO",
+  title: "Blog | Insights on Business, Lifestyle & More",
   meta: [
     {
       name: "description",

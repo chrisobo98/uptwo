@@ -4,8 +4,8 @@ const slug = route.params.slug;
 
 useHead({
   title: post?.title
-    ? `${post.title} | upTWO Blog`
-    : "Blog Post | upTWO",
+    ? `${post.title} | Blog`
+    : "Blog Post",
   meta: [
     {
       name: "description",
@@ -17,7 +17,7 @@ useHead({
       property: "og:title",
       content: post?.title
         ? `${post.title} | upTWO Blog`
-        : "Blog Post | upTWO",
+        : "Blog Post",
     },
     {
       property: "og:description",

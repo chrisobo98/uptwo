@@ -107,7 +107,7 @@ import { ref, watch } from "vue";
 import gsap from "gsap";
 
 useHead({
-  title: "Brand Strategy & Business Consulting | upTWO Services",
+  title: "Brand Strategy & Business Consulting | Services",
   meta: [
     {
       name: "description",

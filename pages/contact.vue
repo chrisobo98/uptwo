@@ -186,7 +186,7 @@
 
 <script setup>
 useHead({
-  title: "Contact | upTWO",
+  title: "Contact",
   meta: [
     {
       name: "description",
