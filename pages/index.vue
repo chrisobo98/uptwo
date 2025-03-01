@@ -17,12 +17,9 @@
       <div
         v-for="(slide, index) in slides"
         :key="index"
-        class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative"
-        :style="{ backgroundImage: `url(${slide.image})` }"
+        class="swiper-slide w-full rounded-2xl pb-24 min-h-[700px] relative border"
       >
         <!-- Background overlay using ::before -->
-        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             class="w-full flex-col justify-start items-start gap-14 inline-flex"
@@ -171,15 +168,12 @@ useHead({
 // Define reactive data
 const slides = ref([
   {
-    image: "https://img1.wsimg.com/isteam/getty/1400557658/:/rs=w:1350,m",
     highlight: "Learn How",
   },
   {
-    image: "https://pagedone.io/asset/uploads/1720172793.png",
     highlight: "View our Services",
   },
   {
-    image: "https://pagedone.io/asset/uploads/1720172806.png",
     highlight: "Read more",
   },
 ]);
