@@ -267,6 +267,26 @@
 import { ref, computed, watch } from "vue";
 import gsap from "gsap";
 
+useHead({
+  title: "About upTWO | Luxury Brand Strategy in Central Florida",
+  meta: [
+    {
+      name: "description",
+      content:
+        "upTWO is a premier brand strategy consultant in Central Florida, specializing in hospitality, small businesses, and creative industries. Elevate your brand with strategic clarity and compelling messaging.",
+    },
+    {
+      property: "og:title",
+      content: "About upTWO | Quality Simplified Branding & Strategy",
+    },
+    {
+      property: "og:description",
+      content:
+        "Discover how upTWO empowers purpose-driven businesses with expert brand strategy, messaging, and creative solutions. Transform your brand presence today.",
+    },
+  ],
+});
+
 const activeTab = ref("tabs-with-pill-1");
 
 const tabs = [

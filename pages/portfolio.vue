@@ -260,6 +260,28 @@ import "swiper/css/pagination";
 import TestimonialsSection from "~/components/TestimonialsSection.vue";
 import ServicesSection from "~/components/ServicesSection.vue";
 
+useHead({
+  title: "Portfolio | T.W. Alexander’s Storytelling",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Explore T.W. Alexander’s portfolio of compelling brand storytelling and narrative expertise.",
+    },
+    {
+      property: "og:title",
+      content: "Portfolio | T.W. Alexander’s Storytelling",
+    },
+    {
+      property: "og:description",
+      content:
+        "Discover how T.W. Alexander crafts narratives that captivate and engage audiences.",
+    },
+  ],
+});
+
+
+
 const slides = ref([
   {
     title: "Chapter 1: The History",

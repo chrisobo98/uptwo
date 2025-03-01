@@ -106,6 +106,26 @@
 import { ref, watch } from "vue";
 import gsap from "gsap";
 
+useHead({
+  title: "Brand Strategy & Business Consulting | upTWO Services",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Explore upTWO’s expert branding and business consulting services, including brand messaging, website copywriting, content support, project management, and keynote speaking.",
+    },
+    {
+      property: "og:title",
+      content: "upTWO Services | Elevate Your Brand with Expert Consulting",
+    },
+    {
+      property: "og:description",
+      content:
+        "From strategic brand messaging to content support and keynote speaking, upTWO helps businesses in hospitality, small business, and creative industries thrive.",
+    },
+  ],
+});
+
 const activeTab = ref("brand");
 
 const tabs = ref([

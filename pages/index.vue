@@ -152,6 +152,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+useHead({
+  title: "Luxury Brand Strategy & Storytelling | upTWO",
+  meta: [
+    {
+      name: "description",
+      content:
+        "upTWO empowers businesses with strategic storytelling, branding, and digital marketing to create lasting impact.",
+    },
+    {
+      property: "og:title",
+      content: "Luxury Brand Strategy & Storytelling | upTWO",
+    },
+    {
+      property: "og:description",
+      content:
+        "Transform your brand with upTWO’s expertise in storytelling, strategy, and marketing.",
+    },
+  ],
+});
+
 export default {
   data() {
     return {

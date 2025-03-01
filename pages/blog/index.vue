@@ -1,6 +1,26 @@
 <script setup>
 import { ref, watch } from "vue";
 
+useHead({
+  title: "Blog | Insights on Business, Lifestyle & More | upTWO",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover expert insights on business, lifestyle, dating, personal development, and more. Explore upTWO’s latest articles and stay informed.",
+    },
+    {
+      property: "og:title",
+      content: "Blog | Explore Articles on Business, Lifestyle & Growth | upTWO",
+    },
+    {
+      property: "og:description",
+      content:
+        "Read insightful articles from upTWO on business strategies, lifestyle tips, personal growth, and interviews with industry leaders.",
+    },
+  ],
+});
+
 const { data: posts } = await useAsyncData(
   "posts",
   async () => {

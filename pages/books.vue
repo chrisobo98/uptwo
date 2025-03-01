@@ -253,4 +253,25 @@
 
 <script>
 import ComingSoon from "../components/ComingSoon.vue";
+
+useHead({
+  title: "Books | upTWO Publishing & Author Services",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Explore upTWO’s collection of books and author services. From compelling storytelling to expert publishing support, we help authors bring their vision to life.",
+    },
+    {
+      property: "og:title",
+      content: "Books | Discover Stories & Publishing Services by upTWO",
+    },
+    {
+      property: "og:description",
+      content:
+        "Browse books and publishing services from upTWO. Whether you're an author or a reader, find inspiring stories and expert publishing support here.",
+    },
+  ],
+});
+
 </script>

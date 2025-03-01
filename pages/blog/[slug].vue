@@ -2,6 +2,40 @@
 const route = useRoute();
 const slug = route.params.slug;
 
+useHead({
+  title: post?.title
+    ? `${post.title} | upTWO Blog`
+    : "Blog Post | upTWO",
+  meta: [
+    {
+      name: "description",
+      content: post?.description
+        ? post.description
+        : "Read the latest insights on business, lifestyle, and personal growth from upTWO’s blog.",
+    },
+    {
+      property: "og:title",
+      content: post?.title
+        ? `${post.title} | upTWO Blog`
+        : "Blog Post | upTWO",
+    },
+    {
+      property: "og:description",
+      content: post?.description
+        ? post.description
+        : "Explore expert insights and thought-provoking articles on business, lifestyle, and more.",
+    },
+    {
+      property: "og:image",
+      content: post?.meta?.image || "/default-blog-image.jpg",
+    },
+    {
+      property: "og:url",
+      content: `https://yourwebsite.com/blog/${slug}`,
+    },
+  ],
+});
+
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
   return queryCollection("content").path(`/blog/${slug}`).first();
 });

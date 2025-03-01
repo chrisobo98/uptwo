@@ -183,3 +183,26 @@
     </div>
   </section>
 </template>
+
+<script>
+useHead({
+  title: "Contact | upTWO",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Get in touch with upTWO for expert brand strategy, storytelling, and consulting. Let's build something remarkable together.",
+    },
+    {
+      property: "og:title",
+      content: "Contact upTWO | Let’s Create Your Brand Story",
+    },
+    {
+      property: "og:description",
+      content:
+        "Reach out to upTWO for strategic branding, storytelling, and marketing expertise. Let’s bring your vision to life.",
+    },
+  ],
+});
+
+</script>
