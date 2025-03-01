@@ -19,6 +19,7 @@
       <div class="w-full">
         <div class="block lg:flex items-center justify-between mb-4">
           <div
+            v-gsap.visible.from="{ opacity: 0, x: 200, delay: 0.5 }"
             class="flex md:flex-row flex-col items-center gap-4 lg:justify-start justify-center"
           >
             <h2
@@ -31,6 +32,7 @@
         </div>
         <div
           class="flex items-center lg:justify-start justify-center max-sm:flex-wrap gap-y-3 mt-3"
+          v-gsap.visible.from="{ opacity: 0, x: 200, delay: 0.5 }"
         >
           <span
             class="p-2 rounded-full border border-yellow-600 cursor-pointer ml-3 group transition-all duration-500 hover:bg-yellow-600"
@@ -145,8 +147,12 @@
               class="max-lg:mx-auto rounded-3xl object-cover"
             />
           </div>
-          <div class="col-span-12 md:col-span-6">
+          <div
+            v-gsap.visible.from="{ opacity: 0, x: -100, delay: 1.0 }"
+            class="col-span-12 md:col-span-6"
+          >
             <h5
+              v-gsap.visible.from="{ opacity: 0, x: 100, delay: 1.2 }"
               class="font-manrope font-semibold text-2xl leading-9 text-white mb-5"
             >
               Purpose
@@ -159,6 +165,7 @@
               meaningful discussions about money with their children.
             </p>
             <h5
+              v-gsap.visible.from="{ opacity: 0, x: -100, delay: 1.1 }"
               class="font-manrope font-semibold text-2xl leading-9 text-white mb-5"
             >
               Theme
@@ -171,6 +178,7 @@
               works.
             </p>
             <h5
+              v-gsap.visible.from="{ opacity: 0, x: 100, delay: 1.2 }"
               class="font-manrope font-semibold text-2xl leading-9 text-white mb-5"
             >
               Target Age Group

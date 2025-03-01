@@ -24,11 +24,6 @@
           <p class="text-lg text-gray-400 mb-16 text-center md:text-left">
             Coming Soon
           </p>
-          <button
-            class="cursor-pointer py-3 px-8 w-60 bg-yellow-600 text-white text-base font-semibold transition-all duration-500 block text-center md:text-left rounded-full hover:bg-yellow-700 mx-auto md:mx-0 lg:mx-0"
-          >
-            Learn More
-          </button>
         </div>
         <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 mt-16 max-lg:max-w-2xl">
           <div

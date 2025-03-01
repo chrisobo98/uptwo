@@ -15,7 +15,10 @@
       </p>
       <div class="grid lg:grid-cols-3 grid-cols-1 md:gap-8 gap-0">
         <div class="md:mb-0 mb-5 flex flex-col justify-between">
-          <div class="bg-yellow-600 rounded-2xl p-6 mb-8">
+          <div
+            v-gsap.visible.from="{ opacity: 0, x: 200, delay: 0.5 }"
+            class="bg-yellow-600 rounded-2xl p-6 mb-8"
+          >
             <div class="flex items-center mb-3">
               <div
                 class="w-10 h-10 rounded-lg bg-white flex items-center justify-center mr-4"
@@ -49,7 +52,10 @@
               Contact Us
             </button>
           </div>
-          <div class="p-6 bg-gray-100 rounded-2xl">
+          <div
+            v-gsap.visible.from="{ opacity: 0, x: -200, delay: 0.5 }"
+            class="p-6 bg-gray-100 rounded-2xl"
+          >
             <div class="flex items-center mb-3">
               <div
                 class="w-10 h-10 rounded-lg bg-white flex items-center justify-center mr-4"
@@ -84,7 +90,10 @@
             </button>
           </div>
         </div>
-        <div class="col-span-2 md:p-8 p-5 border border-gray-100 rounded-2xl">
+        <div
+          v-gsap.visible.from="{ opacity: 0, y: 200, delay: 0.5 }"
+          class="col-span-2 md:p-8 p-5 border border-gray-100 rounded-2xl"
+        >
           <form class="mb-0">
             <div class="flex items-center relative mb-8">
               <svg
