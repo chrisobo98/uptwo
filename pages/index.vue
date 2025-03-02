@@ -14,23 +14,21 @@
     </video>
   </div>
 
-  <div
-    class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl mt-40 md:mt-0"
-  >
+  <div class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl">
     <div class="swiper-wrapper">
       <div
         v-for="(slide, index) in slides"
         :key="index"
-        class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative md:border border-yellow-600"
+        class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative md:border-2 border-solid"
       >
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl md:max-w-full px-4 sm:px-6 lg:px-8">
           <div
             class="w-full flex-col justify-start items-start gap-14 inline-flex"
           >
             <MobileLanding v-if="viewport.isLessThan('tablet')" class="z-10" />
 
             <div
-              class="justify-center items-center gap-[492px] inline-flex z-20"
+              class="justify-center items-center gap-[492px] inline-flex z-20 md:mx-20"
             >
               <div
                 class="flex-col justify-start items-start lg:gap-14 gap-10 inline-flex"
@@ -108,6 +106,7 @@
         </div>
       </div>
     </div>
+
     <div
       class="flex items-center justify-between relative lg:mt-0 mt-7 absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-44 bottom-44 max-w-[320px] mx-auto z-10"
     >
@@ -130,6 +129,7 @@
           />
         </svg>
       </button>
+
       <div class="swiper-scrollbar mx-14"></div>
       <button
         class="swiper-button-next group transition-all duration-700 ease-in-out"
@@ -155,13 +155,7 @@
       class="swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal lg:top-[40%] lg:-left-[18%] left-[-48%]"
     ></div>
   </div>
-
-  <!-- Scroll Indicator -->
-  <div v-if="viewport.isLessThan('tablet')" class="scroll-indicator">
-    <div class="scroll-line"></div>
-    <div class="scroll-label">Scroll</div>
-  </div>
-  <SubscribeForm class="mt-40 mb-10 md:mt-0"/>
+  <SubscribeForm class="mt-40 mb-10 md:mt-0" />
 </template>
 
 <script setup>
@@ -270,43 +264,9 @@ onMounted(() => {
   line-height: 62px;
 }
 
-.scroll-indicator {
-  position: absolute;
-  left: 50%;
-  bottom: 60px;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.scroll-line {
-  width: 1px;
-  height: 40px;
-  background: white;
-  animation: scrollLine 2s infinite;
-}
-
 .scroll-label {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
-
-@keyframes scrollLine {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(5px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 </style>
