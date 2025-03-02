@@ -1,18 +1,23 @@
 <template>
-  <div
-    v-if="!viewport.isLessThan('tablet')"
-    class="w-10/12 mx-auto xl:h-screen md:mt-10"
-  >
-    <CldVideoPlayer
-      src="https://res.cloudinary.com/dkaakonrp/video/upload/v1740935738/oogaajgt1m7sx4r4aa6e.mp4"
-      autoPlay
-      :controls="false"
-      :loop="true"
-      :muted="true"
-    />
+  <div v-if="!viewport.isLessThan('tablet')">
+    <video
+      class="md:w-10/12 mx-auto h-full md:h-dvh md:pt-0"
+      autoplay
+      loop
+      muted
+      playsinline
+      loading="eager"
+      poster="https://res.cloudinary.com/dkaakonrp/image/upload/v1740938519/Screenshot_2025-03-02_at_1.01.28_PM_gsknif.png"
+    >
+      <source
+        src="https://res.cloudinary.com/dkaakonrp/video/upload/f_auto,q_auto/v1740935738/oogaajgt1m7sx4r4aa6e.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
   </div>
 
-  <div class="swiper mySwiper w-11/12 lg:w-10/12 mx-auto rounded-2xl">
+  <div class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl">
     <div class="swiper-wrapper">
       <div
         v-for="(slide, index) in slides"
@@ -168,13 +173,6 @@ import "swiper/css/pagination";
 
 const viewport = useViewport();
 
-const videoUrl = ref(
-  "https://res.cloudinary.com/dkaakonrp/video/upload/v1740935738/oogaajgt1m7sx4r4aa6e.mp4"
-);
-const posterUrl = ref(
-  "https://res.cloudinary.com/dkaakonrp/video/upload/c_limit,h_700,w_1200/oog..."
-);
-
 watch(viewport.breakpoint, (newBreakpoint, oldBreakpoint) => {
   console.log("Breakpoint updated:", oldBreakpoint, "->", newBreakpoint);
 });
@@ -232,17 +230,6 @@ onMounted(() => {
 </script>
 
 <style>
-/* Ensures the video loads only when visible */
-.lazy-video {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.lazy-video.loaded {
-  visibility: visible;
-  opacity: 1;
-}
 .swiper-wrapper {
   height: max-content !important;
   padding-bottom: 100px;
