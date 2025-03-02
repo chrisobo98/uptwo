@@ -1,20 +1,19 @@
 <template>
-  <div v-if="!viewport.isLessThan('tablet')">
-    <video
-      width="auto"
-      height="auto"
-      autoplay
-      type="video/mp4"
-      loop
-      muted
-      class="md:w-10/12 mx-auto h-full md:h-dvh md:pt-0"
-    >
-      <source src="assets/css/uptwo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+  <div
+    v-if="!viewport.isLessThan('tablet')"
+    class="w-10/12 mx-auto xl:h-screen md:mt-10"
+  >
+    <CldVideoPlayer
+      src="https://res.cloudinary.com/dkaakonrp/video/upload/v1740935738/oogaajgt1m7sx4r4aa6e.mp4"
+      autoPlay
+      :controls="false"
+      loop="true"
+      muted="true"
+      alt="My Awesome Image"
+    />
   </div>
 
-  <div class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl">
+  <div class="swiper mySwiper w-11/12 lg:w-10/12 mx-auto rounded-2xl">
     <div class="swiper-wrapper">
       <div
         v-for="(slide, index) in slides"
