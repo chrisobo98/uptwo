@@ -7,7 +7,7 @@
       muted
       playsinline
       loading="eager"
-      poster="https://res.cloudinary.com/dkaakonrp/image/upload/v1740938519/Screenshot_2025-03-02_at_1.01.28_PM_gsknif.png"
+      :poster="posterUrl"
     >
       <source
         src="https://res.cloudinary.com/dkaakonrp/video/upload/f_auto,q_auto/v1740935738/oogaajgt1m7sx4r4aa6e.mp4"
@@ -172,6 +172,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const viewport = useViewport();
+
+const posterUrl = useImage({
+  src: "https://res.cloudinary.com/dkaakonrp/image/upload/v1740938519/Screenshot_2025-03-02_at_1.01.28_PM_gsknif.png",
+  format: "webp",
+  quality: 80,
+});
 
 watch(viewport.breakpoint, (newBreakpoint, oldBreakpoint) => {
   console.log("Breakpoint updated:", oldBreakpoint, "->", newBreakpoint);
