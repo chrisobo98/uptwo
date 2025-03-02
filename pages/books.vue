@@ -23,7 +23,7 @@
             class="flex md:flex-row flex-col items-center gap-4 lg:justify-start justify-center"
           >
             <h2
-              class="font-manrope font-bold text-5xl text-white md:text-left text-center"
+              class="font-manrope font-bold text-3xl md:text-5xl text-white md:text-left text-center"
             >
               Ivan, The Investor Kid: The ABCs of
               <span class="text-yellow-600"> How Money Works</span>

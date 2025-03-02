@@ -1,47 +1,64 @@
 <template>
-  <video
-    width="auto"
-    height="auto"
-    autoplay
-    type="video/mp4"
-    loop
-    muted
-    class="md:w-full mx-auto h-full md:h-dvh pt-20 md:pt-0"
-  >
-    <source src="assets/css/uptwo.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <div v-if="!viewport.isLessThan('tablet')">
+    <video
+      width="auto"
+      height="auto"
+      autoplay
+      type="video/mp4"
+      loop
+      muted
+      class="md:w-10/12 mx-auto h-full md:h-dvh md:pt-0"
+    >
+      <source src="assets/css/uptwo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-  <div class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl">
+  <div
+    class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl mt-40 md:mt-0"
+  >
     <div class="swiper-wrapper">
       <div
         v-for="(slide, index) in slides"
         :key="index"
-        class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative border border-yellow-600"
+        class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative md:border border-yellow-600"
       >
-
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             class="w-full flex-col justify-start items-start gap-14 inline-flex"
           >
-            <div class="justify-center items-center gap-[492px] inline-flex px-12">
+            <MobileLanding v-if="viewport.isLessThan('tablet')" class="z-10" />
+
+            <div
+              class="justify-center items-center gap-[492px] inline-flex z-20"
+            >
               <div
                 class="flex-col justify-start items-start lg:gap-14 gap-10 inline-flex"
               >
                 <div class="flex-col justify-start items-start gap-4 flex">
                   <div
-                    class="flex-col justify-start items-start gap-2 flex mt-20"
+                    class="flex-col justify-start items-start gap-2 flex mt-20 overflow-hidden"
                   >
                     <h2
                       v-gsap.animateText
-                      v-gsap.from="{ opacity: 0, y: 50, stagger: 1.0 }"
+                      v-gsap.from="{
+                        opacity: 0,
+                        x: 150,
+                        stagger: 1.0,
+                        delay: 0.3,
+                      }"
                       class="text-white text-3xl md:text-6xl font-bold font-manrope md:leading-snug leading-snug"
                     >
                       Your Story. Your Brand. Our Pen.
                     </h2>
                     <h2
                       v-gsap.animateText
-                      v-gsap.from="{ opacity: 0, y: 50, stagger: 1.0 }"
+                      v-gsap.from="{
+                        opacity: 0,
+                        x: -150,
+                        stagger: 1.0,
+                        delay: 0.5,
+                      }"
                       class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope md:leading-snug leading-snug"
                     >
                       Our Passion
@@ -138,17 +155,30 @@
       class="swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal lg:top-[40%] lg:-left-[18%] left-[-48%]"
     ></div>
   </div>
-  <SubscribeForm />
+
+  <!-- Scroll Indicator -->
+  <div v-if="viewport.isLessThan('tablet')" class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <div class="scroll-label">Scroll</div>
+  </div>
+  <SubscribeForm class="mt-40 mb-10 md:mt-0"/>
 </template>
 
 <script setup>
-import { useHead } from '#imports';
+import { useHead } from "#imports";
 import Swiper from "swiper";
 import SubscribeForm from "../components/SubscribeForm.vue";
+import MobileLanding from "../components/MobileLanding.vue";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+const viewport = useViewport();
+
+watch(viewport.breakpoint, (newBreakpoint, oldBreakpoint) => {
+  console.log("Breakpoint updated:", oldBreakpoint, "->", newBreakpoint);
+});
 
 useHead({
   title: "Luxury Brand Strategy & Storytelling",
@@ -202,27 +232,29 @@ onMounted(() => {
 });
 </script>
 
-
-
 <style>
 .swiper-wrapper {
   height: max-content !important;
   padding-bottom: 100px;
 }
+
 .swiper-scrollbar {
   width: 196px !important;
   height: 2px;
   background-color: #d1d5db;
   bottom: 21px;
 }
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   content: " ";
 }
+
 .swiper-scrollbar-drag {
   width: 56px !important;
-  background: #818cf8;
+  background: #c98a02;
 }
+
 .swiper-pagination {
   color: #9ca3af;
   font-size: 0px;
@@ -230,10 +262,51 @@ onMounted(() => {
   line-height: 46px;
   position: absolute;
 }
+
 .swiper-pagination-current {
   color: white;
   font-size: 48px;
   font-weight: 600;
   line-height: 62px;
+}
+
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: white;
+  animation: scrollLine 2s infinite;
+}
+
+.scroll-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>

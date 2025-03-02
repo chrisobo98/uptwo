@@ -30,6 +30,7 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxt/scripts',
+    'nuxt-viewport',
   ],
   css: ['~/assets/css/main.css'],
 })
