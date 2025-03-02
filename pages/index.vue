@@ -7,9 +7,8 @@
       src="https://res.cloudinary.com/dkaakonrp/video/upload/v1740935738/oogaajgt1m7sx4r4aa6e.mp4"
       autoPlay
       :controls="false"
-      loop="true"
-      muted="true"
-      alt="My Awesome Image"
+      :loop="true"
+      :muted="true"
     />
   </div>
 
@@ -169,6 +168,13 @@ import "swiper/css/pagination";
 
 const viewport = useViewport();
 
+const videoUrl = ref(
+  "https://res.cloudinary.com/dkaakonrp/video/upload/v1740935738/oogaajgt1m7sx4r4aa6e.mp4"
+);
+const posterUrl = ref(
+  "https://res.cloudinary.com/dkaakonrp/video/upload/c_limit,h_700,w_1200/oog..."
+);
+
 watch(viewport.breakpoint, (newBreakpoint, oldBreakpoint) => {
   console.log("Breakpoint updated:", oldBreakpoint, "->", newBreakpoint);
 });
@@ -226,6 +232,17 @@ onMounted(() => {
 </script>
 
 <style>
+/* Ensures the video loads only when visible */
+.lazy-video {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-video.loaded {
+  visibility: visible;
+  opacity: 1;
+}
 .swiper-wrapper {
   height: max-content !important;
   padding-bottom: 100px;
