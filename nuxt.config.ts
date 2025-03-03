@@ -21,6 +21,10 @@ export default defineNuxtConfig({
     '@nuxtjs/cloudinary',
     '@nuxt/icon',
   ],
+  robots: {
+    allow: '/', // Allows all pages to be crawled
+    sitemap: '/sitemap.xml' // Optional, if you have a sitemap
+  },
   image: {
     provider: 'cloudinary',
     cloudinary: {
