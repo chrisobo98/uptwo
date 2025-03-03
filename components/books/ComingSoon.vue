@@ -44,7 +44,7 @@
             />
             <NuxtImg
               v-gsap.parallax.faster-5
-              src="v1740940715/stellar_bwri1p.webp"
+              src="v1740965363/stellar_bwri1p_lobtze.webp"
               alt="Team tailwind section"
               class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0"
             />
