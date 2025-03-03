@@ -48,7 +48,7 @@
             >
               <!-- Image with GSAP Animation -->
               <NuxtImg
-              provider="cloudinary"
+                provider="cloudinary"
                 v-gsap.visible.from="{ opacity: 0, x: -150, stagger: 0.4 }"
                 v-gsap.magnetic.weak
                 ref="tabImage"
@@ -154,21 +154,21 @@ const tabs = [
   {
     id: "tabs-with-pill-1",
     label: "Our Story",
-    src: "v1740941147/story_gytc2v.webp",
+    src: "v1740965363/story_gytc2v_yjfvgq.webp",
     description:
       'We empower purpose-driven businesses in the hospitality, small business, and creative industries by crafting luxury brand strategies that elevate their impact — adding value to those who bring value to others. Guided by our "Quality Simplified" approach, we blend strategic creativity with hospitality, creating brand experiences that inspire, connect, and make people smile through the power of love and purpose.',
   },
   {
     id: "tabs-with-pill-2",
     label: "Our Mission",
-    src: "v1740941147/mission_xsigit.webp",
+    src: "v1740965292/mission_xsigit_i4oqxw.webp",
     description:
       'To be the leading luxury brand strategy partner for innovative businesses and programs in hospitality, small business, and the arts — where "Quality Simplified" fuels bold ideas, clear messaging, and transformative impact. We envision a future where brands drive creativity, education, and change and build heartfelt connections and memorable experiences.',
   },
   {
     id: "tabs-with-pill-3",
     label: "Our Vision",
-    src: "v1740941148/vision_ql0cjj.webp",
+    src: "v1740965363/vision_ql0cjj_bxqq6m.webp",
     description:
       "Our purpose is to add value to those who bring value to others — driving the drivers of tomorrow. With a foundation of love and hospitality, we simplify complexity, empower impactful voices, and create brand experiences that spark innovation, inspire smiles, and elevate businesses in hospitality, small businesses, and the creative arts.",
   },
