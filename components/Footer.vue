@@ -6,8 +6,8 @@ import { NuxtLink } from '#components';
       <div class="md:flex md:justify-between ">
         <div class="mb-6 md:mb-0">
           <a href="https://flowbite.com" class="flex items-center">
-            <img
-              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/upTwo%201%20transparent.png/:/rs=h:86,cg:true,m/qt=q:95"
+            <NuxtImg
+              src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940906/uptwo_n62bjt.webp"
               class="h-auto w-auto"
               alt="FlowBite Logo"
             />

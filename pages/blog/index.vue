@@ -11,7 +11,8 @@ useHead({
     },
     {
       property: "og:title",
-      content: "Blog | Explore Articles on Business, Lifestyle & Growth | upTWO",
+      content:
+        "Blog | Explore Articles on Business, Lifestyle & Growth | upTWO",
     },
     {
       property: "og:description",
@@ -91,7 +92,6 @@ watch(selectedCategory, () => {
       <!-- Blog Posts Grid -->
       <div
         v-gsap.visible.from="{ opacity: 0, y: 200, delay: 0.5 }"
-
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         <TransitionGroup name="fade">
@@ -101,7 +101,7 @@ watch(selectedCategory, () => {
             class="post-card bg-gray-800 rounded-xl p-6"
           >
             <NuxtLink :to="post.path">
-              <img
+              <NuxtImg
                 :src="post.meta.image"
                 :alt="post.title"
                 class="w-full h-48 object-cover rounded-lg mb-4"

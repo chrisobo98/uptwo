@@ -29,21 +29,21 @@
           <div
             class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8 md:-mt-20"
           >
-            <img
+            <NuxtImg
             v-gsap.parallax.faster
-              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Main%20Promo.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
+              src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940716/book_cover_stellar2_b5sa1h.webp"
               alt="Team tailwind section"
               class="w-full h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0"
             />
-            <img
+            <NuxtImg
             v-gsap.parallax.faster-10
-              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/StellarIV-eBook.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
+              src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940715/book_cover_stellar_gdpylc.webp"
               alt="Team tailwind section"
               class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto"
             />
-            <img
+            <NuxtImg
             v-gsap.parallax.faster-5
-              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/StellarIV-Hardcover-M%20(1).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
+              src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940715/stellar_bwri1p.webp"
               alt="Team tailwind section"
               class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0"
             />
@@ -54,4 +54,4 @@
   </section>
 </template>
 
-<script></script>
+<script setup></script>

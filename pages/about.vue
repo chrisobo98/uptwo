@@ -1,7 +1,9 @@
 <template>
   <section class="py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="w-full flex-col justify-start items-start gap-12 inline-flex md:h-screen">
+      <div
+        class="w-full flex-col justify-start items-start gap-12 inline-flex md:h-screen"
+      >
         <!-- Heading -->
         <div
           v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
@@ -45,11 +47,11 @@
               class="w-full justify-start items-center lg:gap-9 gap-7 flex lg:flex-row flex-col"
             >
               <!-- Image with GSAP Animation -->
-              <img
+              <NuxtImg
                 v-gsap.visible.from="{ opacity: 0, x: -150, stagger: 0.4 }"
                 v-gsap.magnetic.weak
                 ref="tabImage"
-                class="rounded-2xl h-80 w-full object-right-top md:object-center md:h-auto md:w-auto object-cover"
+                class="rounded-2xl h-auto w-full object-right-top md:object-center md:h-auto md:w-auto object-cover"
                 :src="activeTabData.src"
                 alt="About Us image"
               />
@@ -125,11 +127,11 @@
             </div>
           </div>
         </div>
-        <img
+        <NuxtImg
           v-gsap.whenVisible.from="{ opacity: 0, x: -150, stagger: 0.4 }"
           v-gsap.magnetic
           class="w-11/12 md:w-full mx-auto lg:h-full h-auto rounded-xl object-cover"
-          src="https://pagedone.io/asset/uploads/1724388858.png"
+          src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740941147/data_ezpzcy.png"
           alt="About Us image"
         />
       </div>
@@ -293,21 +295,21 @@ const tabs = [
   {
     id: "tabs-with-pill-1",
     label: "Our Story",
-    src: "//img1.wsimg.com/isteam/stock/uV8DYPKZyNTe2d5ox/:/cr=t:0%25,l:16.67%25,w:66.67%25,h:100%25/rs=w:365,h:365,cg:true",
+    src: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1740941147/story_gytc2v.webp",
     description:
       'We empower purpose-driven businesses in the hospitality, small business, and creative industries by crafting luxury brand strategies that elevate their impact — adding value to those who bring value to others. Guided by our "Quality Simplified" approach, we blend strategic creativity with hospitality, creating brand experiences that inspire, connect, and make people smile through the power of love and purpose.',
   },
   {
     id: "tabs-with-pill-2",
     label: "Our Mission",
-    src: "//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Glassses%20lookaway.JPG/:/cr=t:0%25,l:8.25%25,w:66.68%25,h:100%25/rs=w:365,h:365,cg:true",
+    src: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1740941147/mission_xsigit.webp",
     description:
       'To be the leading luxury brand strategy partner for innovative businesses and programs in hospitality, small business, and the arts — where "Quality Simplified" fuels bold ideas, clear messaging, and transformative impact. We envision a future where brands drive creativity, education, and change and build heartfelt connections and memorable experiences.',
   },
   {
     id: "tabs-with-pill-3",
     label: "Our Vision",
-    src: "//img1.wsimg.com/isteam/stock/u73W5ZPJDGUN0VeWl/:/cr=t:0%25,l:16.67%25,w:66.67%25,h:100%25/rs=w:365,h:365,cg:true",
+    src: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1740941148/vision_ql0cjj.webp",
     description:
       "Our purpose is to add value to those who bring value to others — driving the drivers of tomorrow. With a foundation of love and hospitality, we simplify complexity, empower impactful voices, and create brand experiences that spark innovation, inspire smiles, and elevate businesses in hospitality, small businesses, and the creative arts.",
   },

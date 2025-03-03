@@ -5,9 +5,7 @@
         v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
         class="text-center mb-10"
       >
-        <h2 class="text-6xl font-bold text-white leading-normal">
-          Books
-        </h2>
+        <h2 class="text-6xl font-bold text-white leading-normal">Books</h2>
         <p class="text-lg text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           fringilla imperdiet scelerisque. teger finibus, mi ique rhoncus
@@ -140,10 +138,10 @@
         </div>
         <div class="grid grid-cols-12 gap-8 mt-8 mb-12">
           <div class="img-box col-span-12 md:col-span-6">
-            <img
-            v-gsap.visible.from="{ opacity: 0, x: -300, delay: 1.5 }"
+            <NuxtImg
+              v-gsap.visible.from="{ opacity: 0, x: -300, delay: 1.5 }"
               v-gsap.magnetic.weak
-              src="//img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/Cover.jpg/:/cr=t:0%25,l:3.11%25,w:93.78%25,h:100%25/rs=w:400,h:533.3333333333334,cg:true"
+              src="https://res.cloudinary.com/dkgpny3ca/image/upload/t_Sharpen and auto improve/v1740964102/ivan_the_investor_bgyrj0.webp"
               alt="red dots top image"
               class="max-lg:mx-auto rounded-3xl object-cover"
             />
@@ -274,5 +272,4 @@ useHead({
     },
   ],
 });
-
 </script>

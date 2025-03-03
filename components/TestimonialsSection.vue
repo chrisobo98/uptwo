@@ -121,11 +121,6 @@
               </p>
               <div class="flex items-center">
                 <div class="flex items-center gap-4">
-                  <img
-                    src="https://pagedone.io/asset/uploads/1704349534.png"
-                    alt="Emily image"
-                    class="w-6 h-6 rounded-full object-cover"
-                  />
                   <h6 class="font-medium text-black">C.E.O., Founder</h6>
                 </div>
                 <span
@@ -207,11 +202,6 @@
               </p>
               <div class="flex items-center">
                 <div class="flex items-center gap-4">
-                  <img
-                    src="https://pagedone.io/asset/uploads/1704349514.png"
-                    alt="Olivia image"
-                    class="w-6 h-6 rounded-full object-cover"
-                  />
                   <h6 class="font-medium text-black">Co-Founder</h6>
                 </div>
                 <span
@@ -292,11 +282,6 @@
               </p>
               <div class="flex items-center">
                 <div class="flex items-center gap-4">
-                  <img
-                    src="https://pagedone.io/asset/uploads/1704351062.png"
-                    alt="Wyatt image"
-                    class="w-6 h-6 rounded-full object-cover"
-                  />
                   <h6 class="font-medium text-black">C.E.O</h6>
                 </div>
                 <span
