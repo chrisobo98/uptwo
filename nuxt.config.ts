@@ -31,7 +31,8 @@ export default defineNuxtConfig({
     ],
     '@nuxt/scripts',
     'nuxt-viewport',
-    '@nuxtjs/cloudinary'
+    '@nuxtjs/cloudinary',
+    '@nuxt/icon',
   ],
   css: ['~/assets/css/main.css'],
 })

@@ -32,53 +32,6 @@
           class="flex items-center lg:justify-start justify-center max-sm:flex-wrap gap-y-3 mt-3"
           v-gsap.visible.from="{ opacity: 0, x: 200, delay: 0.5 }"
         >
-          <span
-            class="p-2 rounded-full border border-yellow-600 cursor-pointer ml-3 group transition-all duration-500 hover:bg-yellow-600"
-          >
-            <svg
-              class="fill-yellow-600 transition-all duration-500 group-hover:fill-white"
-              xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
-              viewBox="0 0 10 10"
-              fill="none"
-            >
-              <path
-                d="M7.0135 3.60427C7.1973 3.78979 7.20195 4.09542 7.0239 4.28692L5.35958 6.07698C5.18153 6.26848 4.8882 6.27333 4.70441 6.08782C4.52062 5.9023 4.51596 5.59667 4.69401 5.40517L6.35833 3.61511C6.53638 3.42361 6.82971 3.41876 7.0135 3.60427Z"
-                fill=""
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M0 1.3778C0 0.616862 0.592031 0 1.32234 0H6.15424C8.28309 0.0298824 10 1.83766 10 4.06289C10 6.30677 8.2542 8.12578 6.10065 8.12578C5.33279 8.12578 4.61676 7.89453 4.01323 7.49522L1.88233 9.66839C1.18123 10.3834 0 9.86584 0 8.84365V1.3778ZM3.29126 6.88045C2.61631 6.14999 2.20129 5.15694 2.20129 4.06289C2.20129 3.79627 2.40873 3.58013 2.66463 3.58013C2.92052 3.58013 3.12796 3.79627 3.12796 4.06289C3.12796 5.77352 4.45888 7.16025 6.10065 7.16025C7.74242 7.16025 9.07333 5.77352 9.07333 4.06289C9.07333 2.35227 7.74242 0.965533 6.10065 0.965533H1.32234C1.10382 0.965533 0.926669 1.15011 0.926669 1.3778V8.84365C0.926669 9.01062 1.11962 9.09516 1.23414 8.97837L3.29126 6.88045Z"
-                fill=""
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_13228_72031"
-                  x1="10"
-                  y1="0.572917"
-                  x2="-0.208972"
-                  y2="9.53905"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#7C3AED" />
-                  <stop offset="0.993738" stop-color="#4F46E5" />
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear_13228_72031"
-                  x1="10"
-                  y1="0.572917"
-                  x2="-0.208972"
-                  y2="9.53905"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#7C3AED" />
-                  <stop offset="0.993738" stop-color="#4F46E5" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
           <p
             class="font-semibold text-lg leading-8 text-white ml-3 whitespace-nowrap"
           >
@@ -251,7 +204,7 @@
 </template>
 
 <script setup>
-import ComingSoon from "../components/ComingSoon.vue";
+import ComingSoon from "../components/books/ComingSoon.vue";
 
 useHead({
   title: "Books | Publishing & Author Services",

@@ -165,7 +165,7 @@
 import { useHead } from "#imports";
 import Swiper from "swiper";
 import SubscribeForm from "../components/SubscribeForm.vue";
-import MobileLanding from "../components/MobileLanding.vue";
+import MobileLanding from "../components/index/MobileLanding.vue";
 
 import "swiper/css";
 import "swiper/css/navigation";

@@ -259,8 +259,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import TestimonialsSection from "~/components/TestimonialsSection.vue";
-import ServicesSection from "~/components/ServicesSection.vue";
+import TestimonialsSection from "~/components/portfolio/TestimonialsSection.vue";
+import ServicesSection from "~/components/portfolio/ServicesSection.vue";
 
 useHead({
   title: "Portfolio | T.W. Alexander’s Storytelling",
