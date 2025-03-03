@@ -94,7 +94,7 @@
                   <NuxtImg
                     provider="cloudinary"
                     v-gsap.magnetic.weak
-                    class="w-full h-auto col-span-2 md:col-span-1 md:w-auto object-cover md:mt-24 rounded-lg"
+                    class="w-full h-auto col-span-2 md:col-span-1 rounded-lg"
                     :src="slide.img"
                     alt="image description"
                   />

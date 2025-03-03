@@ -179,10 +179,6 @@ const posterUrl = useImage({
   quality: 80,
 });
 
-watch(viewport.breakpoint, (newBreakpoint, oldBreakpoint) => {
-  console.log("Breakpoint updated:", oldBreakpoint, "->", newBreakpoint);
-});
-
 useHead({
   title: "Luxury Brand Strategy & Storytelling",
   meta: [

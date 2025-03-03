@@ -5,8 +5,16 @@
         class="flex md:h-screen items-center justify-between flex-col sm:flex-row gap-y-4 mb-5"
       >
         <h2
-          v-gsap.whenVisible.animateText.once
-          class="font-manrope xl:text-9xl lg:text-6xl text-5xl text-white my-8"
+          v-if="!viewport.isLessThan('tablet')"
+          v-gsap.parallax.faster-5
+          class="font-manrope xl:text-9xl lg:text-6xl text-white my-8"
+        >
+          A thrilling best-selling fantasy novel is set to hit the shelves in
+          July 2025!
+        </h2>
+        <h2
+          v-else
+          class="font-manrope text-5xl text-white my-8"
         >
           A thrilling best-selling fantasy novel is set to hit the shelves in
           July 2025!
@@ -55,4 +63,6 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const viewport = useViewport();
+</script>

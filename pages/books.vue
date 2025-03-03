@@ -92,12 +92,12 @@
         <div class="grid grid-cols-12 gap-8 mt-8 mb-12">
           <div class="img-box col-span-12 md:col-span-6">
             <NuxtImg
-            provider="cloudinary"
+              provider="cloudinary"
               v-gsap.visible.from="{ opacity: 0, x: -300, delay: 1.5 }"
               v-gsap.magnetic.weak
               src="v1740965292/ivan_the_investor_bgyrj0_dxh2nx.webp"
               alt="red dots top image"
-              class="max-lg:mx-auto rounded-3xl object-cover"
+              class="mx-auto h-full rounded-3xl object-cover"
             />
           </div>
           <div
@@ -205,10 +205,10 @@
 </template>
 
 <script setup>
-import ComingSoon from "../components/books/ComingSoon.vue";
+import ComingSoon from "@/components/books/ComingSoon.vue";
 
 useHead({
-  title: "Books | Publishing & Author Services",
+  title: "Books | Publishing & Authsor Services",
   meta: [
     {
       name: "description",
