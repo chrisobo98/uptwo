@@ -1,3 +1,8 @@
+[[headers]]
+  for = "/66b1e66…/66c0592…_Hero_Video-comp-transcode.*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
 [build]
   command = "npm run generate"
   publish = ".output/public"
