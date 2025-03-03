@@ -7,6 +7,7 @@ export default defineNuxtConfig({
       routes: ['/'], // Ensures homepage is always prerendered
     },
   },
+  ogImage: { enabled: false },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: [
