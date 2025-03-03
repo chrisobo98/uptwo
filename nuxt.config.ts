@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false, // Fully static site
+  nitro: {
+    prerender: {
+      crawlLinks: true, // Automatically finds and prerenders all pages
+      routes: ['/'], // Ensures homepage is always prerendered
+    },
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: [
