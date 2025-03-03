@@ -6,6 +6,11 @@ export default defineNuxtConfig({
       crawlLinks: true, // Automatically finds and prerenders all pages
       routes: ['/'], // Ensures homepage is always prerendered
     },
+    routeRules: {
+      "/_nuxt/**": { cache: { maxAge: 31536000 } }, // Cache static assets for 1 year
+      "/static/**": { cache: { maxAge: 31536000 } }, // Cache static files for 1 year
+      "/video/**": { cache: { maxAge: 604800 } }, // Cache videos for 1 week
+    },
   },
   ogImage: {
     enabled: false, // Disable OG Image since SSR is off
