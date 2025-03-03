@@ -4,17 +4,15 @@
     <client-only>
       <div class="hero-video opacity-40">
         <video
-          class="md:w-10/12 mx-auto h-full md:h-dvh md:pt-0"
+          ref="heroVideo"
+          class="w-full h-full object-cover"
           autoplay
           loop
           muted
           playsinline
-          preload="metadata"
+          loading="lazy"
         >
-          <source
-            src="https://cdn.prod.website-files.com/66b1e669bf6b613debec2857/66c059230ce17596b9a93ac0_Hero_Video-comp-transcode.mp4"
-            type="video/mp4"
-          />
+          <source :src="getOptimizedVideoUrl('auto:good')" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -23,22 +21,15 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
-import gsap from "gsap";
+const cloudinaryBaseUrl = "https://res.cloudinary.com/dkgpny3ca/video/upload/";
 
-onMounted(() => {
-  // Add GSAP animations for text lines
-  const textLines = document.querySelectorAll(".hero-text h1 span");
-  textLines.forEach((line, index) => {
-    gsap.from(line, {
-      opacity: 0,
-      y: 20,
-      duration: 0.8,
-      delay: parseFloat(line.style.getPropertyValue("--delay")),
-      ease: "power3.out",
-    });
-  });
-});
+const videoPath =
+  "v1741039053/66c059230ce17596b9a93ac0_Hero_Video-comp-transcode_c0gqkw.mp4";
+
+// Function to generate optimized Cloudinary URL
+const getOptimizedVideoUrl = (quality) => {
+  return `${cloudinaryBaseUrl}q_${quality},f_auto/${videoPath}`;
+};
 </script>
 
 <style scoped>
