@@ -30,20 +30,21 @@
             class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8 md:-mt-20"
           >
             <NuxtImg
-            v-gsap.parallax.faster
-              src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940716/book_cover_stellar2_b5sa1h.webp"
+              provider="cloudinary"
+              v-gsap.parallax.faster
+              src="v1740940716/book_cover_stellar2_b5sa1h.webp"
               alt="Team tailwind section"
               class="w-full h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0"
             />
             <NuxtImg
-            v-gsap.parallax.faster-10
-              src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940715/book_cover_stellar_gdpylc.webp"
+              v-gsap.parallax.faster-10
+              src="v1740940715/book_cover_stellar_gdpylc.webp"
               alt="Team tailwind section"
               class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto"
             />
             <NuxtImg
-            v-gsap.parallax.faster-5
-              src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940715/stellar_bwri1p.webp"
+              v-gsap.parallax.faster-5
+              src="v1740940715/stellar_bwri1p.webp"
               alt="Team tailwind section"
               class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0"
             />

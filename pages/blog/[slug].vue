@@ -90,6 +90,7 @@ watchEffect(() => {
       <!-- Featured Image -->
       <div v-gsap.visible.from="{ opacity: 0, y: -150, stagger: 1.0 }" class="img w-full mb-14">
         <NuxtImg
+          provider="cloudinary"
           :src="post.meta.image"
           alt="Blog image"
           class="w-full h-full object-cover rounded-lg"

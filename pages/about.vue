@@ -48,6 +48,7 @@
             >
               <!-- Image with GSAP Animation -->
               <NuxtImg
+              provider="cloudinary"
                 v-gsap.visible.from="{ opacity: 0, x: -150, stagger: 0.4 }"
                 v-gsap.magnetic.weak
                 ref="tabImage"
@@ -79,7 +80,7 @@
     <div class="h-auto">
       <StatsSection
         :stats="stats"
-        imageSrc="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740941147/data_ezpzcy.png"
+        imageSrc="v1740941147/data_ezpzcy.png"
         imageAlt="About Us image"
       />
       <div

@@ -36,6 +36,7 @@
         <!-- Image -->
         <div class="w-5/6 mx-auto xl:col-span-7 lg:col-span-6 mb-12 md:mb-0">
           <NuxtImg
+            provider="cloudinary"
             v-gsap.magneticv-gsap.magnetic.weak
             v-gsap.from="{
               opacity: 0,
@@ -44,7 +45,7 @@
               ease: 'power3.out',
               delay: 0.4,
             }"
-            src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740964226/rs_w_1280_h_1280_shm6tc.webp"
+            src="v1740964226/rs_w_1280_h_1280_shm6tc.webp"
             alt="Portfolio Image"
             class="w-full lg:h-auto rounded-3xl object-cover"
           />
@@ -91,6 +92,7 @@
                     </p>
                   </div>
                   <NuxtImg
+                    provider="cloudinary"
                     v-gsap.magnetic.weak
                     class="w-full h-auto col-span-2 md:col-span-1 md:w-auto object-cover md:mt-24 rounded-lg"
                     :src="slide.img"
@@ -288,21 +290,21 @@ const slides = ref([
     description:
       "Screams echoed from the children's mouths as toys were thrown across the playroom like confetti. 'Say sorry!' Teacher Winslow yelled at John for pushing Timmy down for the third time during duck-duck-goose. She could barely hear her thoughts over the noise of tossed footballs and plastic cheeseburgers being served, along with the cries of 'I want Mommy and Daddy,' which rang out every thirty seconds. Amid the chaos, a tall boy gazed into a world of imagination that extended far beyond the classroom. While his friends doubted the existence of Santa Claus and questioned the reality of magic, T.W. Alexander contemplated a different mystery: how to reconnect with the source of his visions for a more sustainable world and bring them to life. And that’s precisely what he did. Through the art of storytelling, he found himself performing in stage plays, contributing to newspapers, showcasing his talent at professional sporting events, and catching the attention of scouting agencies while still in elementary school. He was on the honor roll in middle school but was most proud of receiving the prestigious “Class Clown” award in 8th grade. By high school, popularity weighed on his ego like a heavy coat in winter, as days were filled with practices and games for multiple sports. Lunch breaks became opportunities for freestyle rap battles in the cafeteria. Evenings were dedicated to volunteering and community service, while nights were spent studying literature and writing poetry.",
     thumbnail: "While every moment of solitude.",
-    img: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1740965292/kids_aszurx_toxq11.webp",
+    img: "v1740965292/kids_aszurx_toxq11.webp",
   },
   {
     title: "Chapter 2: The Experience",
     description:
       "In college, his thesis statement on business ethics gained significant attention, even reaching the President’s desk. At the same time, he captured the interest of major record labels after releasing a hit single, which led to opportunities for him to be an opening performer for several platinum-selling artists. Still, he graduated at the top of his class with a Bachelor of Science degree in Business and an MBA. For 20 years after college, artistic storytelling has been his secret weapon for climbing the corporate ladder at multiple Fortune 500 companies. His innovative solutions have fast-tracked him in front of senior leadership across various roles, from accounting to purchasing to human resources. He developed compelling financial dashboards that effectively communicated the company's financial story, facilitating cost-saving initiatives and enhancing project mapping. He also wrote legal documentation and collaborated with ERISA attorneys for committee meetings.",
     thumbnail: "A Journey of Discovery and Survival.",
-    img: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1740964634/typewriter_u6q7a3.webp",
+    img: "v1740964634/typewriter_u6q7a3.webp",
   },
   {
     title: "Chapter 3: The Passion",
     description:
       "In addition to his corporate success, he spent his nights and weekends winning the 2014 Poetry and Album of the Year awards, touring the nation with paid gigs, releasing highly streamed music albums, and hosting one of Central Florida’s top open mic shows for three years—all while serving on the board of multiple non-profit organizations and youth mentor.  Now, as a fully independent brand strategist, he often sits in his office, pondering what his 5-year-old envisions as he scribbles notes from across his desk chair. Another storyteller, perhaps? For decades, his brand messaging and innovative solutions have reached key stakeholders' desks, homes, and phones. And now he’s ready to do the same for your business. As a business-to-business consultant, his passion lies in helping companies that are helping others. It’s like compound interest in making it to that sustainable world he envisions. Storytelling is a way of life, and we are dedicated to telling a compelling story for your brand that resonates with your customers' hearts and minds—helping creatives convert!",
     thumbnail: "That captures the thrill of exploration.",
-    img: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1740964634/big_steps_zsuewh.webp",
+    img: "v1740964634/big_steps_zsuewh.webp",
   },
 ]);
 

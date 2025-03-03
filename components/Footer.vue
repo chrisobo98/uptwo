@@ -1,11 +1,12 @@
 <template>
   <footer class="p-4 sm:p-6 bg-black">
     <div class="mx-auto max-w-screen-xl my-12">
-      <div class="md:flex md:justify-between ">
+      <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="https://flowbite.com" class="flex items-center">
             <NuxtImg
-              src="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940906/uptwo_n62bjt.webp"
+              provider="cloudinary"
+              src="v1740940906/uptwo_n62bjt.webp"
               class="h-auto w-auto"
               alt="FlowBite Logo"
             />
@@ -20,9 +21,7 @@
             </h2>
             <ul class="text-white dark:text-white">
               <li class="mb-4">
-                <NuxtLink to="/blog" class="hover:underline"
-                  >Blog</NuxtLink
-                >
+                <NuxtLink to="/blog" class="hover:underline">Blog</NuxtLink>
               </li>
               <li>
                 <NuxtLink to="/contact" class="hover:underline"

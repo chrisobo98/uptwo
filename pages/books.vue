@@ -92,9 +92,10 @@
         <div class="grid grid-cols-12 gap-8 mt-8 mb-12">
           <div class="img-box col-span-12 md:col-span-6">
             <NuxtImg
+            provider="cloudinary"
               v-gsap.visible.from="{ opacity: 0, x: -300, delay: 1.5 }"
               v-gsap.magnetic.weak
-              src="https://res.cloudinary.com/dkgpny3ca/image/upload/t_Sharpen and auto improve/v1740964102/ivan_the_investor_bgyrj0.webp"
+              src="v1740964102/ivan_the_investor_bgyrj0.webp"
               alt="red dots top image"
               class="max-lg:mx-auto rounded-3xl object-cover"
             />

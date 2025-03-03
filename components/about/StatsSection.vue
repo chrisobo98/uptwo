@@ -18,6 +18,7 @@
   
       <!-- Image -->
       <NuxtImg
+        provider="cloudinary"
         v-gsap.whenVisible.from="{ opacity: 0, x: -150, stagger: 0.4 }"
         v-gsap.magnetic
         class="w-11/12 md:w-full mx-auto lg:h-full h-auto rounded-xl object-cover"

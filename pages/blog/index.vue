@@ -102,6 +102,7 @@ watch(selectedCategory, () => {
           >
             <NuxtLink :to="post.path">
               <NuxtImg
+                provider="cloudinary"
                 :src="post.meta.image"
                 :alt="post.title"
                 class="w-full h-48 object-cover rounded-lg mb-4"
