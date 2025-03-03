@@ -34,5 +34,11 @@ export default defineNuxtConfig({
     '@nuxtjs/cloudinary',
     '@nuxt/icon',
   ],
+  image: {
+    provider: 'cloudinary',
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/dkgpny3ca/image/upload/', // Replace with your Cloudinary base URL
+    },
+  },
   css: ['~/assets/css/main.css'],
 })

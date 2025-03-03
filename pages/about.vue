@@ -76,26 +76,26 @@
         </div>
       </div>
     </div>
-  </section>
-  <div class="h-auto">
-    <StatsSection
-      :stats="stats"
-      imageSrc="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740941147/data_ezpzcy.png"
-      imageAlt="About Us image"
-    />
-    <div
-      class="w-8/12 mx-auto justify-center items-center lg:gap-8 gap-6 grid md:grid-cols-3 grid-cols-1 mt-20"
-    >
-      <InfoCard
-        v-for="card in infoCards"
-        :key="card.title"
-        :icon="card.icon"
-        :title="card.title"
-        :description="card.description"
+    <div class="h-auto">
+      <StatsSection
+        :stats="stats"
+        imageSrc="https://res.cloudinary.com/dkgpny3ca/image/upload/v1740941147/data_ezpzcy.png"
+        imageAlt="About Us image"
       />
+      <div
+        class="w-8/12 mx-auto justify-center items-center lg:gap-8 gap-6 grid md:grid-cols-3 grid-cols-1 mt-20"
+      >
+        <InfoCard
+          v-for="card in infoCards"
+          :key="card.title"
+          :icon="card.icon"
+          :title="card.title"
+          :description="card.description"
+        />
+      </div>
     </div>
-  </div>
-  <SubscribeForm />
+    <SubscribeForm />
+  </section>
 </template>
 
 <script setup lang="ts">
