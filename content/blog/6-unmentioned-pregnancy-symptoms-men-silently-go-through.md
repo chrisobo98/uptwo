@@ -2,7 +2,7 @@
 title: "6 Unmentioned Pregnancy Symptoms Men Silently Go Through"
 description: "Pregnancy affects both partners in unexpected ways. Discover six overlooked symptoms that non-pregnant partners experience during pregnancy."
 date: May 2023
-image: https://img1.wsimg.com/isteam/stock/7556/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280
+image: v1741011884/pregnant_oo4qih.webp
 category: Lifestyle
 tags:
   - pregnancy

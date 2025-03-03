@@ -2,7 +2,7 @@
 title: "7 Ways to Have a Successful Side Hustle While Working a 9 to 5"
 description: "Discover practical strategies to balance your side hustle with a full-time job. Learn how to stay disciplined, build momentum, and achieve success."
 date: May 2023
-image: https://img1.wsimg.com/isteam/stock/gb69AG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280
+image: v1741011884/sidehustle_fc28h1.webp
 category: Personal Development
 tags:
   - side hustle

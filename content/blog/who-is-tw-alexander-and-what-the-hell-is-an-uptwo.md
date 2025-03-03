@@ -2,7 +2,7 @@
 title: "What the Hell is an upTWo, and Who is T.W. Alexander?"
 description: "Discover the story behind upTWo Consulting and the man behind the brand, T.W. Alexander. Learn about his journey, philosophy, and approach to business."
 date: March 2024
-image: https://img1.wsimg.com/isteam/ip/aadf6fc8-f522-4009-80bc-3b540e85f52b/9-DSC05876.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280
+image: v1741011885/whatisuptwo_vqk6n2.webp
 category: Business
 tags:
   - business
