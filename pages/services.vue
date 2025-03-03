@@ -47,7 +47,7 @@
         >
           <!-- Image with GSAP Animation -->
           <NuxtImg
-          provider="cloudinary"
+            provider="cloudinary"
             v-gsap.visible.from="{ opacity: 0, y: -200, delay: 0.3 }"
             v-gsap.magneticv-gsap.magnetic.weak
             :src="tab.image"
@@ -133,8 +133,7 @@ const tabs = ref([
   {
     id: "brand",
     title: "Brand Messaging",
-    image:
-      "v1740964634/Brand_pcngvn.webp",
+    image: "v1740964634/Brand_pcngvn.webp",
     heading: "Brand Messaging Service",
     description:
       "Clarify your vision and connect with your audience through powerful brand messaging services. I help businesses craft authentic, compelling messages that reflect their values, resonate with their audience, and differentiate them in the market. Whether you need a captivating tagline, mission statement, or a cohesive brand story, I’ll ensure your messaging aligns with your goals and leaves a lasting impression.",
@@ -142,8 +141,7 @@ const tabs = ref([
   {
     id: "website",
     title: "Website Copywriting",
-    image:
-      "v1740964634/SEO_m9qjoi.webp",
+    image: "v1740964634/SEO_m9qjoi.webp",
     heading: "Website Copywriting",
     description:
       "Bring your online presence to life with professional website building services tailored to your brand. I create user-friendly, visually appealing websites that showcase your unique identity and engage your audience. From design and functionality to SEO optimization, I ensure your website not only looks great but also performs effectively to meet your business goals. Let’s build a site that leaves a lasting impression and drives success.",
@@ -165,8 +163,7 @@ const tabs = ref([
   {
     id: "retainer",
     title: "Content Strategy",
-    image:
-      "v1740964634/Content_y3smaa.webp",
+    image: "v1740964634/Content_y3smaa.webp",
     heading: "Retainer Content Support",
     description:
       "Stay consistent and keep your audience engaged with retainer content support services. I provide ongoing, high-quality content tailored to your brand’s needs, ensuring your message stays fresh and relevant across all platforms. From blogs and social media posts to newsletters and marketing materials, I deliver dependable content creation and strategy that saves you time and drives results. Let’s keep your brand top of mind with a reliable content partner",
@@ -174,8 +171,7 @@ const tabs = ref([
   {
     id: "project",
     title: "Project Management",
-    image:
-      "v1740965292/Main_Promo_2_z5eteh_q8ed9x.webp",
+    image: "v1740965292/Main_Promo_2_z5eteh_q8ed9x.webp",
     heading: "Project Management Services",
     description:
       "I offer expert project management services designed to help creatives complete their musical albums, eBooks, novels, and other artistic endeavors with efficiency and precision. With a structured yet flexible approach, I streamline workflows, set clear milestones, and manage timelines to ensure projects are delivered on time and to the highest quality. Leveraging years of experience in coordinating complex creative processes, I provide guidance and support that empowers artists and writers to focus on their craft while achieving their vision.",
@@ -193,8 +189,7 @@ const tabs = ref([
   {
     id: "keynote",
     title: "Keynote Speaker",
-    image:
-      "v1740964634/BBB_Proof_xo6cfz.webp",
+    image: "v1740964634/BBB_Proof_xo6cfz.webp",
     heading: "Keynote Speaker",
     description:
       "The 'Build, Brand, Believe' workshop is a fun and educational presentation that focuses on creating an effective brand identity and the power of influence. This TED Talk-like speech lasts 15 to 30 minutes and is filled with real-life success and failure stories, as well as proven processes that have led to my brand's success in various sectors over the past 20 years.",

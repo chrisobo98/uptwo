@@ -95,7 +95,7 @@
             provider="cloudinary"
               v-gsap.visible.from="{ opacity: 0, x: -300, delay: 1.5 }"
               v-gsap.magnetic.weak
-              src="v1740964102/ivan_the_investor_bgyrj0.webp"
+              src="v1740965292/ivan_the_investor_bgyrj0_dxh2nx.webp"
               alt="red dots top image"
               class="max-lg:mx-auto rounded-3xl object-cover"
             />
