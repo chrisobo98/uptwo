@@ -1,14 +1,18 @@
 <template>
   <section class="hero-section">
     <!-- Video Background -->
+    <client-only>
+
     <div class="hero-video opacity-40">
-      <video autoplay loop muted playsinline preload="auto">
+      <video autoplay loop muted playsinline preload="metadata">
         <source
           src="https://cdn.prod.website-files.com/66b1e669bf6b613debec2857/66c059230ce17596b9a93ac0_Hero_Video-comp-transcode.mp4"
           type="video/mp4"
         />
       </video>
     </div>
+  </client-only>
+
   </section>
 </template>
 
