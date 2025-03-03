@@ -6,6 +6,7 @@
           <NuxtLink to="/" class="flex items-center">
             <NuxtImg
               provider="cloudinary"
+              width="100%" height="100%"
               src="v1740940906/uptwo_n62bjt.webp"
               class="h-20 w-20"
               alt="UpTwo Logo"

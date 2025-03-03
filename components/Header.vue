@@ -10,10 +10,16 @@
           @mouseenter="isHovered = true"
           @mouseleave="isHovered = false"
         >
-          <h1 class="inline-block transition-transform duration-500 ease-in-out" :class="{ '-translate-y-full': isHovered }">
+          <h1
+            class="inline-block transition-transform duration-500 ease-in-out"
+            :class="{ '-translate-y-full': isHovered }"
+          >
             upTwo
           </h1>
-          <span class="absolute top-full left-0 inline-block transition-transform duration-500 ease-in-out" :class="{ '-translate-y-full': isHovered }">
+          <span
+            class="absolute top-full left-0 inline-block transition-transform duration-500 ease-in-out"
+            :class="{ '-translate-y-full': isHovered }"
+          >
             Home
           </span>
         </NuxtLink>
@@ -21,43 +27,103 @@
 
       <!-- Centered Logo -->
       <div class="absolute left-1/2 transform -translate-x-1/2">
-        <NuxtImg provider="cloudinary" width="100%" height="100%" v-gsap.magnetic class="h-20 w-20" src="v1740940906/uptwo_n62bjt.webp" alt="upTwo Top Header Logo" />
+        <NuxtLink to="/" class="flex items-center">
+          <NuxtImg
+            provider="cloudinary"
+            width="100%"
+            height="100%"
+            v-gsap.magnetic
+            class="h-20 w-20"
+            src="v1740940906/uptwo_n62bjt.webp"
+            alt="upTwo Top Header Logo"
+          />
+        </NuxtLink>
       </div>
 
       <!-- Desktop Menu -->
       <ul class="hidden lg:flex space-x-6">
-        <li><NuxtLink to="/about" class="hover:text-yellow-500 text-gray-100">About</NuxtLink></li>
-        <li><NuxtLink to="/services" class="hover:text-yellow-500 text-gray-100">Services</NuxtLink></li>
-        <li><NuxtLink to="/portfolio" class="hover:text-yellow-500 text-gray-100">Portfolio</NuxtLink></li>
-        <li><NuxtLink to="/books" class="hover:text-yellow-500 text-gray-100">Books</NuxtLink></li>
-        <li><NuxtLink to="/blog" class="hover:text-yellow-500 text-gray-100">Blog</NuxtLink></li>
-        <li><NuxtLink to="/contact" class="hover:text-yellow-500 text-gray-100">Contact</NuxtLink></li>
+        <li>
+          <NuxtLink to="/about" class="hover:text-yellow-500 text-gray-100"
+            >About</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink to="/services" class="hover:text-yellow-500 text-gray-100"
+            >Services</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink to="/portfolio" class="hover:text-yellow-500 text-gray-100"
+            >Portfolio</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink to="/books" class="hover:text-yellow-500 text-gray-100"
+            >Books</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink to="/blog" class="hover:text-yellow-500 text-gray-100"
+            >Blog</NuxtLink
+          >
+        </li>
+        <li>
+          <NuxtLink to="/contact" class="hover:text-yellow-500 text-gray-100"
+            >Contact</NuxtLink
+          >
+        </li>
       </ul>
 
       <!-- Mobile Menu Button -->
-      <button v-if="!menuOpen" @click="toggleMenu" class="lg:hidden focus:outline-none z-50">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      <button
+        v-if="!menuOpen"
+        @click="toggleMenu"
+        class="lg:hidden focus:outline-none z-50"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#ffffff"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="white"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
         </svg>
       </button>
     </nav>
 
     <!-- Full-Screen Mobile Menu -->
     <transition name="fade">
-      <div 
-        v-if="menuOpen" 
+      <div
+        v-if="menuOpen"
         class="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-end items-start p-8 z-40"
       >
         <!-- Close Button (Replaces Hamburger) -->
-        <button @click="closeMenu" class="absolute top-6 right-6 text-white text-4xl focus:outline-none">
+        <button
+          @click="closeMenu"
+          class="absolute top-6 right-6 text-white text-4xl focus:outline-none"
+        >
           &times;
         </button>
-        
+
         <!-- Left-Aligned Menu Items -->
         <ul class="space-y-6 text-left">
           <transition-group name="slide">
-            <li v-for="(item, index) in menuItems" :key="index" class="text-4xl text-white font-bold">
-              <NuxtLink :to="item.link" @click.stop="closeMenu" class="hover:text-yellow-500 transition-colors duration-300">
+            <li
+              v-for="(item, index) in menuItems"
+              :key="index"
+              class="text-4xl text-white font-bold"
+            >
+              <NuxtLink
+                :to="item.link"
+                @click.stop="closeMenu"
+                class="hover:text-yellow-500 transition-colors duration-300"
+              >
                 {{ item.text }}
               </NuxtLink>
             </li>
@@ -94,13 +160,17 @@ const closeMenu = () => {
 
 <style>
 /* Ensure content doesn't get hidden under navbar */
-body { padding-top: 64px; }
+body {
+  padding-top: 64px;
+}
 
 /* Fade animation */
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.4s ease;
 }
-.fade-enter-from, .fade-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
