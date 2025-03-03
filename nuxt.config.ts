@@ -7,6 +7,9 @@ export default defineNuxtConfig({
       routes: ['/'], // Ensures homepage is always prerendered
     },
   },
+  ogImage: {
+    enabled: false, // Disable OG Image since SSR is off
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-swiper', 'v-gsap-nuxt', '@nuxt/image', '@nuxtjs/seo', '@nuxt/content', [
