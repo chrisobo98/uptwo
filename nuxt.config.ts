@@ -36,7 +36,6 @@ export default defineNuxtConfig({
         preload: true, // Preload fonts for faster rendering
       },
     ],
-    '@nuxt/scripts',
     'nuxt-viewport',
     '@nuxtjs/cloudinary',
     '@nuxt/icon',
