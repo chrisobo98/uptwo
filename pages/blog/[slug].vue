@@ -59,18 +59,24 @@ watchEffect(() => {
     <div
       class="w-full max-w-lg md:max-w-2xl lg:max-w-4xl px-5 lg:px-11 mx-auto max-md:px-4"
     >
-      <NuxtLink v-gsap.visible.from="{ opacity: 0, y: -150, stagger: 1.0, delay: 0.5 }" to="/blog" class="hover:text-gray-100 flex">
-        <Icon name="stash:arrow-reply-solid" size="4em" style="color: white" />
-        <span class="text-center object-center my-6"
-          >All Post</span
-        ></NuxtLink
+      <NuxtLink
+        v-gsap.visible.from="{ opacity: 0, y: -150, stagger: 1.0, delay: 0.5 }"
+        to="/blog"
+        class="hover:text-gray-100 flex"
       >
-      <h1 v-gsap.visible.from="{ opacity: 0, y: -150, stagger: 0.3 }"
+        <Icon name="stash:arrow-reply-solid" size="4em" style="color: white" />
+        <span class="text-center object-center my-6">All Post</span></NuxtLink
+      >
+      <h1
+        v-gsap.visible.from="{ opacity: 0, y: -150, stagger: 0.3 }"
         class="text-white font-manrope font-semibold text-4xl min-[500px]:text-5xl leading-tight mb-8 mt-12"
       >
         {{ post.title }}
       </h1>
-      <div v-gsap.visible.from="{ opacity: 0, x: 50, stagger: 0.5 }" class="flex items-center justify-between">
+      <div
+        v-gsap.visible.from="{ opacity: 0, x: 50, stagger: 0.5 }"
+        class="flex items-center justify-between"
+      >
         <div class="data">
           <p class="font-medium text-xl leading-8 text-white mb-1">
             Tags: {{ post.meta.tags.join(", ") }}
@@ -88,7 +94,10 @@ watchEffect(() => {
       class="w-full max-w-lg md:max-w-2xl lg:max-w-4xl px-5 lg:px-11 mx-auto max-md:px-3"
     >
       <!-- Featured Image -->
-      <div v-gsap.visible.from="{ opacity: 0, y: -150, stagger: 1.0 }" class="img w-full mb-14">
+      <div
+        v-gsap.visible.from="{ opacity: 0, y: -150, stagger: 1.0 }"
+        class="img w-full mb-14"
+      >
         <NuxtImg
           provider="cloudinary"
           :src="post.meta.image"
@@ -98,7 +107,10 @@ watchEffect(() => {
       </div>
 
       <!-- Content Renderer -->
-      <article v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }" class="prose lg:prose-xl dark:prose-invert mx-auto">
+      <article
+        v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
+        class="prose lg:prose-xl dark:prose-invert mx-auto"
+      >
         <ContentRenderer :value="post" />
       </article>
 
@@ -120,7 +132,8 @@ watchEffect(() => {
               class="group cursor-pointer w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl p-5 transition-all duration-300 hover:border-yellow-600"
             >
               <div class="flex items-center mb-6">
-                <img
+                <NuxtImg
+                  provider="cloudinary"
                   :src="featuredPost.meta.image"
                   :alt="featuredPost.title"
                   class="rounded-lg w-full object-cover h-48"
