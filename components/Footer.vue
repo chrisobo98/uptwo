@@ -3,14 +3,14 @@
     <div class="mx-auto max-w-screen-xl my-12">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
-          <a href="https://flowbite.com" class="flex items-center">
+          <NuxtLink to="/" class="flex items-center">
             <NuxtImg
               provider="cloudinary"
               src="v1740940906/uptwo_n62bjt.webp"
-              class="h-auto w-auto"
-              alt="FlowBite Logo"
+              class="h-20 w-20"
+              alt="UpTwo Logo"
             />
-          </a>
+          </NuxtLink>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
