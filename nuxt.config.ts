@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false, // Fully static site
-  components: { dirs: [{ path: '~/components', global: true, prefix: 'Lazy' }] },
   nitro: {
     prerender: {
       crawlLinks: true, // Automatically finds and prerenders all pages

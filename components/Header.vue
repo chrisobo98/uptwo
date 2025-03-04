@@ -35,7 +35,7 @@
             class="transition-all duration-300"
             width="80"
             height="80"
-            :class="{ 'h-16 w-16': isScrolled, 'h-20 w-20': !isScrolled }"
+            :class="{ 'h-14 w-14': isScrolled, 'h-16 w-16': !isScrolled }"
             src="v1740940906/uptwo_n62bjt.webp"
             alt="upTwo Top Header Logo"
             preload
