@@ -26,14 +26,13 @@
       </div>
 
       <!-- Centered Logo -->
-      <div class="absolute left-1/2 transform -translate-x-1/2">
+      <div             v-gsap.magnetic
+ class="absolute left-1/2 transform -translate-x-1/2">
         <NuxtLink to="/" class="flex items-center">
           <NuxtImg
             provider="cloudinary"
-            width="100%"
-            height="100%"
-            v-gsap.magnetic
-            class="h-20 w-20"
+            class="transition-all duration-300"
+            :class="{ 'h-16 w-16': isScrolled, 'h-20 w-20': !isScrolled }"
             src="v1740940906/uptwo_n62bjt.webp"
             alt="upTwo Top Header Logo"
           />
@@ -104,37 +103,39 @@
         </ul>
 
         <div class="w-full bg-black rounded-3xl px-8 py-8 mt-8">
-        <!-- Two-Column Footer Inside Menu -->
-        <div class="grid grid-cols-2 gap-6 text-white uppercase">
-          <!-- Contact Section -->
-          <div>
-            <h3 class="text-2xl font-bold">Contact</h3>
-            <p class="text-white mt-2">info@uptwo.com</p>
-            <p class="text-white">+1 (555) 123-4567</p>
-          </div>
+          <!-- Two-Column Footer Inside Menu -->
+          <div class="grid grid-cols-2 gap-6 text-white uppercase">
+            <!-- Contact Section -->
+            <div>
+              <h3 class="text-2xl font-bold">Contact</h3>
+              <p class="text-white mt-2">info@uptwo.com</p>
+              <p class="text-white">+1 (555) 123-4567</p>
+            </div>
 
-          <!-- Social Media Buttons -->
-          <div>
-            <h3 class="text-2xl font-bold">Follow Us</h3>
-            <div class="flex space-x-4 mt-2">
-              <NuxtLink to="#" class="text-xl">🔵</NuxtLink> <!-- Replace with real icons -->
-              <NuxtLink to="#" class="text-xl">📷</NuxtLink>
-              <NuxtLink to="#" class="text-xl">🐦</NuxtLink>
-              <NuxtLink to="#" class="text-xl">🔗</NuxtLink>
+            <!-- Social Media Buttons -->
+            <div>
+              <h3 class="text-2xl font-bold">Follow Us</h3>
+              <div class="flex space-x-4 mt-2">
+                <NuxtLink to="#" class="text-xl">🔵</NuxtLink>
+                <!-- Replace with real icons -->
+                <NuxtLink to="#" class="text-xl">📷</NuxtLink>
+                <NuxtLink to="#" class="text-xl">🐦</NuxtLink>
+                <NuxtLink to="#" class="text-xl">🔗</NuxtLink>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </transition>
   </header>
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted, onUnmounted } from "vue";
 
 const menuOpen = ref(false);
 const isHovered = ref(false);
+const isScrolled = ref(false);
 
 const menuItems = ref([
   { text: "About", link: "/about" },
@@ -154,6 +155,18 @@ const closeMenu = () => {
   menuOpen.value = false;
   document.body.classList.remove("menu-open");
 };
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+})
 
 // Ensure scrolling is re-enabled when component unmounts
 watch(menuOpen, (isOpen) => {
