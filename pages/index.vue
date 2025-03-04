@@ -51,12 +51,12 @@
                   >
                     {{ slide.subheader }}
                   </h2>
-                  <p
-                    v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
-                    class="lg:max-w-xl text-gray-200/80 text-2xl"
-                  >
-                    {{ slide.description }}
-                  </p>
+                    <p
+                      v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
+                      class="lg:max-w-xl text-gray-200/80 text-2xl"
+                    >
+                      {{ slide.description }}
+                    </p>
                 </div>
 
                 <!-- CTA BUTTON -->
@@ -108,7 +108,9 @@
     </div>
   </div>
 
-  <SubscribeForm class="mt-40 mb-10 md:mt-0" />
+  <ClientOnly>
+  <LazySubscribeForm v-hydrate-when="visible" />
+</ClientOnly>
 </template>
 
 <script setup>
