@@ -18,28 +18,19 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-swiper', 'v-gsap-nuxt', '@nuxt/image', '@nuxtjs/seo', '@nuxt/content', [
-    '@nuxtjs/google-fonts',
-    {
-      families: {
-        Cinzel: {
-          wght: [400, 700], // Regular and Bold for Cinzel
-        },
-        Lora: {
-          wght: [400, 700], // Regular and Bold for Lora
-          ital: [400, 700], // Italic variants
-        },
-        Montserrat: {
-          wght: [100, 300, 400, 700], // Thin, Light, Regular, and Bold for Montserrat
-        },
-      },
-      display: "swap", // Ensures text is visible during font load
-      prefetch: true, // Enables DNS prefetch for faster Google Fonts loading
-      preconnect: true, // Preconnect to Google Fonts for quicker connection
-      preload: true, // Preload Google Fonts to speed up font load time
-      useStylesheet: true, // Ensures CSS is injected for Google Fonts
-    },
-  ], 'nuxt-viewport', '@nuxtjs/cloudinary', '@nuxt/icon', '@nuxtjs/google-fonts', 'nuxt-vitalizer'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'nuxt-swiper',
+    'v-gsap-nuxt',
+    '@nuxt/image',
+    '@nuxtjs/seo',
+    '@nuxt/content',
+    'nuxt-viewport',
+    '@nuxtjs/cloudinary',
+    '@nuxt/icon',
+    'nuxt-vitalizer',
+    '@nuxt/fonts',
+  ],
   vitalizer: {
     disableStylesheets: 'entry',
     disablePrefetchLinks: true,
@@ -60,4 +51,30 @@ export default defineNuxtConfig({
     sitemap: '/sitemap.xml' // Optional, if you have a sitemap
   },
   css: ['~/assets/css/main.css'],
+  fonts: {
+    defaults: {
+      weights: [400, 700], // Default weights for all fonts
+      styles: ['normal', 'italic'], // Default styles
+      subsets: ['latin', 'latin-ext'], // Default subsets
+    },
+    families: [
+      {
+        name: 'Cinzel',
+        provider: 'google',
+        weights: [400, 700],
+      },
+      {
+        name: 'Lora',
+        provider: 'google',
+        weights: [400, 700],
+        styles: ['normal', 'italic'],
+      },
+      {
+        name: 'Montserrat',
+        provider: 'google',
+        weights: [100, 300, 400, 700],
+      },
+    ],
+    priority: ['google'], // Set Google as the primary provider
+  },
 })
