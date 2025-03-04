@@ -26,71 +26,82 @@
   <div class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl">
     <MobileLanding v-show="viewport.isLessThan('tablet')" />
     <div class="swiper-wrapper">
-  <div
-    v-for="(slide, index) in slides"
-    :key="index"
-    class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative md:border-2 border-solid"
-  >
-    <div v-if="index === 0 || lazyLoaded.includes(index)">
-      <div class="mx-auto max-w-7xl md:max-w-full px-4 sm:px-6 lg:px-8">
-        <div class="w-full flex flex-col gap-14">
-          <div class="justify-center items-center z-20 md:mx-20 flex">
-            <div class="flex flex-col gap-10 lg:gap-14">
-              <!-- ANIMATED TEXT -->
-              <div class="mt-40 md:mt-20">
-                <h2
-                  v-gsap.animateText
-                  v-gsap.from="{ opacity: 0, x: 150, delay: 0.3 }"
-                  class="text-white text-3xl md:text-6xl font-bold font-manrope"
-                >
-                  {{ slide.header }}
-                </h2>
-                <h2
-                  v-gsap.animateText
-                  v-gsap.from="{ opacity: 0, x: -150, delay: 0.5 }"
-                  class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope"
-                >
-                  {{ slide.subheader }}
-                </h2>
-                <p
-                  v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
-                  class="lg:max-w-xl text-gray-200/80 text-2xl"
-                >
-                  {{ slide.description }}
-                </p>
-              </div>
+      <div
+        v-for="(slide, index) in slides"
+        :key="index"
+        class="swiper-slide w-full bg-no-repeat bg-cover rounded-2xl bg-center pb-24 min-h-[700px] relative md:border-2 border-solid"
+      >
+        <div v-if="index === 0 || lazyLoaded.includes(index)">
+          <div class="mx-auto max-w-7xl md:max-w-full px-4 sm:px-6 lg:px-8">
+            <div class="w-full flex flex-col gap-14">
+              <div class="justify-center items-center z-20 md:mx-20 flex">
+                <div class="flex flex-col gap-10 lg:gap-14">
+                  <!-- ANIMATED TEXT -->
+                  <div class="mt-40 md:mt-20">
+                    <h2
+                      v-gsap.animateText
+                      v-gsap.from="{ opacity: 0, x: 150, delay: 0.3 }"
+                      class="text-white text-3xl md:text-6xl font-bold font-manrope"
+                    >
+                      {{ slide.header }}
+                    </h2>
+                    <h2
+                      v-gsap.animateText
+                      v-gsap.from="{ opacity: 0, x: -150, delay: 0.5 }"
+                      class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope"
+                    >
+                      {{ slide.subheader }}
+                    </h2>
+                    <p
+                      v-if="index === 0"
+                      :class="{ 'animate-description': index !== 0 }"
+                      class="lg:max-w-xl text-gray-200/80 text-2xl"
+                      style="will-change: transform, opacity"
+                    >
+                      Driving Growth Through Strategy and Storytelling
+                    </p>
+                    <p
+                      v-if="index !== 0"
+                      v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
+                      class="lg:max-w-xl text-gray-200/80 text-2xl"
+                    >
+                      {{ slide.description }}
+                    </p>
+                  </div>
 
-              <!-- CTA BUTTON -->
-              <div
-                v-gsap.from="{ opacity: 0, y: 50, delay: 1.5 }"
-                class="border border-yellow-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between"
-              >
-                <span class="font-light text-lg text-white ml-3">
-                  {{ slide.highlight }}
-                </span>
-                <div class="bg-yellow-600 rounded-full">
-                  <!-- Right Icon -->
-                  <Icon
-                    name="oi:arrow-right"
-                    size="1.2em"
-                    class="rounded-full flex mx-2 my-2 justify-center items-center"
-                    style="color: white"
-                  />
+                  <!-- CTA BUTTON -->
+                  <div
+                    v-gsap.from="{ opacity: 0, y: 50, delay: 1.5 }"
+                    class="border border-yellow-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between"
+                  >
+                    <span class="font-light text-lg text-white ml-3">
+                      {{ slide.highlight }}
+                    </span>
+                    <div class="bg-yellow-600 rounded-full">
+                      <!-- Right Icon -->
+                      <Icon
+                        name="oi:arrow-right"
+                        size="1.2em"
+                        class="rounded-full flex mx-2 my-2 justify-center items-center"
+                        style="color: white"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Placeholder for Lazy Loading -->
+        <div
+          v-else
+          class="h-full flex items-center justify-center text-gray-500"
+        >
+          Loading...
+        </div>
       </div>
     </div>
-
-    <!-- Placeholder for Lazy Loading -->
-    <div v-else class="h-full flex items-center justify-center text-gray-500">
-      Loading...
-    </div>
-  </div>
-</div>
-
 
     <div
       class="flex items-center justify-between relative lg:mt-0 mt-7 absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-44 bottom-44 max-w-[320px] mx-auto z-10"
@@ -202,10 +213,14 @@ onMounted(() => {
     },
   });
 });
-
 </script>
 
 <style>
+.animate-description {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
 /* IMPROVED SWIPER STYLES */
 .swiper-wrapper {
   height: auto !important;
