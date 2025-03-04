@@ -52,7 +52,7 @@
                 v-gsap.visible.from="{ opacity: 0, x: -150, stagger: 0.4 }"
                 v-gsap.magnetic.weak
                 ref="tabImage"
-                class="rounded-2xl h-auto w-full object-right-top md:object-center object-cover"
+                class="rounded-2xl h-80 w-80 object-right-top md:object-center object-cover"
                 :src="activeTabData.src"
                 alt="About Us image"
               />
