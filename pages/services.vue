@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24 bg-black">
+  <section class="py-24 mt-12">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div
         v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"

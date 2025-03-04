@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-20">
+  <section class="py-24 mt-12">
     <!-- Hero Section -->
     <div
       class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full lg:h-screen md:mt-40"

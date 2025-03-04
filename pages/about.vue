@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24">
+  <section class="py-24 mt-12">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div
         class="w-full flex-col justify-start items-start gap-12 inline-flex md:h-screen"

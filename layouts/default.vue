@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <Header />
-      <NuxtPage />
-      <Footer />
-    </div>
-  </template>
+  <Header />
+  <NuxtPage />
+  <Footer />
+</template>
 
 <script setup lang="ts">
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 </script>

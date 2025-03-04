@@ -54,7 +54,7 @@ watch(selectedCategory, () => {
 </script>
 
 <template>
-  <section class="pt-20 lg:pb-16 pb-10">
+  <section class="py-24 mt-12">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 min-h-[1000px]">
       <div
         v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
