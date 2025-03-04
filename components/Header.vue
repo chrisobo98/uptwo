@@ -1,7 +1,7 @@
 <template>
   <header class="fixed top-0 left-0 w-full bg-black shadow-md z-50">
     <nav class="container mx-auto flex justify-between items-center p-6 my-4">
-      <!-- Logo and "upTwo" text -->
+      <!-- Left-aligned Logo & Title -->
       <div class="flex items-center">
         <NuxtLink
           v-gsap.magnetic.stronger
@@ -42,35 +42,10 @@
 
       <!-- Desktop Menu -->
       <ul class="hidden lg:flex space-x-6">
-        <li>
-          <NuxtLink to="/about" class="hover:text-yellow-500 text-gray-100"
-            >About</NuxtLink
-          >
-        </li>
-        <li>
-          <NuxtLink to="/services" class="hover:text-yellow-500 text-gray-100"
-            >Services</NuxtLink
-          >
-        </li>
-        <li>
-          <NuxtLink to="/portfolio" class="hover:text-yellow-500 text-gray-100"
-            >Portfolio</NuxtLink
-          >
-        </li>
-        <li>
-          <NuxtLink to="/books" class="hover:text-yellow-500 text-gray-100"
-            >Books</NuxtLink
-          >
-        </li>
-        <li>
-          <NuxtLink to="/blog" class="hover:text-yellow-500 text-gray-100"
-            >Blog</NuxtLink
-          >
-        </li>
-        <li>
-          <NuxtLink to="/contact" class="hover:text-yellow-500 text-gray-100"
-            >Contact</NuxtLink
-          >
+        <li v-for="(item, index) in menuItems" :key="index">
+          <NuxtLink :to="item.link" class="hover:text-yellow-500 text-gray-100">
+            {{ item.text }}
+          </NuxtLink>
         </li>
       </ul>
 
@@ -101,9 +76,9 @@
     <transition name="fade">
       <div
         v-if="menuOpen"
-        class="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-end items-start p-8 z-40"
+        class="fixed inset-0 bg-yellow-600 flex flex-col justify-start p-8 z-40 overflow-hidden"
       >
-        <!-- Close Button (Replaces Hamburger) -->
+        <!-- Close Button -->
         <button
           @click="closeMenu"
           class="absolute top-6 right-6 text-white text-4xl focus:outline-none"
@@ -111,31 +86,52 @@
           &times;
         </button>
 
-        <!-- Left-Aligned Menu Items -->
-        <ul class="space-y-6 text-left">
-          <transition-group name="slide">
-            <li
-              v-for="(item, index) in menuItems"
-              :key="index"
-              class="text-4xl text-white font-bold"
+        <!-- Menu Items -->
+        <ul class="space-y-6 text-left mt-10">
+          <li
+            v-for="(item, index) in menuItems"
+            :key="index"
+            class="text-4xl font-black text-white uppercase montserrat-black"
+          >
+            <NuxtLink
+              :to="item.link"
+              @click.stop="closeMenu"
+              class="hover:text-yellow-300 transition-colors duration-300"
             >
-              <NuxtLink
-                :to="item.link"
-                @click.stop="closeMenu"
-                class="hover:text-yellow-500 transition-colors duration-300"
-              >
-                {{ item.text }}
-              </NuxtLink>
-            </li>
-          </transition-group>
+              {{ item.text }}
+            </NuxtLink>
+          </li>
         </ul>
+
+        <div class="w-full bg-black rounded-3xl px-8 py-8 mt-8">
+        <!-- Two-Column Footer Inside Menu -->
+        <div class="grid grid-cols-2 gap-6 text-white uppercase">
+          <!-- Contact Section -->
+          <div>
+            <h3 class="text-2xl font-bold">Contact</h3>
+            <p class="text-white mt-2">info@uptwo.com</p>
+            <p class="text-white">+1 (555) 123-4567</p>
+          </div>
+
+          <!-- Social Media Buttons -->
+          <div>
+            <h3 class="text-2xl font-bold">Follow Us</h3>
+            <div class="flex space-x-4 mt-2">
+              <NuxtLink to="#" class="text-xl">🔵</NuxtLink> <!-- Replace with real icons -->
+              <NuxtLink to="#" class="text-xl">📷</NuxtLink>
+              <NuxtLink to="#" class="text-xl">🐦</NuxtLink>
+              <NuxtLink to="#" class="text-xl">🔗</NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </transition>
   </header>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const menuOpen = ref(false);
 const isHovered = ref(false);
@@ -151,15 +147,30 @@ const menuItems = ref([
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
+  document.body.classList.toggle("menu-open", menuOpen.value);
 };
 
 const closeMenu = () => {
   menuOpen.value = false;
+  document.body.classList.remove("menu-open");
 };
+
+// Ensure scrolling is re-enabled when component unmounts
+watch(menuOpen, (isOpen) => {
+  document.body.style.overflow = isOpen ? "hidden" : "";
+});
 </script>
 
 <style>
-/* Ensure content doesn't get hidden under navbar */
+/* Ensure Montserrat Black is used */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+.montserrat-black {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+/* Prevent scrolling when mobile menu is open */
 body {
   padding-top: 64px;
 }
