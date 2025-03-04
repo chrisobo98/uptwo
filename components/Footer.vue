@@ -6,7 +6,8 @@
           <NuxtLink to="/" class="flex items-center">
             <NuxtImg
               provider="cloudinary"
-              width="100%" height="100%"
+              width="100%"
+              height="100%"
               src="v1740940906/uptwo_n62bjt.webp"
               class="h-20 w-20"
               alt="UpTwo Logo"
@@ -59,15 +60,40 @@
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <!-- Facebook -->
-          <Icon name="simple-icons:facebook" size="2em" style="color: white" />
-          <!-- Instagram -->
-          <Icon name="simple-icons:instagram" size="2em" style="color: white" />
-          <!-- youtube -->
-          <Icon name="simple-icons:youtube" size="2em" style="color: white" />
-          <!-- Linkedin -->
-          <Icon name="simple-icons:linkedin" size="2em" style="color: white" />
-          <!-- Google -->
-          <Icon name="simple-icons:google" size="2em" style="color: white" />
+          <NuxtLink to="https://www.facebook.com/uptwoink" target="_blank">
+            <Icon
+              name="simple-icons:facebook"
+              size="2em"
+              style="color: white"
+            />
+          </NuxtLink>
+          <NuxtLink to="https://www.instagram.com/beuptwo" target="_blank">
+            <!-- Instagram -->
+            <Icon
+              name="simple-icons:instagram"
+              size="2em"
+              style="color: white"
+            />
+          </NuxtLink>
+
+          <NuxtLink to="https://www.youtube.com/@uptwoink" target="_blank">
+            <!-- youtube -->
+            <Icon name="simple-icons:youtube" size="2em" style="color: white" />
+          </NuxtLink>
+
+          <NuxtLink to="https://www.linkedin.com/in/t-w-alexander-mba-24969a122">
+            <!-- Linkedin -->
+            <Icon
+              name="simple-icons:linkedin"
+              size="2em"
+              style="color: white"
+            />
+          </NuxtLink>
+
+          <NuxtLink to="https://maps.app.goo.gl/cJdcHPF41DFV8k7F8" target="_blank">
+            <!-- Google -->
+            <Icon name="simple-icons:google" size="2em" style="color: white" />
+          </NuxtLink>
         </div>
       </div>
     </div>
