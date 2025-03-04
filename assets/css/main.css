@@ -50,22 +50,3 @@ button {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 600; /* Slightly bolder for buttons */
 }
-
-/* Performance Optimizations */
-@font-face {
-  font-family: 'Cinzel';
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/cinzel/v21/8vIJ7ww63mVu7gt79mT-.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Lora';
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/lora/v14/0QIhMX1D_JOuMwr7Iw.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW.woff2') format('woff2');
-}
