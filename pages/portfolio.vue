@@ -34,7 +34,16 @@
           </p>
         </div>
         <!-- Image -->
-        <div class="w-full mx-auto h-5/6 animated-div rounded-full xl:col-span-7 lg:col-span-6 mb-12 md:mb-0">
+        <div
+          v-gsap.from="{
+            opacity: 0,
+            x: 100,
+            duration: 1,
+            ease: 'power3.out',
+            delay: 0.3,
+          }"
+          class="w-full mx-auto h-5/6 animated-div rounded-full xl:col-span-7 lg:col-span-6 mb-12 md:mb-0"
+        >
           <NuxtImg
             provider="cloudinary"
             v-gsap.magneticv-gsap.magnetic.weak
@@ -43,7 +52,7 @@
               x: 100,
               duration: 1,
               ease: 'power3.out',
-              delay: 0.4,
+              delay: 0.6,
             }"
             src="v1741065783/alexcompressed_xytyi4.png"
             alt="Portfolio Image"
@@ -438,7 +447,8 @@ const goToSlide2 = (index) => {
 /* Add smooth color transition for active text */
 .swiper-slide.text-yellow-400 {
   font-weight: bold;
-}.animated-div {
+}
+.animated-div {
   background: linear-gradient(200deg, #464545, #b78111, #e4e4e4);
   background-size: 600% 600%;
   -webkit-animation: AnimationName 14s ease infinite;
