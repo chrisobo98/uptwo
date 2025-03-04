@@ -42,7 +42,7 @@
             ease: 'power3.out',
             delay: 0.3,
           }"
-          class="w-full mx-auto h-5/6 animated-div rounded-full xl:col-span-7 lg:col-span-6 mb-12 md:mb-0"
+          class="w-auto mx-auto h-auto animated-div rounded-3xl xl:col-span-7 lg:col-span-6 mb-12 md:mb-0"
         >
           <NuxtImg
             provider="cloudinary"
@@ -54,9 +54,9 @@
               ease: 'power3.out',
               delay: 0.6,
             }"
-            src="v1741065783/alexcompressed_xytyi4.png"
+            src="v1740964226/rs_w_1280_h_1280_shm6tc.webp"
             alt="Portfolio Image"
-            class="w-auto h-auto rounded-3xl"
+            class="w-auto h-auto rounded-3xl mx-auto px-3 py-3"
           />
         </div>
       </div>
@@ -380,9 +380,9 @@ const goToSlide2 = (index) => {
 .animated-div {
   background: linear-gradient(200deg, #464545, #b78111, #e4e4e4);
   background-size: 600% 600%;
-  -webkit-animation: AnimationName 14s ease infinite;
-  -moz-animation: AnimationName 14s ease infinite;
-  animation: AnimationName 14s ease infinite;
+  -webkit-animation: AnimationName 7s ease infinite;
+  -moz-animation: AnimationName 7s ease infinite;
+  animation: AnimationName 7s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
