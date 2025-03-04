@@ -51,14 +51,12 @@
                   >
                     {{ slide.subheader }}
                   </h2>
-                  <SkipHydration>
-                    <p
-                      v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
-                      class="lg:max-w-xl text-gray-200/80 text-2xl"
-                    >
-                      {{ slide.description }}
-                    </p>
-                  </SkipHydration>
+                  <p
+                    v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
+                    class="lg:max-w-xl text-gray-200/80 text-2xl"
+                  >
+                    {{ slide.description }}
+                  </p>
                 </div>
 
                 <!-- CTA BUTTON -->
