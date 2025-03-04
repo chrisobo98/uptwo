@@ -1,6 +1,6 @@
 <template>
   <!-- VIDEO: Only loads on larger screens -->
-  <div v-if="!viewport.isLessThan('tablet')">
+  <div v-show="!viewport.isLessThan('tablet')">
     <video
       class="md:w-10/12 mx-auto h-full md:h-dvh md:pt-0"
       autoplay
@@ -19,7 +19,7 @@
 
   <!-- SWIPER SLIDER -->
   <div class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl">
-    <MobileLanding v-if="viewport.isLessThan('tablet')" />
+    <MobileLanding v-show="viewport.isLessThan('tablet')" />
     <div class="swiper-wrapper">
       <div
         v-for="(slide, index) in slides"
@@ -159,8 +159,8 @@ const slides = [
   },
   {
     highlight: "View our Services",
-    header: "The Art of",
-    subheader: "Storytelling",
+    header: "The Art of Story Telling",
+    subheader: "Portfolio",
     description: "Explore T.W. Alexander’s storytelling portfolio",
   },
 ];
