@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
   color: #ffffff; /* Default text color */
   background-color: #000000; /* Default background color */
 }
@@ -17,14 +17,14 @@ body.menu-open {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', Georgia, 'Times New Roman', Times, serif;
   font-weight: 700; /* Bold for headings */
   color: #ffffff; /* White text for headings */
 }
 
 /* Subheadings and Quotes */
 .subheading, blockquote {
-  font-family: 'Lora', serif;
+  font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
   font-weight: 400; /* Regular weight */
   font-style: italic;
   color: #d1d5db; /* Light gray for subheadings */
@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Body Text */
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 400; /* Regular weight */
   font-size: 1rem; /* 16px */
   line-height: 1.6;
@@ -40,12 +40,32 @@ p {
 }
 
 li {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500; /* Regular weight */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 500; /* Medium weight */
   font-size: 1rem; /* 16px */
 }
 
 /* Buttons */
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600; /* Slightly bolder for buttons */
+}
+
+/* Performance Optimizations */
+@font-face {
+  font-family: 'Cinzel';
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/cinzel/v21/8vIJ7ww63mVu7gt79mT-.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/lora/v14/0QIhMX1D_JOuMwr7Iw.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW.woff2') format('woff2');
 }
