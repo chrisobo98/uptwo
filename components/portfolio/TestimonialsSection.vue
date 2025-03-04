@@ -1,7 +1,7 @@
 <template>
   <div
     v-gsap.whenVisible.from="{ scale: 0.8, height: 0, padding: 0 }"
-    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-20 lg:-mt-40 xl:-mt-80"
+    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-20"
   >
     <div
       v-gsap.whenVisible.from="{ y: 100 }"
@@ -41,7 +41,7 @@
         </button>
       </div>
       <!-- Testimonials -->
-      <div class="w-full xl:w-2/3 relative md:mt-80 mt-40">
+      <div class="w-full xl:w-2/3 relative md:mt-80">
         <div class="flex flex-col items-center md:flex-row gap-8">
           <div class="w-full xl:w-1/2">
             <div
