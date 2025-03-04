@@ -23,12 +23,10 @@
 <script setup>
 const cloudinaryBaseUrl = "https://res.cloudinary.com/dkgpny3ca/video/upload/";
 
-const videoPath =
-  "v1741039053/66c059230ce17596b9a93ac0_Hero_Video-comp-transcode_c0gqkw.mp4";
+const videoPath = "v1741039053/66c059230ce17596b9a93ac0_Hero_Video-comp-transcode_c0gqkw.mp4";
 
-// Function to generate optimized Cloudinary URL
-const getOptimizedVideoUrl = (quality) => {
-  return `${cloudinaryBaseUrl}q_${quality},f_auto/${videoPath}`;
+const getOptimizedVideoUrl = (quality = "auto") => {
+  return `${cloudinaryBaseUrl}q_${quality},f_auto,vc_auto/${videoPath}`;
 };
 </script>
 
