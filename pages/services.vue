@@ -6,13 +6,14 @@
         class="text-center mb-10"
       >
         <h2 class="text-4xl md:text-6xl font-bold text-white leading-normal">
-          Comprehensive
-          <span class="text-yellow-600">Services and Benefits</span>
+          Your Brand Deserves a Stage
+          <span class="text-yellow-600">not a Shelf</span>
         </h2>
         <p class="text-lg text-gray-400">
-          We pride ourselves on delivering tailored services to meet diverse
-          needs, from strategic consulting and creative solutions to robust
-          marketing.
+          A brand without strategy is like placing a Rolex in the canned goods
+          aisle—lost, overlooked, and out of place. Brand strategy is more than
+          logos and colors; bold architecture positions your business in the
+          correct rooms, in front of the right eyes, at the right time.
         </p>
       </div>
 
@@ -75,21 +76,10 @@
                 :key="feature.title"
                 class="flex gap-3 items-center"
               >
-                <svg
-                  class="w-5 h-5 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
+              <Icon name="humbleicons:check-circle" size="2em" style="color: goldenrod" />
+
                 <div>
-                  <h6 class="text-white text-sm font-medium">
+                  <h6 class="text-white text-xl font-bold">
                     {{ feature.title }}
                   </h6>
                   <p class="text-gray-400 text-sm">{{ feature.description }}</p>
@@ -134,29 +124,48 @@ const tabs = ref([
     id: "brand",
     title: "Brand Messaging",
     image: "v1740964634/Brand_pcngvn.webp",
-    heading: "Brand Messaging Service",
+    heading: "Brand Strategy & Messaging",
     description:
-      "Clarify your vision and connect with your audience through powerful brand messaging services. I help businesses craft authentic, compelling messages that reflect their values, resonate with their audience, and differentiate them in the market. Whether you need a captivating tagline, mission statement, or a cohesive brand story, I’ll ensure your messaging aligns with your goals and leaves a lasting impression.",
+      "Craft powerful brand identities through strategic messaging, operational alignment, employee retention strategies, and internal brand culture development.",
+    features: [
+      {
+        title: "SEO-Optimized Messaging",
+        description:
+          "Develop brand messaging that enhances search rankings and digital presence.",
+      },
+      {
+        title: "Audience-Centric Storytelling",
+        description:
+          "Align messaging with target demographics to boost engagement and conversions.",
+      },
+      {
+        title: "Competitive Differentiation",
+        description:
+          "Position your brand uniquely with value-driven messaging strategies.",
+      },
+    ],
   },
   {
     id: "website",
-    title: "Website Copywriting",
+    title: "Strategic Copywriting",
     image: "v1740964634/SEO_m9qjoi.webp",
-    heading: "Website Copywriting",
+    heading: "Strategic Copywriting",
     description:
-      "Bring your online presence to life with professional website building services tailored to your brand. I create user-friendly, visually appealing websites that showcase your unique identity and engage your audience. From design and functionality to SEO optimization, I ensure your website not only looks great but also performs effectively to meet your business goals. Let’s build a site that leaves a lasting impression and drives success.",
+      "Transform words into compelling stories that drive customer action—across websites, campaigns, and product launches.",
     features: [
       {
-        title: "Deep Insights",
-        description: "Get real-time analytics on user behavior.",
+        title: "SEO-Driven Content",
+        description:
+          "Create keyword-rich copy that improves rankings on Google and other search engines.",
       },
       {
-        title: "Predictive Analysis",
-        description: "Forecast trends with machine learning.",
+        title: "Conversion-Focused Copy",
+        description: "Craft persuasive content that increases leads and sales.",
       },
       {
-        title: "Custom Reports",
-        description: "Generate insights tailored to your needs.",
+        title: "A/B Tested Messaging",
+        description:
+          "Optimize copy effectiveness through real-world testing and performance analytics.",
       },
     ],
   },
@@ -164,43 +173,74 @@ const tabs = ref([
     id: "retainer",
     title: "Content Strategy",
     image: "v1740964634/Content_y3smaa.webp",
-    heading: "Retainer Content Support",
+    heading: "Content Strategy & Development",
     description:
-      "Stay consistent and keep your audience engaged with retainer content support services. I provide ongoing, high-quality content tailored to your brand’s needs, ensuring your message stays fresh and relevant across all platforms. From blogs and social media posts to newsletters and marketing materials, I deliver dependable content creation and strategy that saves you time and drives results. Let’s keep your brand top of mind with a reliable content partner",
+      "Build content ecosystems that elevate your brand’s voice, ensuring consistency and impact across all platforms.",
+    features: [
+      {
+        title: "Evergreen Content Planning",
+        description:
+          "Develop long-term content strategies that drive sustained traffic.",
+      },
+      {
+        title: "Omnichannel Distribution",
+        description:
+          "Maximize content reach through blogs, social media, and email marketing.",
+      },
+      {
+        title: "Search Intent Optimization",
+        description:
+          "Align content with user search behaviors to improve discoverability.",
+      },
+    ],
   },
   {
     id: "project",
     title: "Project Management",
     image: "v1740965292/Main_Promo_2_z5eteh_q8ed9x.webp",
-    heading: "Project Management Services",
+    heading: "Project Management for Brand Growth",
     description:
-      "I offer expert project management services designed to help creatives complete their musical albums, eBooks, novels, and other artistic endeavors with efficiency and precision. With a structured yet flexible approach, I streamline workflows, set clear milestones, and manage timelines to ensure projects are delivered on time and to the highest quality. Leveraging years of experience in coordinating complex creative processes, I provide guidance and support that empowers artists and writers to focus on their craft while achieving their vision.",
+      "Streamline brand initiatives with expert project management, ensuring strategic goals are met with precision and efficiency.",
     features: [
       {
-        title: "Deep Insights",
-        description: "Get real-time analytics on user behavior.",
+        title: "Agile Workflow Optimization",
+        description:
+          "Implement flexible project strategies to enhance efficiency and productivity.",
       },
       {
-        title: "Predictive Analysis",
-        description: "Forecast trends with machine learning.",
+        title: "KPI-Driven Execution",
+        description:
+          "Track key performance indicators to ensure brand growth aligns with business goals.",
+      },
+      {
+        title: "Cross-Platform Brand Integration",
+        description:
+          "Ensure seamless brand consistency across web, social media, and offline campaigns.",
       },
     ],
   },
   {
     id: "keynote",
-    title: "Keynote Speaker",
+    title: "Speaking & Storytelling",
     image: "v1740964634/BBB_Proof_xo6cfz.webp",
-    heading: "Keynote Speaker",
+    heading: "Keynote Speaking & Brand Storytelling",
     description:
-      "The 'Build, Brand, Believe' workshop is a fun and educational presentation that focuses on creating an effective brand identity and the power of influence. This TED Talk-like speech lasts 15 to 30 minutes and is filled with real-life success and failure stories, as well as proven processes that have led to my brand's success in various sectors over the past 20 years.",
+      "Inspire and educate through captivating keynotes, unlocking the power of storytelling to amplify your brand’s influence.",
     features: [
       {
-        title: "Deep Insights",
-        description: "Get real-time analytics on user behavior.",
+        title: "Authority Building Content",
+        description:
+          "Position yourself as a thought leader through impactful speaking engagements.",
       },
       {
-        title: "Predictive Analysis",
-        description: "Forecast trends with machine learning.",
+        title: "Viral Storytelling Techniques",
+        description:
+          "Craft narratives that captivate audiences and encourage organic sharing.",
+      },
+      {
+        title: "Podcast & Media Guest Spot Optimization",
+        description:
+          "Enhance your brand visibility through strategic podcast appearances and media exposure.",
       },
     ],
   },

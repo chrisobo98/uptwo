@@ -19,6 +19,7 @@
 
   <!-- SWIPER SLIDER -->
   <div class="swiper mySwiper w-11/12 lg:w-6/12 mx-auto rounded-2xl">
+    <MobileLanding v-if="viewport.isLessThan('tablet')" />
     <div class="swiper-wrapper">
       <div
         v-for="(slide, index) in slides"
@@ -27,31 +28,29 @@
       >
         <div class="mx-auto max-w-7xl md:max-w-full px-4 sm:px-6 lg:px-8">
           <div class="w-full flex flex-col gap-14">
-            <MobileLanding v-if="viewport.isLessThan('tablet')" class="z-10" />
-
             <div class="justify-center items-center z-20 md:mx-20 flex">
               <div class="flex flex-col gap-10 lg:gap-14">
                 <!-- ANIMATED TEXT -->
-                <div class="mt-20">
+                <div class="mt-40 md:mt-20">
                   <h2
                     v-gsap.animateText
                     v-gsap.from="{ opacity: 0, x: 150, delay: 0.3 }"
                     class="text-white text-3xl md:text-6xl font-bold font-manrope"
                   >
-                    Your Story. Your Brand. Our Pen.
+                    {{ slide.header }}
                   </h2>
                   <h2
                     v-gsap.animateText
                     v-gsap.from="{ opacity: 0, x: -150, delay: 0.5 }"
                     class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope"
                   >
-                    Our Passion
+                    {{ slide.subheader }}
                   </h2>
                   <p
                     v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
                     class="lg:max-w-xl text-gray-200/80 text-2xl"
                   >
-                    Driving Growth Through Strategy and Storytelling
+                    {{ slide.description }}
                   </p>
                 </div>
 
@@ -145,9 +144,25 @@ useHead({
 });
 
 const slides = [
-  { highlight: "Learn How" },
-  { highlight: "View our Services" },
-  { highlight: "Read more" },
+  {
+    highlight: "Learn How",
+    header: "Your Story. Your Brand. Our Pen.",
+    subheader: "Our Passion",
+    description: "Driving Growth Through Strategy and Storytelling",
+  },
+  {
+    highlight: "Read More",
+    header: "Your Brand Deserves a Stage",
+    subheader: "Not a Shelf",
+    description:
+      "Brand without strategy is like placing a Rolex in the canned goods aisle—lost, overlooked, and out of place...",
+  },
+  {
+    highlight: "View our Services",
+    header: "The Art of",
+    subheader: "Storytelling",
+    description: "Explore T.W. Alexander’s storytelling portfolio",
+  },
 ];
 
 onMounted(() => {
