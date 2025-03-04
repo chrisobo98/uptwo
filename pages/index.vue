@@ -7,10 +7,15 @@
       loop
       muted
       playsinline
+      preload="none"
       :poster="posterUrl"
     >
       <source
-        src="https://res.cloudinary.com/dkaakonrp/video/upload/f_auto,q_auto/v1740935738/oogaajgt1m7sx4r4aa6e.mp4"
+        :src="
+          !viewport.isLessThan('tablet')
+            ? 'https://res.cloudinary.com/dkaakonrp/video/upload/f_auto,q_auto/v1740935738/oogaajgt1m7sx4r4aa6e.mp4'
+            : ''
+        "
         type="video/mp4"
       />
       Your browser does not support the video tag.
