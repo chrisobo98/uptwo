@@ -246,31 +246,8 @@ const slides = ref([
   },
 ]);
 
-const slides2 = ref([
-  {
-    title:
-      "We are a luxury brand strategy consulting firm where integrity is the ink to our pen.",
-    description:
-      "I am a brand strategy consultant with a strong foundation in brand messaging. I have also authored a financial literacy children’s book and crafted top SEO-ranked blogs and websites. My expertise extends to writing mission statements, SOPs, business documentation, and legal content for Fortune 500 companies. With a strategic approach to storytelling and clear communication, I simplify complex ideas into impactful messages that drive engagement and results.",
-    thumbnail: "Luxury brand strategy consulting firm",
-  },
-  {
-    title: "Professional Keynote Speaker | Performer",
-    description:
-      "Over the past two decades, I have traveled across the United States, performing spoken word poetry and delivering keynote speeches at business conferences while also building a strong network of business-to-business partners. ",
-    thumbnail: "Professional Keynote Speaker",
-  },
-  {
-    title: "Crafting stories through the art of music composition",
-    description:
-      "Over the past 15 years, I have released an award-winning poetry album and three highly streamed, internationally recognized musical compilation albums.",
-    thumbnail: "Crafting stories",
-  },
-]);
-
 const activeIndex = ref(0);
-const activeIndex2 = ref(0);
-let slider, sliderThumbnail, slider2, sliderThumbnail2;
+let slider, sliderThumbnail
 
 onMounted(() => {
   // First Swiper
@@ -298,42 +275,11 @@ onMounted(() => {
       },
     },
   });
-
-  // Second Swiper
-  sliderThumbnail2 = new Swiper(".slider-thumbnail2", {
-    slidesPerView: 3,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-  });
-
-  slider2 = new Swiper(".slider2", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-    thumbs: {
-      swiper: sliderThumbnail2,
-    },
-    on: {
-      slideChange: () => {
-        activeIndex2.value = slider2.activeIndex;
-      },
-    },
-  });
 });
 
 const goToSlide = (index) => {
   slider.slideTo(index);
   activeIndex.value = index;
-};
-
-const goToSlide2 = (index) => {
-  slider2.slideTo(index);
-  activeIndex2.value = index;
 };
 </script>
 
