@@ -31,6 +31,7 @@
                 placeholder="Your email address..."
               />
               <button
+                name="Subscribe Button"
                 v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
                 @click="subscribe"
                 class="h-12 py-2 px-6 bg-yellow-600 shadow-sm rounded-full text-white font-semibold hover:bg-yellow-700 transition-colors"

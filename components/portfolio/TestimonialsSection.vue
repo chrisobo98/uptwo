@@ -21,23 +21,10 @@
           knowledge, expertise, advices & confidence
         </p>
         <button
+          name="View All Testimonials"
           class="bg-yellow-50 rounded-full shadow-sm py-3 px-7 flex items-center gap-4 font-semibold text-yellow-600 transition-all duration-500 hover:bg-yellow-100 md:mb-12"
         >
           View all testimonials
-          <svg
-            class="w-2 h-3 text-yellow-600"
-            viewBox="0 0 8 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.5 11L5.08578 7.41421C5.75245 6.74755 6.08579 6.41421 6.08579 6C6.08579 5.58579 5.75245 5.25245 5.08579 4.58579L1.5 1"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
         </button>
       </div>
       <!-- Testimonials -->

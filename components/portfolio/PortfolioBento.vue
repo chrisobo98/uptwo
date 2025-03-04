@@ -65,9 +65,9 @@
           />
         </div>
 
-        <button id="prevButton" @click.stop="prevImage">&#10094;</button>
-        <button id="nextButton" @click.stop="nextImage">&#10095;</button>
-        <button id="exitButton" @click.stop="closeLightbox">&times;</button>
+        <button name="Previous Button" id="prevButton" @click.stop="prevImage">&#10094;</button>
+        <button name="Next Button" id="nextButton" @click.stop="nextImage">&#10095;</button>
+        <button name="Exit Button" id="exitButton" @click.stop="closeLightbox">&times;</button>
       </div>
     </div>
   </section>
