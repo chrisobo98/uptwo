@@ -1,7 +1,7 @@
 <template>
   <div
     v-gsap.whenVisible.from="{ scale: 0.8, height: 0, padding: 0 }"
-    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-80 lg:-mt-40 xl:-mt-80"
+    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-20 lg:-mt-40 xl:-mt-80"
   >
     <div
       v-gsap.whenVisible.from="{ y: 100 }"

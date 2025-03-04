@@ -142,7 +142,7 @@
     </div>
 
     <div
-      class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-none overflow-y-none mb-20 md:mb-0"
+      class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-x-none overflow-y-none"
     >
       <h1
         v-gsap.whenVisible.to="{
@@ -185,79 +185,7 @@
       </h1>
     </div>
 
-    <!-- Swiper2 Section -->
-    <div
-      class="md:w-3/4 bg-no-repeat bg-cover bg-center mx-auto rounded-2xl"
-      :style="{ backgroundImage: `url(${slides2[activeIndex].img})` }"
-    >
-      <section class="mx-auto lg:pt-[84px]">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div
-            v-gsap.whenVisible.from="{ y: 100 }"
-            class="swiper-container slider2 w-full lg:pt-28 pt-10 flex-col justify-start items-start gap-12"
-          >
-            <div
-              v-gsap.whenVisible.stagger.from="{ opacity: 0, x: 40 }"
-              class="swiper-wrapper"
-            >
-              <div
-                class="swiper-slide"
-                v-for="(slide, index) in slides2"
-                :key="index"
-              >
-                <div class="grid grid-cols-1 gap-4">
-                  <div
-                    class="w-full flex-col justify-end items-end gap-8 flex text-right"
-                  >
-                    <div class="flex flex-col">
-                      <h2
-                        class="text-white text-6xl font-normal font-playfairDisplay"
-                      >
-                        {{ slide.title }}
-                      </h2>
-                    </div>
-                    <p
-                      class="lg:max-w-xl w-full text-gray-300 text-base font-medium leading-relaxed md:pb-28 pb-14"
-                    >
-                      {{ slide.description }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Second Swiper Thumbnail Navigation (Aligned Right) -->
-          <div
-            class="swiper-container slider-thumbnail2 relative flex justify-end mt-20"
-          >
-            <div class="swiper-wrapper lg:flex-row flex-col">
-              <div
-                class="swiper-slide cursor-pointer transition duration-300 ease-in-out"
-                :class="{
-                  'text-yellow-400': activeIndex2 === index,
-                  'text-white': activeIndex2 !== index,
-                }"
-                v-for="(slide, index) in slides2"
-                :key="index"
-                @click="goToSlide2(index)"
-              >
-                <div
-                  class="text-lg font-normal leading-relaxed whitespace py-4 px-4"
-                >
-                  {{ slide.thumbnail }}
-                </div>
-                <div
-                  v-show="activeIndex2 === index"
-                  class="swiper-scrollbar my-12"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
+    <PortfolioBento />
     <TestimonialsSection />
     <ServicesSection class="md:mt-20 mt-0" />
   </section>
@@ -270,6 +198,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import PortfolioBento from "~/components/portfolio/PortfolioBento.vue";
 import TestimonialsSection from "~/components/portfolio/TestimonialsSection.vue";
 import ServicesSection from "~/components/portfolio/ServicesSection.vue";
 
@@ -489,4 +418,28 @@ const goToSlide2 = (index) => {
     background-position: 69% 0%;
   }
 }
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.img-wrapper:hover .img-overlay {
+  opacity: 1;
+}
+
 </style>
