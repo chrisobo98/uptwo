@@ -114,12 +114,64 @@
             <!-- Social Media Buttons -->
             <div class="col-span-2">
               <h3 class="text-xl font-bold">Follow Us</h3>
-              <div class="flex space-x-4 mt-2">
-                <NuxtLink to="#" class="text-xl">🔵</NuxtLink>
-                <!-- Replace with real icons -->
-                <NuxtLink to="#" class="text-xl">📷</NuxtLink>
-                <NuxtLink to="#" class="text-xl">🐦</NuxtLink>
-                <NuxtLink to="#" class="text-xl">🔗</NuxtLink>
+              <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                <!-- Facebook -->
+                <NuxtLink
+                  to="https://www.facebook.com/uptwoink"
+                  target="_blank"
+                >
+                  <Icon
+                    name="simple-icons:facebook"
+                    size="2em"
+                    style="color: white"
+                  />
+                </NuxtLink>
+                <NuxtLink
+                  to="https://www.instagram.com/beuptwo"
+                  target="_blank"
+                >
+                  <!-- Instagram -->
+                  <Icon
+                    name="simple-icons:instagram"
+                    size="2em"
+                    style="color: white"
+                  />
+                </NuxtLink>
+
+                <NuxtLink
+                  to="https://www.youtube.com/@uptwoink"
+                  target="_blank"
+                >
+                  <!-- youtube -->
+                  <Icon
+                    name="simple-icons:youtube"
+                    size="2em"
+                    style="color: white"
+                  />
+                </NuxtLink>
+
+                <NuxtLink
+                  to="https://www.linkedin.com/in/t-w-alexander-mba-24969a122"
+                >
+                  <!-- Linkedin -->
+                  <Icon
+                    name="simple-icons:linkedin"
+                    size="2em"
+                    style="color: white"
+                  />
+                </NuxtLink>
+
+                <NuxtLink
+                  to="https://maps.app.goo.gl/cJdcHPF41DFV8k7F8"
+                  target="_blank"
+                >
+                  <!-- Google -->
+                  <Icon
+                    name="simple-icons:google"
+                    size="2em"
+                    style="color: white"
+                  />
+                </NuxtLink>
               </div>
             </div>
           </div>
