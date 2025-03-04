@@ -26,8 +26,7 @@
       </div>
 
       <!-- Centered Logo -->
-      <div             v-gsap.magnetic
- class="absolute left-1/2 transform -translate-x-1/2">
+      <div v-gsap.magnetic class="absolute left-1/2 transform -translate-x-1/2">
         <NuxtLink to="/" class="flex items-center">
           <NuxtImg
             provider="cloudinary"
@@ -106,14 +105,14 @@
           <!-- Two-Column Footer Inside Menu -->
           <div class="grid grid-cols-2 gap-6 text-white uppercase">
             <!-- Contact Section -->
-            <div>
+            <div class="col-span-2 md:col-span-1">
               <h3 class="text-2xl font-bold">Contact</h3>
               <p class="text-white mt-2">info@uptwo.com</p>
               <p class="text-white">+1 (555) 123-4567</p>
             </div>
 
             <!-- Social Media Buttons -->
-            <div>
+            <div class="col-span-2 md:col-span-1">
               <h3 class="text-2xl font-bold">Follow Us</h3>
               <div class="flex space-x-4 mt-2">
                 <NuxtLink to="#" class="text-xl">🔵</NuxtLink>
@@ -166,7 +165,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
-})
+});
 
 // Ensure scrolling is re-enabled when component unmounts
 watch(menuOpen, (isOpen) => {
