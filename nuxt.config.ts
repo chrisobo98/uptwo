@@ -36,7 +36,16 @@ export default defineNuxtConfig({
       subsets: 'latin', // Optimize for Latin-based languages
       preload: true, // Preload fonts for faster rendering
     },
-  ], 'nuxt-viewport', '@nuxtjs/cloudinary', '@nuxt/icon', '@nuxtjs/google-fonts'],
+  ], 'nuxt-viewport', '@nuxtjs/cloudinary', '@nuxt/icon', '@nuxtjs/google-fonts', 'nuxt-vitalizer'],
+  vitalizer: {
+    disableStylesheets: 'entry',
+    disablePrefetchLinks: true,
+    delayHydration: {
+      hydrateOnEvents: ['mousemove', 'scroll', 'keydown', 'click', 'touchstart', 'wheel'],
+      idleCallbackTimeout: 8000,
+      postIdleTimeout: 4000
+    }
+  },
   image: {
     provider: 'cloudinary',
     cloudinary: {

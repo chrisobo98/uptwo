@@ -37,26 +37,30 @@
               <div class="flex flex-col gap-10 lg:gap-14">
                 <!-- ANIMATED TEXT -->
                 <div class="mt-40 md:mt-20">
-                  <h2
-                    v-gsap.animateText
-                    v-gsap.from="{ opacity: 0, x: 150, delay: 0.3 }"
-                    class="text-white text-3xl md:text-6xl font-bold font-manrope"
-                  >
-                    {{ slide.header }}
-                  </h2>
-                  <h2
-                    v-gsap.animateText
-                    v-gsap.from="{ opacity: 0, x: -150, delay: 0.5 }"
-                    class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope"
-                  >
-                    {{ slide.subheader }}
-                  </h2>
-                  <p
-                    v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
-                    class="lg:max-w-xl text-gray-200/80 text-2xl"
-                  >
-                    {{ slide.description }}
-                  </p>
+                  <DelayHydration>
+                    <h2
+                      v-gsap.animateText
+                      v-gsap.from="{ opacity: 0, x: 150, delay: 0.3 }"
+                      class="text-white text-3xl md:text-6xl font-bold font-manrope"
+                    >
+                      {{ slide.header }}
+                    </h2>
+                    <h2
+                      v-gsap.animateText
+                      v-gsap.from="{ opacity: 0, x: -150, delay: 0.5 }"
+                      class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope"
+                    >
+                      {{ slide.subheader }}
+                    </h2>
+                    <SkipHydration>
+                      <p
+                        v-gsap.from="{ opacity: 0, y: 50, delay: 1.0 }"
+                        class="lg:max-w-xl text-gray-200/80 text-2xl"
+                      >
+                        {{ slide.description }}
+                      </p>
+                    </SkipHydration>
+                  </DelayHydration>
                 </div>
 
                 <!-- CTA BUTTON -->
