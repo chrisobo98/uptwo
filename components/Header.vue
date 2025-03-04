@@ -103,17 +103,10 @@
 
         <div class="w-full bg-black rounded-3xl px-8 py-8 mt-8">
           <!-- Two-Column Footer Inside Menu -->
-          <div class="grid grid-cols-2 gap-6 text-white uppercase">
-            <!-- Contact Section -->
-            <div class="col-span-2 md:col-span-1">
-              <h3 class="text-2xl font-bold">Contact</h3>
-              <p class="text-white mt-2">info@uptwo.com</p>
-              <p class="text-white">+1 (555) 123-4567</p>
-            </div>
-
+          <div class="grid grid-cols-2 text-white uppercase">
             <!-- Social Media Buttons -->
-            <div class="col-span-2 md:col-span-1">
-              <h3 class="text-2xl font-bold">Follow Us</h3>
+            <div class="col-span-2">
+              <h3 class="text-xl font-bold">Follow Us</h3>
               <div class="flex space-x-4 mt-2">
                 <NuxtLink to="#" class="text-xl">🔵</NuxtLink>
                 <!-- Replace with real icons -->
