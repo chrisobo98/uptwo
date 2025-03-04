@@ -76,9 +76,14 @@
                 :key="feature.title"
                 class="flex gap-3 items-center"
               >
-              <Icon name="humbleicons:check-circle" size="2em" style="color: goldenrod" />
+                <Icon
+                  v-gsap.visible.from="{ opacity: 0, x: -200, delay: 1.0 }"
+                  name="humbleicons:check-circle"
+                  size="2em"
+                  style="color: goldenrod"
+                />
 
-                <div>
+                <div v-gsap.visible.from="{ opacity: 0, y: 200, delay: 0.8 }">
                   <h6 class="text-white text-xl font-bold">
                     {{ feature.title }}
                   </h6>

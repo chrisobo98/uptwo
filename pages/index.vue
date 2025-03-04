@@ -146,6 +146,7 @@
     </div>
   </div>
 
+  <ServicesSection />
   <SubscribeForm />
 </template>
 
@@ -153,6 +154,7 @@
 import Swiper from "swiper";
 import MobileLanding from "@/components/index/MobileLanding.vue";
 import SubscribeForm from "@/components/SubscribeForm.vue";
+import ServicesSection from "@/components/portfolio/ServicesSection.vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
