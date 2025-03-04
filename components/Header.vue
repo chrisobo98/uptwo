@@ -54,7 +54,8 @@
 
       <!-- Mobile Menu Button -->
       <button
-        name="Mobile Header Menu"
+        id="mobileHeaderMenu"
+        aria-label="Mobile Header Menu"
         v-if="!menuOpen"
         @click="toggleMenu"
         class="lg:hidden focus:outline-none z-50"
@@ -118,6 +119,7 @@
                 <!-- Facebook -->
                 <NuxtLink
                   to="https://www.facebook.com/uptwoink"
+                  aria-label="Facebook page"
                   target="_blank"
                 >
                   <Icon
@@ -128,6 +130,7 @@
                 </NuxtLink>
                 <NuxtLink
                   to="https://www.instagram.com/beuptwo"
+                  aria-label="Instagram page"
                   target="_blank"
                 >
                   <!-- Instagram -->
@@ -140,6 +143,7 @@
 
                 <NuxtLink
                   to="https://www.youtube.com/@uptwoink"
+                  aria-label="youtube channel"
                   target="_blank"
                 >
                   <!-- youtube -->
@@ -152,6 +156,7 @@
 
                 <NuxtLink
                   to="https://www.linkedin.com/in/t-w-alexander-mba-24969a122"
+                  aria-label="Linkedin profile"
                 >
                   <!-- Linkedin -->
                   <Icon
@@ -163,6 +168,7 @@
 
                 <NuxtLink
                   to="https://maps.app.goo.gl/cJdcHPF41DFV8k7F8"
+                  aria-label="google maps"
                   target="_blank"
                 >
                   <!-- Google -->

@@ -22,7 +22,7 @@
         <div
           class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4"
         >
-          <NuxtLink to="/services">
+          <NuxtLink aria-label="Brand & Indentity services link" to="/services">
             <div
               class="bg-yellow-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-yellow-600"
             >
@@ -45,7 +45,7 @@
         <div
           class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4"
         >
-          <NuxtLink to="/services">
+          <NuxtLink aria-label="copywriting & Storytelling" to="/services">
             <div
               class="bg-pink-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-pink-600"
             >
@@ -70,7 +70,7 @@
         <div
           class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4"
         >
-          <NuxtLink to="/services">
+          <NuxtLink aria-label="Project Management link" to="/services">
             <div
               class="bg-teal-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-teal-600"
             >
@@ -95,7 +95,7 @@
         <div
           class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4"
         >
-          <NuxtLink to="/services">
+          <NuxtLink aria-label="Keynote Speaker link" to="/services">
             <div
               class="bg-orange-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-orange-600"
             >
@@ -120,7 +120,7 @@
         <div
           class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4"
         >
-          <NuxtLink to="/services">
+          <NuxtLink aria-label="Market Positioning link" to="/services">
             <div
               class="bg-fuchsia-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-fuchsia-600"
             >
