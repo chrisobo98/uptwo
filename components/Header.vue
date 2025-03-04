@@ -167,8 +167,13 @@ onUnmounted(() => {
 
 // Ensure scrolling is re-enabled when component unmounts
 watch(menuOpen, (isOpen) => {
-  document.body.style.overflow = isOpen ? "hidden" : "";
+  if (isOpen) {
+    document.body.style.overflow = "hidden"; // Disable scroll when menu is open
+  } else {
+    document.body.style.overflow = ""; // Enable scroll when menu is closed
+  }
 });
+
 </script>
 
 <style>
@@ -182,7 +187,16 @@ watch(menuOpen, (isOpen) => {
 
 /* Prevent scrolling when mobile menu is open */
 body {
-  padding-top: 64px;
+  padding-top: 0px; /* Removed padding to avoid bouncing effect */
+  overflow: hidden; /* Added overflow hidden globally when mobile menu is open */
+}
+
+/* Mobile Menu Fix */
+.fixed.inset-0.bg-yellow-600 {
+  height: 100vh; /* Ensure full viewport height for mobile menu */
+  top: 0; /* Ensure menu is at the top */
+  left: 0;
+  right: 0;
 }
 
 /* Fade animation */
@@ -207,4 +221,5 @@ body {
   transform: translateY(-20px);
   opacity: 0;
 }
+
 </style>
