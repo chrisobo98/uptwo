@@ -118,28 +118,33 @@
       </div>
     </div>
 
-    <div
-      class="flex items-center justify-between relative lg:mt-0 mt-7 absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-44 bottom-44 max-w-[320px] mx-auto z-10"
-    >
-      <!-- Left Icon -->
-      <Icon
-        name="oi:chevron-left"
-        size="2em"
-        class="swiper-button-prev group transition-all duration-700 ease-in-out grabbable"
-        style="color: white"
-      />
+<div
+  class="flex flex-col items-center justify-center relative lg:mt-0 mt-7 absolute 2xl:bottom-40 xl:bottom-48 lg:bottom-44 bottom-44 max-w-[320px] mx-auto z-10"
+>
+  <!-- Swipe Text -->
+  <span v-gsap.magnetic class="mb-2 text-white">Swipe Me</span>
 
-      <!-- Swiper Scrollbar -->
-      <div class="swiper-scrollbar mx-14"></div>
+  <div class="flex items-center justify-between w-full">
+    <!-- Left Icon -->
+    <Icon
+      name="oi:chevron-left"
+      size="2em"
+      class="swiper-button-prev group transition-all duration-700 ease-in-out grabbable"
+      style="color: white"
+    />
 
-      <!-- Right Icon -->
-      <Icon
-        name="oi:chevron-right"
-        size="2em"
-        class="swiper-button-next group grabbable transition-all duration-700 ease-in-out"
-        style="color: white"
-      />
-    </div>
+    <!-- Swiper Scrollbar -->
+
+    <!-- Right Icon -->
+    <Icon
+      name="oi:chevron-right"
+      size="2em"
+      class="swiper-button-next group grabbable transition-all duration-700 ease-in-out"
+      style="color: white"
+    />
+  </div>
+</div>
+
   </div>
 
   <ClientOnly>
