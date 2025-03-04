@@ -34,7 +34,7 @@
           </p>
         </div>
         <!-- Image -->
-        <div class="w-5/6 mx-auto xl:col-span-7 lg:col-span-6 mb-12 md:mb-0">
+        <div class="w-full mx-auto h-5/6 animated-div rounded-full xl:col-span-7 lg:col-span-6 mb-12 md:mb-0">
           <NuxtImg
             provider="cloudinary"
             v-gsap.magneticv-gsap.magnetic.weak
@@ -45,9 +45,9 @@
               ease: 'power3.out',
               delay: 0.4,
             }"
-            src="v1740964226/rs_w_1280_h_1280_shm6tc.webp"
+            src="v1741065783/alexcompressed_xytyi4.png"
             alt="Portfolio Image"
-            class="w-full lg:h-auto rounded-3xl object-cover"
+            class="w-auto h-auto rounded-3xl"
           />
         </div>
       </div>
@@ -438,5 +438,45 @@ const goToSlide2 = (index) => {
 /* Add smooth color transition for active text */
 .swiper-slide.text-yellow-400 {
   font-weight: bold;
+}.animated-div {
+  background: linear-gradient(200deg, #464545, #b78111, #e4e4e4);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 14s ease infinite;
+  -moz-animation: AnimationName 14s ease infinite;
+  animation: AnimationName 14s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 69% 0%;
+  }
+  50% {
+    background-position: 32% 100%;
+  }
+  100% {
+    background-position: 69% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 69% 0%;
+  }
+  50% {
+    background-position: 32% 100%;
+  }
+  100% {
+    background-position: 69% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 69% 0%;
+  }
+  50% {
+    background-position: 32% 100%;
+  }
+  100% {
+    background-position: 69% 0%;
+  }
 }
 </style>
