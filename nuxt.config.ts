@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false, // Fully static site
+  ssr: true, // Enable SSR so social media scrapers can read metadata
   nitro: {
     prerender: {
       crawlLinks: true, // Automatically finds and prerenders all pages
-      routes: ['/'], // Ensures homepage is always prerendered
+      routes: ['/', '/about', '/services', '/portfolio'], // Ensures homepage is always prerendered
     },
     routeRules: {
       "/_nuxt/**": { cache: { maxAge: 31536000 } }, // Cache static assets for 1 year
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
   },
   ogImage: {
-    enabled: false, // Disable OG Image since SSR is off
+    enabled: true,
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
