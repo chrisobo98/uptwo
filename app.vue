@@ -16,10 +16,13 @@ useHead({
     { property: "og:description", content: "upTWO helps brands stand out with expert storytelling, strategic branding, and marketing innovation." },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://beuptwo.com/" },
+
+    // Author & Publisher for Credibility
+    { property: "article:author", content: "https://www.linkedin.com/in/t-w-alexander-mba-24969a122/" },
+    { property: "article:publisher", content: "https://www.facebook.com/uptwoink" },
     
     // OpenGraph Images (Multiple Sizes)
-    { property: "og:image", content: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1741065783/alexcompressed_xytyi4.png" }, // Large OpenGraph image
-    { property: "og:image:secure_url", content: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1741065783/alexcompressed_xytyi4.png" },
+    { property: "og:image", content: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1741196509/Screenshot_2025-03-05_at_12.41.28_PM_n7uxvd.png" }, // Large OpenGraph image
     { property: "og:image:type", content: "image/png" },
     { property: "og:image:width", content: "1200" },
     { property: "og:image:height", content: "630" },
