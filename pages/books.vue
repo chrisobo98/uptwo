@@ -6,11 +6,6 @@
         class="text-center mb-10"
       >
         <h2 class="text-6xl font-bold text-white leading-normal">Books</h2>
-        <p class="text-lg text-gray-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          fringilla imperdiet scelerisque. teger finibus, mi ique rhoncus
-          consectetur.
-        </p>
       </div>
     </div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

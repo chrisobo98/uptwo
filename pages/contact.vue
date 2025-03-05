@@ -37,9 +37,9 @@
               v-gsap.visible.animateText.once
               class="text-white font-manrope 2xl:text-3xl lg:text-2xl text-3xl font-bold leading-10 mb-12"
             >
-              321 - 388 - 2772
+              904 - 717 - 3697
             </h3>
-            <a href="tel:+3213882772" target="_blank">
+            <a href="tel:+9047173697" target="_blank">
 
             <button
               class="w-full h-11 text-white text-center text-sm font-semibold leading-5 rounded-full bg-yellow-500 transition-all duration-700 hover:bg-yellow-700"
@@ -71,9 +71,9 @@
               v-gsap.visible.animateText.once
               class="text-black font-manrope 2xl:text-3xl lg:text-2xl text-3xl md:break-words break-normal font-bold leading-10 mb-12"
             >
-              email@upTWo.com
+              brand@beuptwo.com
             </h3>
-            <a href="mailto:talexander@uptwoink.com" target="_blank">
+            <a href="mailto:brand@beuptwo.com" target="_blank">
               <button
                 class="w-full h-11 text-black text-center text-sm font-semibold leading-5 rounded-full bg-gray-300 group-hover:bg-yellow-500 transition-all duration-700 hover:bg-gray-400"
               >
