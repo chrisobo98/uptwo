@@ -205,8 +205,8 @@ const slides = [
   {
     highlight: "View our Services",
     header: "The Art of Story Telling",
-    subheader: "Portfolio",
-    description: "Explore T.W. Alexander’s storytelling portfolio",
+    subheader: "Explore",
+    description: "T.W. Alexander’s storytelling portfolio",
   },
 ];
 
