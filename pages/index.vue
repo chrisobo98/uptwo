@@ -39,13 +39,13 @@
                   <div class="mt-40 md:mt-20">
                     <h2
                       v-if="index === 0"
-                      class="text-white text-3xl md:text-6xl font-bold font-manrope"
+                      class="text-white text-3xl md:text-6xl font-bold"
                     >
                       {{ slide.header }}
                     </h2>
                     <h2
                       v-if="index === 0"
-                      class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope"
+                      class="text-yellow-600 md:text-7xl text-6xl font-bold"
                     >
                       {{ slide.subheader }}
                     </h2>
@@ -62,7 +62,7 @@
                       v-if="index !== 0"
                       v-gsap.animateText
                       v-gsap.from="{ opacity: 0, x: 150, delay: 0.3 }"
-                      class="text-white text-3xl md:text-6xl font-bold font-manrope"
+                      class="text-white text-3xl md:text-6xl font-bold"
                     >
                       {{ slide.header }}
                     </h2>
@@ -70,7 +70,7 @@
                       v-if="index !== 0"
                       v-gsap.animateText
                       v-gsap.from="{ opacity: 0, x: -150, delay: 0.5 }"
-                      class="text-yellow-600 md:text-7xl text-6xl font-bold font-manrope"
+                      class="text-yellow-600 md:text-7xl text-6xl font-bold"
                     >
                       {{ slide.subheader }}
                     </h2>
@@ -145,16 +145,17 @@
       </div>
     </div>
   </div>
-
-  <ServicesSection />
-  <SubscribeForm />
+  <DelayHydration>
+    <LazyServicesSection />
+    <LazySubscribeForm />
+  </DelayHydration>
 </template>
 
 <script setup>
 import Swiper from "swiper";
 import MobileLanding from "@/components/index/MobileLanding.vue";
-import SubscribeForm from "@/components/SubscribeForm.vue";
-import ServicesSection from "@/components/portfolio/ServicesSection.vue";
+import LazySubscribeForm from "@/components/SubscribeForm.vue";
+import LazyServicesSection from "@/components/portfolio/ServicesSection.vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -235,6 +236,13 @@ onMounted(() => {
 </script>
 
 <style>
+/* Inline your critical heading styles */
+.text-yellow-600 {
+  color: #cb8b01;
+}
+.md\:text-7xl {
+  font-size: 4.5rem;
+}
 .animate-description {
   opacity: 0;
   transform: translateY(50px);
