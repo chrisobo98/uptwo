@@ -49,7 +49,6 @@ export default defineNuxtConfig({
     allow: '/', // Allows all pages to be crawled
     sitemap: '/sitemap.xml' // Optional, if you have a sitemap
   },
-  css: ['~/assets/css/main.css'],
   fonts: {
     defaults: {
       weights: [400, 700], // Default weights for all fonts
