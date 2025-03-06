@@ -14,7 +14,7 @@
             />
           </NuxtLink>
         </div>
-        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div class="grid grid-cols-2 gap-8 sm:gap-6">
           <div>
             <h2
               class="mb-6 text-sm font-semibold text-white uppercase dark:text-white"
@@ -29,21 +29,6 @@
                 <NuxtLink to="/contact" class="hover:underline"
                   >Contact</NuxtLink
                 >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              class="mb-6 text-sm font-semibold text-white uppercase dark:text-white"
-            >
-              Legal
-            </h2>
-            <ul class="text-white dark:text-white">
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
               </li>
             </ul>
           </div>

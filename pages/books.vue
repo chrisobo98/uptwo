@@ -153,11 +153,16 @@
                 <p class="font-normal text-lg text-yellow-700">Paperback</p>
                 <p class="font-semibold text-sm text-yellow-600">$9.99</p>
               </div>
-              <button
-                class="h-full px-8 text-center rounded-full py-2.5 bg-yellow-600 sh-1 font-semibold text-sm text-white transition-all duration-500 hover:bg-yellow-700"
+              <NuxtLink
+                to="https://www.amazon.com/Ivan-Investor-Kid-Money-Works/dp/B0D3C2SBMF"
+                target="_blank"
               >
-                Buy&nbsp;Now
-              </button>
+                <button
+                  class="h-full px-8 text-center rounded-full py-2.5 bg-yellow-600 sh-1 font-semibold text-sm text-white transition-all duration-500 hover:bg-yellow-700"
+                >
+                  Buy&nbsp;Now
+                </button>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -182,16 +187,6 @@
           Investor Kid," an interactive children's book designed for parents to
           read along and open a dialogue about how money works.
         </p>
-        <div
-          class="md:flex-row gap-5 flex-col flex items-center justify-center"
-        >
-          <a
-            v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0 }"
-            href="#"
-            class="border border-gray-300 shadow-sm rounded-full font-semibold text-white block py-3.5 px-7"
-            >More about author</a
-          >
-        </div>
       </div>
     </div>
 
