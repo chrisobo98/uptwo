@@ -40,7 +40,7 @@
       <div class="sm:flex sm:items-center sm:justify-between">
         <span class="text-white sm:text-center dark:text-white"
           >© 2025
-          <a href="https://flowbite.com" class="hover:underline">UpTwo</a>. All
+          UpTwo All
           Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
