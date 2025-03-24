@@ -2,7 +2,7 @@
   <!-- VIDEO: Only loads on larger screens -->
   <div v-show="!viewport.isLessThan('tablet')">
     <video
-      class="md:w-10/12 mx-auto h-full md:h-dvh md:pt-0"
+      class="md:w-10/12 mx-auto h-full md:h-dvh md:pt-20"
       autoplay
       loop
       muted
