@@ -7,6 +7,7 @@ import '@/assets/css/main.css'
 
 useHead({
   htmlAttrs: { lang: 'en' },
+  titleTemplate: "%s", // Ensures no default Nuxt title suffix
   title: "upTWO | Elevate Your Brand with Strategy & Storytelling",
   meta: [
     { name: "description", content: "upTWO helps brands stand out with expert storytelling, strategic branding, and marketing innovation." },
