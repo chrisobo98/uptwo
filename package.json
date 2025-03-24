@@ -19,6 +19,7 @@
     "@nuxtjs/tailwindcss": "^6.13.1",
     "@unhead/vue": "^1.11.20",
     "nuxt": "^3.15.4",
+    "nuxt-gtag": "^3.0.2",
     "nuxt-swiper": "^2.0.0",
     "nuxt-viewport": "^2.2.0",
     "nuxt-vitalizer": "^0.10.0",

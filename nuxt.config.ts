@@ -29,7 +29,11 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'nuxt-vitalizer',
     '@nuxt/fonts',
+    'nuxt-gtag',
   ],
+  gtag: {
+    id: 'G-V78GEZCG7C'
+  },
   vitalizer: {
     disableStylesheets: 'entry',
     disablePrefetchLinks: true,

@@ -1,28 +1,81 @@
 <template>
   <section class="py-24 mt-12">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div
-        class="w-full flex-col justify-start items-start gap-12 inline-flex md:h-screen"
-      >
+      <div class="w-full flex-col justify-start items-start gap-12 inline-flex">
         <!-- Heading -->
-        <div
-          v-gsap.visible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
-          class="w-full flex-col justify-start items-center gap-3 flex"
-        >
-          <h2 class="text-center text-white text-6xl font-bold leading-normal">
-            About <span class="text-yellow-600"> Us </span>
-          </h2>
-          <p
-            class="lg:max-w-3xl w-full text-center text-gray-500 text-lg leading-relaxed"
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 my-20">
+          <div
+            class="justify-start items-center gap-9 flex xl:flex-row flex-col"
           >
-            Your trusted partner in the digital realm, we specialize in creating
-            products that not only look stunning but also deliver seamless user
-            experiences.
-          </p>
+            <div
+              class="max-w-[620px] mx-auto w-full lg:justify-start justify-center items-center gap-5 grid grid-cols-2"
+            >
+              <NuxtImg
+                v-gsap.from="{ opacity: 0, x: -150, stagger: 0 }"
+                provider="cloudinary"
+                class="w-full h-full rounded-full object-cover"
+                src="v1740965292/Main_Promo_2_z5eteh_q8ed9x.webp"
+                alt="About Us image"
+              />
+              <div class="w-full flex-col justify-start items-start gap-5 flex">
+                <NuxtImg
+                  v-gsap.from="{ opacity: 0, y: -150, delay: 0.2 }"
+                  class="lg:w-full w-auto h-auto object-cover rounded-tl-full rounded-tr-full rounded-bl-3xl rounded-br-full"
+                  src="v1740965363/stellar_bwri1p_lobtze.webp"
+                  alt="About Us image"
+                />
+                <NuxtImg
+                  v-gsap.from="{ opacity: 0, y: 150, delay: 0.4 }"
+                  class="lg:w-full w-auto h-auto object-cover rounded-tl-3xl rounded-tr-full rounded-bl-full rounded-br-full"
+                  src="v1740941147/data_ezpzcy.png"
+                  alt="About Us image"
+                />
+              </div>
+            </div>
+            <div class="flex-col justify-start items-start gap-10 inline-flex">
+              <div class="w-full flex-col justify-start items-start gap-8 flex">
+                <div
+                  class="w-full flex-col justify-start lg:items-start items-center gap-3 flex"
+                >
+                  <div
+                    class="flex-col justify-start lg:items-start items-center gap-1.5 flex"
+                    v-gsap.from="{ opacity: 0, y: -150, stagger: 0 }"
+                  >
+                    <h5 class="text-5xl md:text-6xl text-center">
+                      About <span class="text-yellow-600">Me</span>
+                    </h5>
+                  </div>
+                  <p
+                    class="lg:max-w-[560px] w-full text-gray-400 text-base font-normal leading-relaxed lg:text-start text-center"
+                    v-gsap.from="{ opacity: 0, y: 150, delay: 0.5 }"
+                  >
+                    I’m T.W. Alexander, a visionary brand strategist, author,
+                    and consultant with over 20 years of experience in
+                    transforming brands and crafting compelling narratives that
+                    drive impact. My journey began as a storyteller at the age
+                    of five, when I started writing poetry that evolved into
+                    powerful brand messages, chart-topping music, and
+                    captivating novels.
+                    <br />
+                    <br />
+                    Equipped with an MBA and a proven track record of helping
+                    companies save and generate millions, I bridge the world of
+                    corporate strategy and creative expression.
+                    <br />
+
+                    <br />
+                    Today, I leverage that expertise to empower businesses that
+                    are driving change, helping them craft stories that resonate
+                    deeply with their target audiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Tabs -->
-        <div class="tabs">
+        <div class="tabs py-20">
           <div class="flex w-full items-center justify-center overflow-auto">
             <ul
               class="w-full flex sm:gap-8 gap-4 sm:flex-row flex-col items-center justify-center transition-all duration-700 ease-in-out lg:mb-0 mb-3"
@@ -77,7 +130,7 @@
         </div>
       </div>
     </div>
-    <div class="h-auto">
+    <div class="h-screen py-20">
       <StatsSection
         :stats="stats"
         imageSrc="v1740941147/data_ezpzcy.png"
@@ -153,24 +206,24 @@ const activeTab = ref("tabs-with-pill-1");
 const tabs = [
   {
     id: "tabs-with-pill-1",
-    label: "Our Story",
+    label: "Our Mission",
     src: "v1740965363/story_gytc2v_yjfvgq.webp",
     description:
-      'We empower purpose-driven businesses in the hospitality, small business, and creative industries by crafting luxury brand strategies that elevate their impact — adding value to those who bring value to others. Guided by our "Quality Simplified" approach, we blend strategic creativity with hospitality, creating brand experiences that inspire, connect, and make people smile through the power of love and purpose.',
+      "At upTWo Branding Company, we believe that words don’t just tell stories; they craft visions. We transform complex ideas into captivating narratives that enable your ideal customers to see, feel, and choose your brand as if they were selecting the perfect book from a crowded shelf. Our approach combines strategy, storytelling, and operational excellence to craft brand identities that endure, ensuring your message not only resonates but also inspires action.",
   },
   {
     id: "tabs-with-pill-2",
-    label: "Our Mission",
+    label: "Why We’re Different",
     src: "v1740965292/mission_xsigit_i4oqxw.webp",
     description:
-      'To be the leading luxury brand strategy partner for innovative businesses and programs in hospitality, small business, and the arts — where "Quality Simplified" fuels bold ideas, clear messaging, and transformative impact. We envision a future where brands drive creativity, education, and change and build heartfelt connections and memorable experiences.',
+      "We prioritize our clients by aligning every strategy with their core mission, ensuring that their brand narrative reflects their values, goals, and impact. Through our 30-day Brand Identity Transformation Program, we don’t just refine messaging; we build ecosystems that enhance operational turnover, improve customer retention, and position businesses for long-term success. From stunning visual branding to SEO optimization and high-end media content, we elevate every touchpoint, ensuring that your story echoes beyond the first encounter.",
   },
   {
     id: "tabs-with-pill-3",
-    label: "Our Vision",
+    label: "Our Promise",
     src: "v1740965363/vision_ql0cjj_bxqq6m.webp",
     description:
-      "Our purpose is to add value to those who bring value to others — driving the drivers of tomorrow. With a foundation of love and hospitality, we simplify complexity, empower impactful voices, and create brand experiences that spark innovation, inspire smiles, and elevate businesses in hospitality, small businesses, and the creative arts.",
+      "We’re not just consultants; we’re architects of influence. Our mission is to add value to those who bring value to others, driving measurable results by amplifying the voices of brands that are making a difference.",
   },
 ];
 

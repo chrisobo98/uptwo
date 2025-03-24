@@ -35,7 +35,7 @@
             </div>
             <h3
               v-gsap.visible.animateText.once
-              class="text-white font-manrope 2xl:text-3xl lg:text-2xl text-3xl font-bold leading-10 mb-12"
+              class="text-white font-manrope lg:text-2xl text-3xl font-bold leading-10 mb-12"
             >
               904 - 717 - 3697
             </h3>
@@ -69,7 +69,7 @@
             </div>
             <h3
               v-gsap.visible.animateText.once
-              class="text-black font-manrope 2xl:text-3xl lg:text-2xl text-3xl md:break-words break-normal font-bold leading-10 mb-12"
+              class="text-black font-manrope lg:text-2xl text-3xl md:break-words break-normal font-bold leading-10 mb-12"
             >
               brand@beuptwo.com
             </h3>

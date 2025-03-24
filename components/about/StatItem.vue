@@ -6,7 +6,7 @@
       ]"
     >
       <h4 class="text-yellow-600 text-xl font-bold leading-8">{{ value }}</h4>
-      <h5 class="text-gray-500 text-lg font-normal leading-relaxed break-all">
+      <h5 class="text-gray-200 text-lg font-normal leading-relaxed break-all">
         {{ label }}
       </h5>
     </div>
