@@ -44,7 +44,7 @@
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <!-- Facebook -->
-          <NuxtLink to="https://www.facebook.com/uptwoink" target="_blank">
+          <NuxtLink to="https://www.facebook.com/beuptwo" target="_blank">
             <Icon
               name="simple-icons:facebook"
               size="2em"

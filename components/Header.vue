@@ -118,7 +118,7 @@
               <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                 <!-- Facebook -->
                 <NuxtLink
-                  to="https://www.facebook.com/uptwoink"
+                  to="https://www.facebook.com/beuptwo"
                   aria-label="Facebook page"
                   target="_blank"
                 >

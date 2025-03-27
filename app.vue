@@ -20,7 +20,7 @@ useHead({
 
     // Author & Publisher for Credibility
     { property: "article:author", content: "https://www.linkedin.com/in/t-w-alexander-mba-24969a122/" },
-    { property: "article:publisher", content: "https://www.facebook.com/uptwoink" },
+    { property: "article:publisher", content: "https://www.facebook.com/beuptwo" },
     
     // OpenGraph Images (Multiple Sizes)
     { property: "og:image", content: "https://res.cloudinary.com/dkgpny3ca/image/upload/v1741196509/Screenshot_2025-03-05_at_12.41.28_PM_n7uxvd.png" }, // Large OpenGraph image
@@ -50,7 +50,7 @@ useHead({
       "url": "https://beuptwo.com/",
       "logo": "https://res.cloudinary.com/dkgpny3ca/image/upload/v1740940906/uptwo_n62bjt.webp",
       "sameAs": [
-        "https://www.facebook.com/uptwoink",
+        "https://www.facebook.com/beuptwo",
         "https://www.instagram.com/beuptwo",
         "https://www.youtube.com/@uptwoink",
         "https://www.linkedin.com/in/t-w-alexander-mba-24969a122/"
