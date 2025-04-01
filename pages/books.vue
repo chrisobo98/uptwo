@@ -191,6 +191,7 @@
     </div>
 
     <ComingSoon />
+    <SubscribeForm />
   </section>
 </template>
 
