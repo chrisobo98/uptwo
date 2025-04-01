@@ -130,7 +130,7 @@
         </div>
       </div>
     </div>
-    <div class="h-screen py-20">
+    <div class="py-20">
       <StatsSection
         :stats="stats"
         imageSrc="v1740941147/data_ezpzcy.png"
