@@ -27,19 +27,18 @@
             </h1>
             <p
               v-gsap.whenVisible.animateText.once.fast
-              class="text-center mb-9 lg:text-left md:h-20 h-32"
+              class="text-center mb-9 lg:text-left md:h-10 h-20"
             >
               These four strangers must overcome their differences to form an
               unbreakable team. As they confront external threats and internal
               struggles, bonds are forged, love is kindled, and secrets about
-              Zierlux’s true history come to light. The four agents question
-              their assignments and the motives behind Stellar IV.
+              Zierlux’s true history come to light.
             </p>
             <NuxtImg
               provider="cloudinary"
               src="v1744299884/book-cover-transparent_kqfutd.png"
               alt="Stellar IV Book Cover"
-              class="mx-auto"
+              class="mx-auto h-full w-full"
             />
           </div>
         </div>
