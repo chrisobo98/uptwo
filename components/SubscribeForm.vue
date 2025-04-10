@@ -31,7 +31,7 @@
                 <button
                   type="submit"
                   :disabled="loading"
-                  class="w-full sm:w-auto px-6 py-2 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition disabled:opacity-50"
+                  class="w-full sm:w-auto px-6 py-2 bg-yellow-600 text-white font-medium rounded-lg hover:bg-yellow-700 transition disabled:opacity-50"
                 >
                   <span v-if="loading">Sending...</span>
                   <span v-else>Subscribe</span>
