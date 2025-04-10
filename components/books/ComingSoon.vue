@@ -42,6 +42,8 @@
             />
           </div>
         </div>
+
+        <!-- FORM SECTION -->
         <div
           class="w-full lg:col-span-6"
           v-gsap.visible.from="{ opacity: 0, x: 250, stagger: 1.2 }"
@@ -49,7 +51,7 @@
           <div
             class="rounded-3xl p-5 lg:p-10 max-lg:max-w-2xl max-lg:mx-auto xl:ml-auto xl:max-w-lg lg:max-w-md border border-yellow-600"
           >
-            <form>
+            <form @submit.prevent="handleSubmit">
               <div class="py-6">
                 <h4 class="text-3xl font-bold mb-2">Register Now</h4>
                 <p>
@@ -60,8 +62,8 @@
               </div>
               <div class="block w-full">
                 <div class="relative mb-9">
-                  <label class="flex items-center mb-2 text-sm font-medium"
-                    >Email
+                  <label class="flex items-center mb-2 text-sm font-medium">
+                    Email
                     <svg
                       width="7"
                       height="7"
@@ -73,20 +75,22 @@
                       <path
                         d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z"
                         fill="#EF4444"
-                      ></path>
+                      />
                     </svg>
                   </label>
                   <input
-                    type="text"
-                    id="default-search"
+                    v-model="email"
+                    type="email"
+                    id="email"
                     class="block w-full h-14 px-5 py-2.5 text-base font-normal shadow-xs bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none"
                     placeholder="Your email"
-                    required=""
+                    required
                   />
                 </div>
               </div>
               <button
-                class="bg-yellow-600 shadow-[0px 1px 2px rgba(16, 24, 40, 0.05)] rounded-full w-full h-14 text-lg text-white font-semibold cursor-pointer transition-all duration-500 hover:bg-yellow-700"
+                type="submit"
+                class="bg-yellow-600 shadow-[0px_1px_2px_rgba(16,24,40,0.05)] rounded-full w-full h-14 text-lg text-white font-semibold cursor-pointer transition-all duration-500 hover:bg-yellow-700"
               >
                 Submit
               </button>
@@ -95,6 +99,8 @@
         </div>
       </div>
     </div>
+
+    <!-- FINAL TEXT SECTION -->
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
       <div
         class="w-full flex-col justify-start items-start gap-2.5 inline-flex"
@@ -102,7 +108,8 @@
         <h2
           class="text-white md:text-[123px] text-center md:text-left sm:text-5xl text-7xl md:leading-tight sm:leading-tight leading-snug"
         >
-          bravery, sacrifice <span class="md:hidden text-yellow-600">Unity</span>
+          bravery, sacrifice
+          <span class="md:hidden text-yellow-600">Unity</span>
         </h2>
         <div
           class="w-full justify-start items-center md:gap-14 gap-7 flex md:flex-row flex-col-reverse md:pb-0 pb-5"
@@ -130,8 +137,7 @@
           These four strangers must overcome their differences to form an
           unbreakable team. As they confront external threats and internal
           struggles, bonds are forged, love is kindled, and secrets about
-          Zierlux’s true history come to light. The four agents question their
-          assignments and the motives behind Stellar IV.
+          Zierlux’s true history come to light.
         </p>
         <p
           v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.8 }"
@@ -148,8 +154,7 @@
           class="w-full text-white text-xl font-normal leading-relaxed md:text-start text-center"
         >
           Get ready for an epic adventure! A thrilling best-selling fantasy
-          novel is set to hit the shelves in July 2025. <br />
-          <br />
+          novel is set to hit the shelves in July 2025. <br /><br />
           Don’t miss your chance to dive into a world of magic and adventure!
         </p>
       </div>
@@ -158,5 +163,26 @@
 </template>
 
 <script setup>
-const viewport = useViewport();
+import { ref } from "vue";
+import emailjs from "@emailjs/browser";
+
+const email = ref("");
+
+const handleSubmit = async () => {
+  try {
+    const templateParams = { email: email.value };
+
+    const result = await emailjs.send(
+      "service_oeh1z7o", // Replace with your actual Service ID
+      "template_rst08ie", // Replace with your actual Template ID
+      templateParams, // Template variable
+      "50kCpdxmRHfnhakxl" // Replace with your actual Public Key
+    );
+
+    alert("Thanks for signing up! 🎉");
+    email.value = "";
+  } catch (error) {
+    alert("Oops! Something went wrong. Try again.");
+  }
+};
 </script>
