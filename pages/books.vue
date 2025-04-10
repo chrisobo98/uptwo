@@ -6,10 +6,24 @@
         class="text-center mb-10"
       >
         <h2 class="text-6xl font-bold text-white leading-normal">Books</h2>
+        <p class="text-lg text-gray-400">
+          Explore upTWO’s collection of books and author services, discover upcoming book release dates and updates on our collection
+        </p>
       </div>
     </div>
+    <ComingSoon  />
+
+
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="w-full">
+      <div class="py-12">
+      <h2 class="text-6xl text-center font-bold text-white mt-5">
+          More of our <span class="text-yellow-600">Books</span>
+        </h2>
+        <p class="text-center">
+          Our collection of books is constantly growing. We are excited to share Ivan, the Investor Kid with you. This book is designed to not only entertain but also to empower parents to have meaningful discussions about money with their children.
+        </p>
+      </div>
+      <div class="w-full border border-yellow-600 p-10 rounded-3xl">
         <div class="block lg:flex items-center justify-between mb-4">
           <div
             v-gsap.visible.from="{ opacity: 0, x: 200, delay: 0.5 }"
@@ -169,7 +183,7 @@
       </div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <div class="bg-yellow-600 rounded-2xl p-8 xl:p-11">
         <h2
           v-gsap.whenVisible.from="{ opacity: 0, y: 50, stagger: 0.4 }"
@@ -189,8 +203,6 @@
         </p>
       </div>
     </div>
-
-    <ComingSoon />
     <SubscribeForm />
   </section>
 </template>
