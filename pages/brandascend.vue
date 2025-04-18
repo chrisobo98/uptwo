@@ -21,7 +21,7 @@
               </p>
               <div class="flex flex-col sm:flex-row items-center my-4 gap-8">
                 <NuxtLink
-                  to="/join"
+                  to="/"
                   class="text-white px-6 py-3 rounded-xl bg-yellow-600 font-semibold hover:bg-yellow-700 transition"
                   >Join the Program Now</NuxtLink
                 >
@@ -1084,8 +1084,7 @@
               </li>
             </ul>
             <NuxtLink
-              to="https://www.amazon.com/Ivan-Investor-Kid-Money-Works/dp/B0D3C2SBMF"
-              target="_blank"
+              to="/"
             >
               <button
                 class="h-full px-8 mx-2 text-center rounded-full py-2.5 bg-yellow-600 sh-1 font-semibold text-sm text-white transition-all duration-500 hover:bg-yellow-700"
@@ -1094,8 +1093,7 @@
               </button>
             </NuxtLink>
             <NuxtLink
-              to="https://www.amazon.com/Ivan-Investor-Kid-Money-Works/dp/B0D3C2SBMF"
-              target="_blank"
+              to="/contact"
             >
               <button
                 class="h-full px-8 mx-2 text-center rounded-full py-2.5 bg-yellow-600 sh-1 font-semibold text-sm text-white transition-all duration-500 hover:bg-yellow-700"
