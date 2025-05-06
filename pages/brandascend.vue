@@ -1,6 +1,6 @@
 <template>
   <!-- Hero -->
-  <section class="relative py-14 lg:pt-40 lg:pb-24">
+  <section class="relative pt-32 md:pt-40 lg:pb-24">
     <div class="w-full max-w-7xl mx-auto px-4 lg:px-8">
       <div class="w-full px-3 sm:px-10 mb-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -10,7 +10,7 @@
                 ># Brandascend</span
               >
               <h1
-                class="font-manrope font-bold text-5xl leading-tight my-4 pr-5 max-sm:break-all"
+                class="font-manrope font-bold text-5xl leading-tight my-4 pr-5"
               >
                 Transform Your Brand in 30 Days: Stand Out, Scale Up, and
                 <span class="text-yellow-600"> Stay Ahead.</span>
@@ -28,10 +28,11 @@
               </div>
             </div>
           </div>
-          <div class="mt-8">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -translate-y-16">
+          <div class="pt-16">
+            <!-- First Name Email etc area -->
+            <div class="mx-auto max-w-7xl -translate-y-16">
               <svg
-                class="absolute -top-20 md:top-10 md:left-full w-10 h-12"
+                class="absolute -top-20 md:top-10 left-full ml-20 w-10 h-12"
                 width="39"
                 height="43"
                 viewBox="0 0 39 43"
@@ -222,9 +223,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-6"
-      >
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-6">
         <button
           class="w-full min-[560px]:max-w-[280px] mx-auto py-4 gap-3 text-sm font-medium text-yellow-500 bg-gradient-to-b from-yellow-500 via-yellow-900 to-black rounded-3xl shadow-sm shadow-transparent transition-all duration-500 hover:border-yellow-500"
         >
@@ -593,9 +592,9 @@
         <button
           class="px-5 py-2.5 bg-yellow-600 hover:bg-yellow-800 transition-all duration-700 ease-in-out rounded-xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"
         >
-          <span
+          <NuxtLink to="/contact"
             class="px-2 py-px text-white text-base font-semibold leading-relaxed"
-            >Get Started</span
+            >Get Started</NuxtLink
           >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -622,7 +621,7 @@
         >
           <div class="flex-col justify-start items-start gap-1.5 flex">
             <h3
-              class="text-gray-300 text-2xl font-medium font-manrope leading-9"
+              class="text-yellow-600 text-2xl font-medium font-manrope leading-9"
             >
               1
             </h3>
@@ -630,41 +629,17 @@
               Bonus
             </h5>
           </div>
-          <p class="text-sm font-normal leading-normal">
+          <p class="text-sm text-black font-normal leading-normal">
             Personalized Brand Playbook
           </p>
-          <a
-            href=""
-            class="group py-2.5 rounded-full justify-center items-center flex"
-          >
-            <span
-              class="pr-2 py-px text-yellow-600 group-hover:text-yellow-800 text-base font-semibold leading-relaxed"
-              >Read More</span
-            >
-            <svg
-              class="text-yellow-600 group-hover:text-yellow-800 group-hover:translate-x-0.5 transition-all duration-700 ease-in-out"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M7.50295 4.99609L12.5032 9.9963L7.5 14.9994"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
+
         </div>
         <div
           class="w-full lg:h-full xl:p-8 p-5 bg-white rounded-2xl shadow-[0px_15px_40px_-4px_rgba(16,_24,_40,_0.04)] flex-col justify-start items-start gap-3 inline-flex"
         >
           <div class="flex-col justify-start items-start gap-1.5 flex">
             <h3
-              class="text-gray-300 text-2xl font-medium font-manrope leading-9"
+              class="text-yellow-600 text-2xl font-medium font-manrope leading-9"
             >
               02
             </h3>
@@ -672,41 +647,16 @@
               Bonus
             </h5>
           </div>
-          <p class="text-sm font-normal leading-normal">
+          <p class="text-sm text-black font-normal leading-normal">
             Exclusive Access to Brand Strategy Templates
           </p>
-          <a
-            href=""
-            class="group py-2.5 rounded-full justify-center items-center flex"
-          >
-            <span
-              class="pr-2 py-px text-yellow-600 group-hover:text-yellow-800 text-base font-semibold leading-relaxed"
-              >Read More</span
-            >
-            <svg
-              class="text-yellow-600 group-hover:text-yellow-800 group-hover:translate-x-0.5 transition-all duration-700 ease-in-out"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M7.50295 4.99609L12.5032 9.9963L7.5 14.9994"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
         </div>
         <div
           class="w-full lg:h-full xl:p-8 p-5 bg-white rounded-2xl shadow-[0px_15px_40px_-4px_rgba(16,_24,_40,_0.04)] flex-col justify-start items-start gap-3 inline-flex"
         >
           <div class="flex-col justify-start items-start gap-1.5 flex">
             <h3
-              class="text-gray-300 text-2xl font-medium font-manrope leading-9"
+              class="text-yellow-600 text-2xl font-medium font-manrope leading-9"
             >
               03
             </h3>
@@ -714,34 +664,9 @@
               Bonus
             </h5>
           </div>
-          <p class="text-sm font-normal leading-normal">
+          <p class="text-sm text-black font-normal leading-normal">
             Follow-up Strategy Call After 30 Days
           </p>
-          <a
-            href=""
-            class="group py-2.5 rounded-full justify-center items-center flex"
-          >
-            <span
-              class="pr-2 py-px text-yellow-600 group-hover:text-yellow-800 text-base font-semibold leading-relaxed"
-              >Read More</span
-            >
-            <svg
-              class="text-yellow-600 group-hover:text-yellow-800 group-hover:translate-x-0.5 transition-all duration-700 ease-in-out"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M7.50295 4.99609L12.5032 9.9963L7.5 14.9994"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
         </div>
       </div>
     </div>
@@ -777,7 +702,10 @@
             <p
               class="self-stretch text-center text-gray-400 text-base font-normal leading-relaxed"
             >
-              Briefly Explain
+              After implementing a mobile-first design and localized SEO
+              strategies targeting Central Florida audiences, our client saw a
+              30% uptick in customer interactions across their website and
+              social platforms.
             </p>
           </div>
           <svg
@@ -811,7 +739,10 @@
             <p
               class="self-stretch text-center text-gray-400 text-base font-normal leading-relaxed"
             >
-              Briefly Explain
+              A full rebrand—including new messaging, visuals, and SEO-optimized
+              web content—helped position a Clermont-based service provider as a
+              premium brand, leading to contracts with top-tier companies in the
+              Orlando area.
             </p>
           </div>
           <svg
@@ -845,7 +776,10 @@
             <p
               class="self-stretch text-center text-gray-400 text-base font-normal leading-relaxed"
             >
-              Briefly Explain
+              One Central Florida business saw a measurable revenue increase in
+              just two months thanks to our launch strategy: combining
+              fast-loading pages, conversion-optimized design, and keyword-rich
+              content focused on local search.
             </p>
           </div>
         </div>
@@ -997,7 +931,7 @@
         class="py-3 px-7 bg-yellow-600 rounded-full text-lg text-center w-fit mx-auto"
       >
         Didn’t find the answer you are looking for ?
-        <a href="#" class="text-black font-semibold"> CONTACT SUPPORT</a>
+        <NuxtLink to="/contact" class="text-black font-semibold"> CONTACT SUPPORT</NuxtLink>
       </div>
     </div>
   </section>
@@ -1083,18 +1017,14 @@
                 Elevate Your Impact.
               </li>
             </ul>
-            <NuxtLink
-              to="/"
-            >
+            <NuxtLink to="/">
               <button
                 class="h-full px-8 mx-2 text-center rounded-full py-2.5 bg-yellow-600 sh-1 font-semibold text-sm text-white transition-all duration-500 hover:bg-yellow-700"
               >
                 Join Now
               </button>
             </NuxtLink>
-            <NuxtLink
-              to="/contact"
-            >
+            <NuxtLink to="/contact">
               <button
                 class="h-full px-8 mx-2 text-center rounded-full py-2.5 bg-yellow-600 sh-1 font-semibold text-sm text-white transition-all duration-500 hover:bg-yellow-700"
               >
@@ -1302,16 +1232,18 @@ img {
   inset: -0.2rem;
   border-radius: 1.5rem;
   z-index: -1;
-  background: linear-gradient(var(--angle), 
-    #02C972,  #9302C9, #c98a02);
+  background: linear-gradient(var(--angle), #02c972, #9302c9, #c98a02);
   animation: rotate 10s linear infinite;
 }
 .moving-border::after {
   filter: blur(10px);
 }
 @keyframes rotate {
-  0%     { --angle: 0deg; }
-  100%   { --angle: 360deg;
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
   }
 }
 .timeline_link {
